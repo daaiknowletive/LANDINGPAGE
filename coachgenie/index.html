@@ -1,0 +1,2870 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knowletive Smart School Management | Interactive Cloud Institute Platform</title>
+    <meta name="description" content="Knowletive Smart School Management: Visual Client Manual, 5-step setup roadmap, 30-second mobile attendance, itemized fee billing, tamper-proof report cards, and role-based permissions for school owners, principals, teachers, and staff.">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800;900&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            /* Distinct CoachGenie Modern SaaS / EdTech Mentorship Theme */
+            --tech-navy: #0B132B;
+            --tech-navy-dark: #070D1E;
+            --tech-navy-card: #111C38;
+            --indigo-primary: #6366F1;
+            --indigo-dark: #4F46E5;
+            --indigo-light: #EEF2FF;
+            --cyan-accent: #06B6D4;
+            --cyan-glow: rgba(6, 182, 212, 0.15);
+            --emerald-accent: #10B981;
+            --cta-orange: #F97316;
+            --cta-orange-hover: #EA580C;
+            --bg-page: #F8FAFC;
+            --bg-card: #FFFFFF;
+            --border-card: #E2E8F0;
+            --border-subtle: #F1F5F9;
+            --text-heading: #0F172A;
+            --text-body: #475569;
+            --text-muted: #64748B;
+            --font-sans: 'Inter', sans-serif;
+            --font-display: 'Plus Jakarta Sans', sans-serif;
+            --font-mono: 'JetBrains Mono', monospace;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            background-color: var(--bg-page);
+            color: var(--text-heading);
+            line-height: 1.55;
+            -webkit-font-smoothing: antialiased;
+            padding-bottom: 70px;
+        }
+
+        @media (min-width: 769px) {
+            body {
+                padding-bottom: 0;
+            }
+        }
+
+        h1, h2, h3, h4, .font-display {
+            font-family: var(--font-display);
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.25rem;
+        }
+
+        /* 1. TOP HEADER */
+        .top-header {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            background: rgba(255, 255, 255, 0.97);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border-card);
+            box-shadow: 0 2px 10px rgba(11, 19, 43, 0.04);
+        }
+
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 72px;
+        }
+
+        .brand-logo-link {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            text-decoration: none;
+        }
+
+        .brand-logo-img {
+            height: 48px;
+            max-height: 50px;
+            width: auto;
+            object-fit: contain;
+            display: block;
+            opacity: 1 !important;
+            filter: none !important;
+            image-rendering: -webkit-optimize-contrast;
+            image-rendering: crisp-edges;
+        }
+
+        .brand-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            padding: 0.25rem 0.6rem;
+            background: #EEF2FF;
+            border: 1px solid #C7D2FE;
+            border-radius: 9999px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            color: var(--indigo-dark);
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 0.85rem;
+        }
+
+        .btn-call {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--tech-navy);
+            text-decoration: none;
+            padding: 0.55rem 0.95rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-card);
+            background: #FFFFFF;
+            transition: all 0.2s ease;
+        }
+
+        .btn-call:hover {
+            border-color: var(--indigo-primary);
+            color: var(--indigo-dark);
+            background: #F8FAFC;
+        }
+
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.45rem;
+            background: linear-gradient(135deg, var(--cta-orange) 0%, #EA580C 100%);
+            color: #FFFFFF;
+            font-size: 0.88rem;
+            font-weight: 700;
+            padding: 0.65rem 1.35rem;
+            border-radius: 8px;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 14px rgba(249, 115, 22, 0.32);
+            transition: all 0.25s ease;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(249, 115, 22, 0.45);
+            background: linear-gradient(135deg, #FB923C 0%, #EA580C 100%);
+        }
+
+        .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.45rem;
+            background: #FFFFFF;
+            color: var(--tech-navy);
+            border: 1.5px solid var(--border-card);
+            font-size: 0.88rem;
+            font-weight: 600;
+            padding: 0.65rem 1.25rem;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: all 0.25s ease;
+        }
+
+        .btn-secondary:hover {
+            background: #F1F5F9;
+            border-color: #CBD5E1;
+            color: var(--tech-navy);
+        }
+
+        .btn-wa {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            background: #10B981;
+            color: #FFFFFF;
+            font-size: 0.88rem;
+            font-weight: 600;
+            padding: 0.65rem 1.25rem;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: all 0.25s ease;
+            box-shadow: 0 3px 10px rgba(16, 185, 129, 0.25);
+        }
+
+        .btn-wa:hover {
+            background: #059669;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(16, 185, 129, 0.35);
+        }
+
+        /* SECTION BASE STYLES */
+        .section-padding {
+            padding: 4.5rem 0;
+        }
+
+        .bg-light {
+            background-color: var(--bg-page);
+        }
+
+        .bg-white {
+            background-color: #FFFFFF;
+        }
+
+        .bg-dark-tech {
+            background: radial-gradient(circle at 85% 15%, rgba(99, 102, 241, 0.12) 0%, transparent 60%),
+                        radial-gradient(circle at 15% 85%, rgba(6, 182, 212, 0.1) 0%, transparent 55%),
+                        var(--tech-navy);
+            color: #FFFFFF;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 760px;
+            margin: 0 auto 3rem auto;
+        }
+
+        .eyebrow {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--indigo-primary);
+            background: var(--indigo-light);
+            padding: 0.25rem 0.8rem;
+            border-radius: 9999px;
+            margin-bottom: 0.75rem;
+            border: 1px solid #E0E7FF;
+        }
+
+        .eyebrow-dark {
+            color: var(--cyan-accent);
+            background: rgba(6, 182, 212, 0.12);
+            border-color: rgba(6, 182, 212, 0.3);
+        }
+
+        .section-title {
+            font-size: 2.15rem;
+            font-weight: 800;
+            color: var(--text-heading);
+            line-height: 1.25;
+            margin-bottom: 0.75rem;
+        }
+
+        .section-title-dark {
+            color: #FFFFFF;
+        }
+
+        .section-subtitle {
+            font-size: 1.05rem;
+            color: var(--text-body);
+            line-height: 1.6;
+        }
+
+        .section-subtitle-dark {
+            color: #94A3B8;
+        }
+
+        /* 1. HERO SECTION */
+        .hero-section {
+            position: relative;
+            background: linear-gradient(135deg, #0A1428 0%, #0F172A 50%, #1E1B4B 100%);
+            color: #FFFFFF;
+            padding: 4rem 0 5rem 0;
+            overflow: hidden;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .hero-bg-pattern {
+            position: absolute;
+            inset: 0;
+            background-image: 
+                radial-gradient(rgba(99, 102, 241, 0.15) 1px, transparent 1px),
+                radial-gradient(rgba(6, 182, 212, 0.1) 1px, transparent 1px);
+            background-size: 32px 32px;
+            background-position: 0 0, 16px 16px;
+            opacity: 0.6;
+            pointer-events: none;
+        }
+
+        .hero-glow-1 {
+            position: absolute;
+            top: -10%;
+            left: -10%;
+            width: 450px;
+            height: 450px;
+            background: radial-gradient(circle, rgba(99, 102, 241, 0.25) 0%, transparent 70%);
+            filter: blur(80px);
+            pointer-events: none;
+        }
+
+        .hero-glow-2 {
+            position: absolute;
+            bottom: -15%;
+            right: -5%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(6, 182, 212, 0.2) 0%, transparent 70%);
+            filter: blur(90px);
+            pointer-events: none;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        @media (min-width: 992px) {
+            .hero-grid {
+                grid-template-columns: 1.15fr 1fr;
+                gap: 3.5rem;
+            }
+        }
+
+        .hero-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.35rem 0.85rem;
+            border-radius: 9999px;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            color: #F8FAFC;
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 0.03em;
+            margin-bottom: 1.25rem;
+        }
+
+        .pulse-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--cta-orange);
+            box-shadow: 0 0 10px var(--cta-orange);
+        }
+
+        .hero-h1 {
+            font-size: 2.5rem;
+            font-weight: 900;
+            line-height: 1.18;
+            margin-bottom: 1.2rem;
+            color: #FFFFFF;
+            letter-spacing: -0.02em;
+        }
+
+        @media (min-width: 768px) {
+            .hero-h1 {
+                font-size: 3.1rem;
+            }
+        }
+
+        .accent-gradient {
+            background: linear-gradient(135deg, #38BDF8 0%, #818CF8 50%, #F472B6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .accent-orange {
+            color: #FB923C;
+        }
+
+        .hero-p {
+            font-size: 1.08rem;
+            color: #CBD5E1;
+            line-height: 1.65;
+            margin-bottom: 1.5rem;
+            max-width: 580px;
+        }
+
+        /* Status Notice Card */
+        .status-notice {
+            background: rgba(255, 255, 255, 0.06);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-left: 4px solid var(--cta-orange);
+            border-radius: 10px;
+            padding: 0.85rem 1.15rem;
+            font-size: 0.82rem;
+            color: #E2E8F0;
+            margin-bottom: 1.75rem;
+            line-height: 1.5;
+        }
+
+        .status-notice strong {
+            color: #FFFFFF;
+            display: inline-block;
+            margin-right: 0.35rem;
+        }
+
+        /* Feature Badges in 2x2 */
+        .hero-badges-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.75rem;
+            margin-bottom: 2rem;
+        }
+
+        .hero-badge-pill {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.55rem 0.85rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            font-size: 0.78rem;
+            color: #F1F5F9;
+            font-weight: 600;
+        }
+
+        .hero-badge-icon {
+            color: var(--cyan-accent);
+            flex-shrink: 0;
+        }
+
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.85rem;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        .hero-trust-strip {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.25rem;
+            align-items: center;
+            padding-top: 1.25rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.78rem;
+            color: #94A3B8;
+        }
+
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .trust-stars {
+            color: #FBBF24;
+            font-weight: 800;
+            letter-spacing: 1px;
+        }
+
+        /* HERO RIGHT VISUAL UI CARD (Tech Mentorship Mockup) */
+        .hero-mockup-wrapper {
+            position: relative;
+        }
+
+        .hero-mockup-card {
+            background: #0B132B;
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6), 0 0 30px rgba(99, 102, 241, 0.2);
+            overflow: hidden;
+        }
+
+        .mockup-top-bar {
+            background: #070D1E;
+            padding: 0.75rem 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            font-family: var(--font-mono);
+            font-size: 0.7rem;
+            color: #94A3B8;
+        }
+
+        .mockup-dots {
+            display: flex;
+            gap: 6px;
+        }
+
+        .mockup-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+        }
+
+        .dot-red { background: #EF4444; }
+        .dot-yellow { background: #F59E0B; }
+        .dot-green { background: #10B981; }
+
+        .mockup-city-tag {
+            background: rgba(249, 115, 22, 0.2);
+            color: #FB923C;
+            padding: 0.15rem 0.5rem;
+            border-radius: 4px;
+            font-weight: 700;
+            font-size: 0.65rem;
+        }
+
+        .mockup-body {
+            padding: 1.25rem;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.25rem;
+        }
+
+        @media (min-width: 640px) {
+            .mockup-body {
+                grid-template-columns: 1fr 1.2fr;
+            }
+        }
+
+        .mockup-mentor-card {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            padding: 1rem;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .mentor-photo-wrap {
+            position: relative;
+            width: 84px;
+            height: 84px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid #6366F1;
+            margin-bottom: 0.75rem;
+            box-shadow: 0 0 20px rgba(99, 102, 241, 0.4);
+        }
+
+        .mentor-photo-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .mentor-badge {
+            background: linear-gradient(135deg, #10B981, #059669);
+            color: #FFFFFF;
+            font-size: 0.65rem;
+            font-weight: 800;
+            padding: 0.2rem 0.5rem;
+            border-radius: 9999px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5rem;
+        }
+
+        .mentor-name {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: #FFFFFF;
+            margin-bottom: 0.2rem;
+        }
+
+        .mentor-role {
+            font-size: 0.72rem;
+            color: #94A3B8;
+            margin-bottom: 0.75rem;
+        }
+
+        .mentor-desk-strip {
+            width: 100%;
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 8px;
+            padding: 0.5rem;
+            font-size: 0.68rem;
+            color: #38BDF8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.35rem;
+        }
+
+        /* Right rubric UI */
+        .mockup-rubric-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .rubric-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 0.85rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+            padding-bottom: 0.5rem;
+        }
+
+        .rubric-title {
+            font-size: 0.72rem;
+            font-weight: 700;
+            color: #94A3B8;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .rubric-timer {
+            display: flex;
+            align-items: center;
+            gap: 0.35rem;
+            background: rgba(99, 102, 241, 0.2);
+            color: #A5B4FC;
+            font-size: 0.68rem;
+            font-weight: 700;
+            padding: 0.2rem 0.5rem;
+            border-radius: 6px;
+        }
+
+        .rubric-bars {
+            display: flex;
+            flex-direction: column;
+            gap: 0.65rem;
+            margin-bottom: 1rem;
+        }
+
+        .rubric-item {
+            font-size: 0.7rem;
+        }
+
+        .rubric-label-val {
+            display: flex;
+            justify-content: space-between;
+            color: #CBD5E1;
+            margin-bottom: 0.25rem;
+            font-weight: 600;
+        }
+
+        .rubric-track {
+            height: 6px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 9999px;
+            overflow: hidden;
+        }
+
+        .rubric-fill-1 {
+            width: 94%;
+            height: 100%;
+            background: linear-gradient(90deg, #6366F1, #38BDF8);
+            border-radius: 9999px;
+        }
+
+        .rubric-fill-2 {
+            width: 88%;
+            height: 100%;
+            background: linear-gradient(90deg, #06B6D4, #10B981);
+            border-radius: 9999px;
+        }
+
+        .rubric-fill-3 {
+            width: 92%;
+            height: 100%;
+            background: linear-gradient(90deg, #F59E0B, #EF4444);
+            border-radius: 9999px;
+        }
+
+        .rubric-verdict {
+            background: rgba(16, 185, 129, 0.12);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            border-radius: 8px;
+            padding: 0.45rem 0.65rem;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-size: 0.68rem;
+            color: #34D399;
+            font-weight: 700;
+        }
+
+        .mockup-timeline-bar {
+            background: #070D1E;
+            padding: 0.75rem 1rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 0.65rem;
+            color: #64748B;
+            font-family: var(--font-mono);
+        }
+
+        .timeline-step-active {
+            color: #38BDF8;
+            font-weight: 700;
+        }
+
+        /* 2. PROBLEM SECTION */
+        .problem-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        @media (min-width: 640px) {
+            .problem-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .problem-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        .problem-card {
+            background: #FFFFFF;
+            border: 1px solid #FED7AA;
+            border-top: 4px solid #EA580C;
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .problem-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px -6px rgba(234, 88, 12, 0.12);
+        }
+
+        .problem-icon-wrap {
+            width: 44px;
+            height: 44px;
+            border-radius: 10px;
+            background: #FFF7ED;
+            color: #EA580C;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.15rem;
+        }
+
+        .problem-h3 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--text-heading);
+            margin-bottom: 0.6rem;
+            line-height: 1.35;
+        }
+
+        .problem-p {
+            font-size: 0.88rem;
+            color: var(--text-body);
+            line-height: 1.55;
+        }
+
+        /* 3. SOLUTION SECTION */
+        .solution-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.75rem;
+        }
+
+        @media (min-width: 900px) {
+            .solution-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .solution-card {
+            background: #FFFFFF;
+            border: 1px solid var(--border-card);
+            border-radius: 14px;
+            padding: 2rem;
+            box-shadow: 0 10px 25px -5px rgba(11, 19, 43, 0.05);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: all 0.25s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .solution-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--indigo-primary), var(--cyan-accent));
+            opacity: 0;
+            transition: opacity 0.25s ease;
+        }
+
+        .solution-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 18px 30px -8px rgba(99, 102, 241, 0.15);
+            border-color: #CBD5E1;
+        }
+
+        .solution-card:hover::before {
+            opacity: 1;
+        }
+
+        .solution-icon-wrap {
+            width: 52px;
+            height: 52px;
+            border-radius: 12px;
+            background: #EEF2FF;
+            color: var(--indigo-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.25rem;
+        }
+
+        .solution-h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--text-heading);
+            margin-bottom: 0.75rem;
+        }
+
+        .solution-p {
+            font-size: 0.92rem;
+            color: var(--text-body);
+            line-height: 1.6;
+            margin-bottom: 1.25rem;
+        }
+
+        .solution-tag-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            font-size: 0.82rem;
+            color: var(--text-body);
+        }
+
+        .solution-tag-item {
+            display: flex;
+            align-items: center;
+            gap: 0.45rem;
+        }
+
+        .solution-tag-item svg {
+            color: var(--emerald-accent);
+            flex-shrink: 0;
+        }
+
+        /* 4. BENEFITS SECTION */
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        @media (min-width: 640px) {
+            .benefits-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .benefits-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        .benefit-card {
+            background: #FFFFFF;
+            border: 1px solid var(--border-card);
+            border-radius: 14px;
+            padding: 1.75rem;
+            text-align: left;
+            transition: all 0.25s ease;
+        }
+
+        .benefit-card:hover {
+            border-color: var(--indigo-primary);
+            box-shadow: 0 10px 25px -5px rgba(99, 102, 241, 0.1);
+            transform: translateY(-3px);
+        }
+
+        .benefit-stat {
+            font-size: 2.25rem;
+            font-weight: 900;
+            font-family: var(--font-display);
+            background: linear-gradient(135deg, var(--indigo-primary) 0%, var(--cyan-accent) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.5rem;
+            line-height: 1;
+        }
+
+        .benefit-title {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--text-heading);
+            margin-bottom: 0.5rem;
+        }
+
+        .benefit-desc {
+            font-size: 0.86rem;
+            color: var(--text-body);
+            line-height: 1.55;
+        }
+
+        /* 5. CORE PILLARS SECTION */
+        .pillars-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.75rem;
+        }
+
+        @media (min-width: 768px) {
+            .pillars-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .pillar-card {
+            background: #FFFFFF;
+            border: 1px solid var(--border-card);
+            border-radius: 16px;
+            padding: 2.25rem;
+            position: relative;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+            transition: all 0.25s ease;
+        }
+
+        .pillar-card:hover {
+            border-color: var(--indigo-primary);
+            box-shadow: 0 15px 30px -10px rgba(99, 102, 241, 0.15);
+            transform: translateY(-4px);
+        }
+
+        .pillar-header-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 1.25rem;
+        }
+
+        .pillar-number {
+            font-family: var(--font-mono);
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--indigo-primary);
+            background: var(--indigo-light);
+            padding: 0.25rem 0.65rem;
+            border-radius: 6px;
+            letter-spacing: 0.05em;
+        }
+
+        .pillar-icon-box {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            background: #F8FAFC;
+            border: 1px solid var(--border-card);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--tech-navy);
+        }
+
+        .pillar-h3 {
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: var(--text-heading);
+            margin-bottom: 0.75rem;
+            line-height: 1.3;
+        }
+
+        .pillar-desc {
+            font-size: 0.92rem;
+            color: var(--text-body);
+            line-height: 1.6;
+            margin-bottom: 1.25rem;
+        }
+
+        .pillar-features-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.55rem;
+            font-size: 0.84rem;
+            color: var(--text-body);
+            border-top: 1px dashed var(--border-card);
+            padding-top: 1rem;
+        }
+
+        .pillar-feature-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .pillar-feature-item svg {
+            color: var(--emerald-accent);
+            flex-shrink: 0;
+        }
+
+        /* 6. HOW IT WORKS (JOURNEY) */
+        .journey-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            position: relative;
+        }
+
+        @media (min-width: 640px) {
+            .journey-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .journey-grid {
+                grid-template-columns: repeat(5, 1fr);
+            }
+        }
+
+        .journey-card {
+            background: #FFFFFF;
+            border: 1px solid var(--border-card);
+            border-radius: 14px;
+            padding: 2rem 1.5rem;
+            position: relative;
+            transition: all 0.25s ease;
+        }
+
+        .journey-card:hover {
+            border-color: var(--cyan-accent);
+            box-shadow: 0 12px 24px -6px rgba(6, 182, 212, 0.15);
+            transform: translateY(-4px);
+        }
+
+        .journey-badge {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--indigo-primary), var(--cyan-accent));
+            color: #FFFFFF;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-display);
+            font-weight: 800;
+            font-size: 1.15rem;
+            margin-bottom: 1.25rem;
+            box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+        }
+
+        .journey-step-title {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--text-heading);
+            margin-bottom: 0.65rem;
+        }
+
+        .journey-step-desc {
+            font-size: 0.88rem;
+            color: var(--text-body);
+            line-height: 1.55;
+        }
+
+        /* 7. WHY KNOWLETIVE */
+        .why-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.75rem;
+        }
+
+        @media (min-width: 768px) {
+            .why-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .why-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 14px;
+            padding: 2rem;
+            transition: all 0.25s ease;
+        }
+
+        .why-card:hover {
+            border-color: rgba(6, 182, 212, 0.4);
+            background: rgba(255, 255, 255, 0.08);
+            transform: translateY(-3px);
+        }
+
+        .why-icon {
+            color: var(--cyan-accent);
+            margin-bottom: 1.2rem;
+        }
+
+        .why-h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #FFFFFF;
+            margin-bottom: 0.65rem;
+        }
+
+        .why-p {
+            font-size: 0.9rem;
+            color: #CBD5E1;
+            line-height: 1.6;
+        }
+
+        /* 8. PROOF & TESTIMONIALS */
+        .proof-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        @media (min-width: 900px) {
+            .proof-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .proof-card {
+            background: #FFFFFF;
+            border: 1px solid var(--border-card);
+            border-radius: 14px;
+            padding: 1.75rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.03);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .proof-stars {
+            color: #F59E0B;
+            font-size: 0.85rem;
+            margin-bottom: 0.85rem;
+            letter-spacing: 2px;
+        }
+
+        .proof-quote {
+            font-size: 0.9rem;
+            color: var(--text-body);
+            line-height: 1.6;
+            margin-bottom: 1.25rem;
+            font-style: italic;
+        }
+
+        .proof-author {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            border-top: 1px solid var(--border-subtle);
+            padding-top: 1rem;
+        }
+
+        .proof-avatar {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            background: #EEF2FF;
+            color: var(--indigo-dark);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 0.95rem;
+        }
+
+        .author-name {
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: var(--text-heading);
+        }
+
+        .author-role {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+        }
+
+        /* 9. PRICING & SPRINTS */
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            max-width: 960px;
+            margin: 0 auto;
+        }
+
+        @media (min-width: 768px) {
+            .pricing-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .pricing-card {
+            background: #FFFFFF;
+            border: 1.5px solid var(--border-card);
+            border-radius: 16px;
+            padding: 2.25rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            transition: all 0.25s ease;
+        }
+
+        .pricing-card-featured {
+            border-color: var(--indigo-primary);
+            box-shadow: 0 15px 35px -5px rgba(99, 102, 241, 0.2);
+            transform: scale(1.02);
+        }
+
+        .pricing-badge {
+            position: absolute;
+            top: -12px;
+            right: 20px;
+            background: linear-gradient(135deg, var(--cta-orange), #EA580C);
+            color: #FFFFFF;
+            font-size: 0.7rem;
+            font-weight: 800;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .pricing-tier-name {
+            font-size: 1.35rem;
+            font-weight: 800;
+            color: var(--text-heading);
+            margin-bottom: 0.4rem;
+        }
+
+        .pricing-tier-desc {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+        }
+
+        .pricing-price-box {
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.25rem;
+            border-bottom: 1px solid var(--border-card);
+        }
+
+        .pricing-term-notice {
+            font-size: 0.82rem;
+            font-weight: 600;
+            color: var(--indigo-primary);
+            display: flex;
+            align-items: center;
+            gap: 0.35rem;
+        }
+
+        .pricing-feature-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.7rem;
+            font-size: 0.88rem;
+            color: var(--text-body);
+            margin-bottom: 2rem;
+        }
+
+        .pricing-feature-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.5rem;
+        }
+
+        .pricing-feature-item svg {
+            color: var(--emerald-accent);
+            flex-shrink: 0;
+            margin-top: 3px;
+        }
+
+        /* 10. FAQ ACCORDION (Pure CSS Native Details) */
+        .faq-wrapper {
+            max-width: 820px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        details.faq-item {
+            background: #FFFFFF;
+            border: 1px solid var(--border-card);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        details.faq-item[open] {
+            border-color: var(--indigo-primary);
+            box-shadow: 0 4px 14px rgba(99, 102, 241, 0.08);
+        }
+
+        summary.faq-question {
+            list-style: none;
+            padding: 1.25rem 1.5rem;
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--text-heading);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            user-select: none;
+        }
+
+        summary.faq-question::-webkit-details-marker {
+            display: none;
+        }
+
+        .faq-chevron {
+            width: 20px;
+            height: 20px;
+            color: var(--indigo-primary);
+            transition: transform 0.25s ease;
+            flex-shrink: 0;
+        }
+
+        details[open] .faq-chevron {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            padding: 0 1.5rem 1.25rem 1.5rem;
+            font-size: 0.92rem;
+            color: var(--text-body);
+            line-height: 1.65;
+            border-top: 1px solid var(--border-subtle);
+            padding-top: 1rem;
+        }
+
+        /* 11. LEAD INQUIRY FORM (Coachgenie Exact Fields) */
+        .lead-form-section {
+            background: #F8FAFC;
+            position: relative;
+        }
+
+        .form-card-container {
+            max-width: 720px;
+            margin: 0 auto;
+            background: #FFFFFF;
+            border: 1px solid var(--border-card);
+            border-radius: 20px;
+            padding: 2.5rem;
+            box-shadow: 0 20px 40px -10px rgba(11, 19, 43, 0.08);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .form-top-accent {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, var(--indigo-primary), var(--cyan-accent), var(--cta-orange));
+        }
+
+        .form-header-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.25rem 0.75rem;
+            background: #EEF2FF;
+            color: var(--indigo-dark);
+            border-radius: 9999px;
+            font-size: 0.72rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.75rem;
+        }
+
+        .form-h3 {
+            font-size: 1.75rem;
+            font-weight: 800;
+            color: var(--text-heading);
+            margin-bottom: 0.5rem;
+        }
+
+        .form-p {
+            font-size: 0.92rem;
+            color: var(--text-muted);
+            margin-bottom: 1.75rem;
+        }
+
+        .inquiry-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+        }
+
+        .form-label {
+            font-size: 0.84rem;
+            font-weight: 700;
+            color: var(--text-heading);
+        }
+
+        .required-star {
+            color: #EF4444;
+        }
+
+        .form-input, .form-select, .form-textarea {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            font-size: 0.92rem;
+            font-family: inherit;
+            color: var(--text-heading);
+            background: #FFFFFF;
+            border: 1.5px solid var(--border-card);
+            border-radius: 8px;
+            transition: all 0.2s ease;
+        }
+
+        .form-input:focus, .form-select:focus, .form-textarea:focus {
+            outline: none;
+            border-color: var(--indigo-primary);
+            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
+        }
+
+        .phone-group-wrap {
+            display: flex;
+            border: 1.5px solid var(--border-card);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: all 0.2s ease;
+        }
+
+        .phone-group-wrap:focus-within {
+            border-color: var(--indigo-primary);
+            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
+        }
+
+        .phone-prefix {
+            display: flex;
+            align-items: center;
+            gap: 0.35rem;
+            padding: 0.75rem 0.85rem;
+            background: #F1F5F9;
+            border-right: 1px solid var(--border-card);
+            font-size: 0.88rem;
+            font-weight: 600;
+            color: var(--text-body);
+        }
+
+        .phone-input {
+            border: none;
+            border-radius: 0;
+            padding: 0.75rem 1rem;
+            flex: 1;
+            font-size: 0.92rem;
+            color: var(--text-heading);
+            outline: none;
+        }
+
+        .checkbox-label {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.65rem;
+            font-size: 0.82rem;
+            color: var(--text-body);
+            line-height: 1.45;
+            cursor: pointer;
+        }
+
+        .checkbox-label input[type="checkbox"] {
+            margin-top: 3px;
+            accent-color: var(--indigo-primary);
+            width: 16px;
+            height: 16px;
+        }
+
+        .form-btn-submit {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            background: linear-gradient(135deg, var(--cta-orange) 0%, #EA580C 100%);
+            color: #FFFFFF;
+            font-size: 1rem;
+            font-weight: 700;
+            padding: 0.95rem 1.5rem;
+            border-radius: 10px;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 6px 20px rgba(249, 115, 22, 0.35);
+            transition: all 0.25s ease;
+            margin-top: 0.5rem;
+        }
+
+        .form-btn-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(249, 115, 22, 0.45);
+            background: linear-gradient(135deg, #FB923C 0%, #EA580C 100%);
+        }
+
+        .form-privacy-note {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.4rem;
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            margin-top: 0.75rem;
+        }
+
+        /* 12. FINAL CTA */
+        .final-cta-section {
+            background: linear-gradient(135deg, var(--tech-navy) 0%, #1E1B4B 100%);
+            color: #FFFFFF;
+            padding: 5rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .final-cta-inner {
+            max-width: 760px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .final-cta-h2 {
+            font-size: 2.3rem;
+            font-weight: 900;
+            margin-bottom: 1rem;
+            line-height: 1.25;
+            color: #FFFFFF;
+        }
+
+        .final-cta-p {
+            font-size: 1.05rem;
+            color: #CBD5E1;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        .final-cta-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* FOOTER */
+        .footer {
+            background: var(--tech-navy-dark);
+            color: #94A3B8;
+            padding: 3.5rem 0 2rem 0;
+            font-size: 0.85rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .footer-inner {
+            display: flex;
+            flex-direction: column;
+            gap: 2.5rem;
+        }
+
+        .footer-top {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        @media (min-width: 768px) {
+            .footer-top {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: flex-start;
+            }
+        }
+
+        .footer-brand-col {
+            max-width: 420px;
+        }
+
+        .footer-company-name {
+            color: #FFFFFF;
+            font-weight: 700;
+            font-size: 1rem;
+            margin-top: 0.75rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .footer-bottom-row {
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            padding-top: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            font-size: 0.75rem;
+        }
+
+        /* FLOATING WHATSAPP BUTTON */
+        .floating-whatsapp {
+            position: fixed;
+            bottom: 85px;
+            right: 20px;
+            z-index: 99;
+            background: #25D366;
+            color: #FFFFFF;
+            border-radius: 9999px;
+            padding: 0.65rem 1.15rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.82rem;
+            font-weight: 700;
+            text-decoration: none;
+            box-shadow: 0 4px 18px rgba(37, 211, 102, 0.4);
+            transition: all 0.25s ease;
+        }
+
+        .floating-whatsapp:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 8px 24px rgba(37, 211, 102, 0.5);
+            background: #20BA5A;
+        }
+
+        @media (min-width: 769px) {
+            .floating-whatsapp {
+                bottom: 25px;
+                right: 25px;
+            }
+        }
+
+        /* STICKY MOBILE BOTTOM CONVERSION BAR */
+        .sticky-mobile-bar {
+            display: flex;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 90;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(8px);
+            border-top: 1px solid var(--border-card);
+            padding: 0.65rem 1rem;
+            gap: 0.75rem;
+            box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.08);
+        }
+
+        @media (min-width: 769px) {
+            .sticky-mobile-bar {
+                display: none;
+            }
+        }
+
+        .btn-mobile-call {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.35rem;
+            background: #F1F5F9;
+            color: var(--tech-navy);
+            font-size: 0.85rem;
+            font-weight: 700;
+            padding: 0.65rem;
+            border-radius: 8px;
+            text-decoration: none;
+            border: 1px solid var(--border-card);
+        }
+
+        .btn-mobile-book {
+            flex: 1.4;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.35rem;
+            background: linear-gradient(135deg, var(--cta-orange) 0%, #EA580C 100%);
+            color: #FFFFFF;
+            font-size: 0.85rem;
+            font-weight: 700;
+            padding: 0.65rem;
+            border-radius: 8px;
+            text-decoration: none;
+            box-shadow: 0 2px 8px rgba(249, 115, 22, 0.3);
+        }
+
+        /* COOKIE NOTICE BANNER (Pure CSS Dismiss using :target) */
+        .cookie-banner {
+            position: fixed;
+            bottom: 90px;
+            left: 20px;
+            max-width: 380px;
+            background: rgba(11, 19, 43, 0.95);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 12px;
+            padding: 1rem;
+            color: #CBD5E1;
+            font-size: 0.76rem;
+            line-height: 1.45;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+            z-index: 80;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+
+        .cookie-banner:target {
+            display: none !important;
+        }
+
+        @media (max-width: 640px) {
+            .cookie-banner {
+                display: none;
+            }
+        }
+
+        .cookie-banner-actions {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .cookie-btn-accept {
+            background: var(--cta-orange);
+            color: #FFFFFF;
+            font-size: 0.72rem;
+            font-weight: 700;
+            padding: 0.35rem 0.75rem;
+            border-radius: 6px;
+            text-decoration: none;
+        }
+
+        .cookie-btn-dismiss {
+            background: rgba(255, 255, 255, 0.1);
+            color: #E2E8F0;
+            font-size: 0.72rem;
+            font-weight: 600;
+            padding: 0.35rem 0.65rem;
+            border-radius: 6px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===================================================================== -->
+    <!-- 1. TOP HEADER & NAVIGATION                                            -->
+    <!-- ===================================================================== -->
+        <!-- Global Header -->
+    <header class="top-header">
+        <div class="header-inner">
+            <a href="#sec-hero" class="brand-logo-link" aria-label="Knowletive Smart School Management">
+                <img src="assets/knowletive-logo-counseling-large.png" alt="Knowletive Smart School Management • Baner, Pune" class="brand-logo-img">
+            </a>
+            <div class="header-actions">
+                <a href="tel:+919970600116" class="btn-call">
+                    <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+                    <span>+91 99706 00116</span>
+                </a>
+                <a href="#sec-lead-form" class="btn-primary">
+                    Book School Demo
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===================================================================== -->
+    <!-- 1. HERO SECTION                                                       -->
+    <!-- ===================================================================== -->
+    <section id="sec-hero" class="hero-section">
+        <div class="hero-bg-pattern"></div>
+        <div class="hero-glow-1"></div>
+        <div class="hero-glow-2"></div>
+
+        <div class="container">
+            <div class="hero-grid">
+                
+                <!-- Left: Hero Pitch -->
+                <div class="hero-content-col">
+                    <div class="hero-tag">
+                        <span class="pulse-dot"></span>
+                        KNOWLETIVE SMART SCHOOL MANAGEMENT &bull; CLOUD INSTITUTE PLATFORM
+                    </div>
+
+                    <h1 class="hero-h1">
+                        Knowletive Smart School <br>
+                        <span class="accent-gradient">Management Platform.</span>
+                    </h1>
+
+                    <p class="hero-p">
+                        Interactive cloud platform designed for school owners, directors, principals, teachers, and office staff. Step-by-step module workflows, role-based security, automated fee billing, and real-time classroom operations.
+                    </p>
+
+                    <!-- Honest Status Notice -->
+                    <div class="status-notice">
+                        <strong>🚀 Rapid 5-Step Setup Roadmap:</strong>
+                        Setting up your institute in Knowletive takes less than an hour. Tie active academic sessions (2026–2027), link class architecture, onboard staff with role permissions, and import students with automated parent linking.
+                    </div>
+
+                    <!-- 2x2 Feature Check Pills -->
+                    <div class="hero-badges-grid">
+                        <div class="hero-badge-pill">
+                            <svg class="hero-badge-icon" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                            <span>&lt;30-Second Mobile Roll Call</span>
+                        </div>
+                        <div class="hero-badge-pill">
+                            <svg class="hero-badge-icon" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                            <span>Itemized Fees &amp; Instant Receipts</span>
+                        </div>
+                        <div class="hero-badge-pill">
+                            <svg class="hero-badge-icon" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                            <span>Role-Based Privacy &amp; Zero Leaks</span>
+                        </div>
+                        <div class="hero-badge-pill">
+                            <svg class="hero-badge-icon" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                            <span>Tamper-Proof Report Cards &amp; AI Studio</span>
+                        </div>
+                    </div>
+
+                    <!-- Hero Action Buttons -->
+                    <div class="hero-actions">
+                        <a href="#sec-lead-form" class="btn-primary" style="font-size: 0.95rem; padding: 0.85rem 1.75rem;">
+                            Book School Demo &rarr;
+                        </a>
+                        <a href="https://wa.me/919970600116?text=Hi%20Knowletive%2C%20I%20would%20like%20to%20learn%20more%20about%20Knowletive%20Smart%20School%20Management." target="_blank" rel="noopener noreferrer" class="btn-wa">
+                            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.698.077-2.124-.515-1.826-.757-3.003-2.613-3.094-2.736-.091-.123-.746-.992-.746-1.893 0-.901.472-1.343.64-1.525.168-.182.368-.228.49-.228.123 0 .245.002.353.007.113.005.265-.043.415.317.154.368.524 1.277.57 1.369.046.091.077.199.015.321-.061.123-.092.199-.184.307-.092.108-.194.24-.277.322-.092.091-.188.19-.081.373.107.183.477.788 1.025 1.275.706.628 1.302.822 1.486.914.184.091.292.077.4-.047.108-.123.461-.537.584-.72.123-.184.246-.153.415-.091.169.061 1.074.507 1.258.599.184.092.307.138.353.215.046.077.046.446-.098.851z"/></svg>
+                            <span>Chat on WhatsApp</span>
+                        </a>
+                    </div>
+
+                    <!-- Trust Strip -->
+                    <div class="hero-trust-strip">
+                        <div class="trust-item">
+                            <span class="trust-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                            <span><strong>4.9/5</strong> (School Directors &amp; Admins)</span>
+                        </div>
+                        <div class="trust-item">
+                            <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+                            <span>50,000+ Students &amp; Parents</span>
+                        </div>
+                        <div class="trust-item">
+                            <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                            <span>ISO 9001:2015 Certified System</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: High-Converting School Management UI Mockup -->
+                <div class="hero-mockup-wrapper">
+                    <div class="hero-mockup-card">
+                        <!-- Top Terminal Window Bar -->
+                        <div class="mockup-top-bar">
+                            <div class="mockup-dots">
+                                <span class="mockup-dot dot-red"></span>
+                                <span class="mockup-dot dot-yellow"></span>
+                                <span class="mockup-dot dot-green"></span>
+                            </div>
+                            <span>KNOWLETIVE CLOUD PLATFORM &bull; DAILY OPERATIONS DESK</span>
+                            <span class="mockup-city-tag">SESSION 2026&ndash;2027</span>
+                        </div>
+
+                        <!-- Mockup Body -->
+                        <div class="mockup-body">
+                            
+                            <!-- Institute Profile Preview -->
+                            <div class="mockup-mentor-card">
+                                <div class="mentor-photo-wrap">
+                                    <img src="assets/counselor-session.jpg" alt="School Director &amp; Administrator Hub">
+                                </div>
+                                <span class="mentor-badge">School Admin / Director</span>
+                                <h4 class="mentor-name">Institute Command Hub</h4>
+                                <p class="mentor-role">Active Session 2026&ndash;2027 &bull; CBSE / State</p>
+                                <div class="mentor-desk-strip">
+                                    <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
+                                    <span>Chrome &bull; Safari &bull; iOS &bull; Android Ready</span>
+                                </div>
+                            </div>
+
+                            <!-- Operations Live Monitor Preview -->
+                            <div class="mockup-rubric-card">
+                                <div class="rubric-header">
+                                    <span class="rubric-title">Daily Operations Monitor</span>
+                                    <div class="rubric-timer">
+                                        <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                                        <span>30-SEC ROLL CALL</span>
+                                    </div>
+                                </div>
+
+                                <div class="rubric-bars">
+                                    <div class="rubric-item">
+                                        <div class="rubric-label-val">
+                                            <span>Morning Attendance (Grade 1-12)</span>
+                                            <span style="color: #38BDF8;">98.4% Present</span>
+                                        </div>
+                                        <div class="rubric-track">
+                                            <div class="rubric-fill-1"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="rubric-item">
+                                        <div class="rubric-label-val">
+                                            <span>Fee Ledger (Partial / Full Receipts)</span>
+                                            <span style="color: #34D399;">₹15,000 Collected</span>
+                                        </div>
+                                        <div class="rubric-track">
+                                            <div class="rubric-fill-2"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="rubric-item">
+                                        <div class="rubric-label-val">
+                                            <span>Exam Gradebook (Audit Locked)</span>
+                                            <span style="color: #F87171;">Published 100%</span>
+                                        </div>
+                                        <div class="rubric-track">
+                                            <div class="rubric-fill-3"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="rubric-verdict">
+                                    <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                                    <span>Zero Administrative Leaks &bull; Role-Protected</span>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- Milestone Bottom Track -->
+                        <div class="mockup-timeline-bar">
+                            <span class="timeline-step-active">01. Profile Setup &rarr;</span>
+                            <span class="timeline-step-active">02. Class Architecture &rarr;</span>
+                            <span class="timeline-step-active">03. Staff Roles &rarr;</span>
+                            <span style="color: #10B981; font-weight: 700;">04. Go Live &#10003;</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- 2. PROBLEM SECTION (TRADITIONAL SCHOOL MANAGEMENT HEADACHES)          -->
+    <!-- ===================================================================== -->
+    <section id="sec-problem" class="section-padding bg-light">
+        <div class="container">
+            <div class="section-header">
+                <span class="eyebrow">Traditional School Headaches</span>
+                <h2 class="section-title">Why Manual Registers &amp; Disconnected Software Cripple School Operations</h2>
+                <p class="section-subtitle">Paper registers, fee leakage, unrecorded parent inquiries, and accidental grade tampering cost school owners peace of mind and lakhs in revenue every session.</p>
+            </div>
+
+            <div class="problem-grid">
+                <div class="problem-card">
+                    <div class="problem-icon-wrap">
+                        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+                    </div>
+                    <h3 class="problem-h3">Fee Leakage &amp; Peer Embarrassment</h3>
+                    <p class="problem-p">When teachers see who owes fees or record cash without itemized receipts, accounting discrepancies arise and students face unnecessary embarrassment in front of classmates.</p>
+                </div>
+
+                <div class="problem-card">
+                    <div class="problem-icon-wrap">
+                        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
+                    </div>
+                    <h3 class="problem-h3">Lost Inquiries &amp; Missed Admissions</h3>
+                    <p class="problem-p">Walk-in parents and phone inquiries recorded in paper diaries get forgotten. Front desk staff fail to follow up, leaking high-value admissions to competing schools.</p>
+                </div>
+
+                <div class="problem-card">
+                    <div class="problem-icon-wrap">
+                        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+                    </div>
+                    <h3 class="problem-h3">Mark Tampering &amp; Unaudited Changes</h3>
+                    <p class="problem-p">Unprotected spreadsheets and manual report cards allow unverified grade changes without audit trails, destroying parent trust during final evaluations.</p>
+                </div>
+
+                <div class="problem-card">
+                    <div class="problem-icon-wrap">
+                        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"/></svg>
+                    </div>
+                    <h3 class="problem-h3">Slow Roll Call &amp; Delayed Alerts</h3>
+                    <p class="problem-p">Paper registers eat up 15 minutes of every morning class. Parents only find out about unauthorized student absences days later after it is already too late.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- 3. SOLUTION SECTION (THE KNOWLETIVE SMART SCHOOL PLATFORM)            -->
+    <!-- ===================================================================== -->
+    <section id="sec-solution" class="section-padding bg-white">
+        <div class="container">
+            <div class="section-header">
+                <span class="eyebrow">The Knowletive Solution</span>
+                <h2 class="section-title">Smart Cloud Institute Management Engineered for Effortless School Operations</h2>
+                <p class="section-subtitle">Unite admissions, classroom attendance, itemized fee billing, and examination gradebooks in one secure role-based ecosystem.</p>
+            </div>
+
+            <div class="solution-grid">
+                <div class="solution-card">
+                    <div>
+                        <div class="solution-icon-wrap">
+                            <svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z"/></svg>
+                        </div>
+                        <h3 class="solution-h3">Inquiry CRM &amp; 1-Click Lead Conversion</h3>
+                        <p class="solution-p">Log every walk-in and phone inquiry with parent contact details. When registration fees are paid, convert inquiries into official Student and Parent records in 1 click without manual re-typing.</p>
+                    </div>
+                    <ul class="solution-tag-list">
+                        <li class="solution-tag-item">
+                            <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                            <span>Automatic placement onto Class Teacher's daily roll call</span>
+                        </li>
+                        <li class="solution-tag-item">
+                            <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                            <span>Follow-up interaction notes after every phone call &amp; campus visit</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="solution-card">
+                    <div>
+                        <div class="solution-icon-wrap">
+                            <svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                        </div>
+                        <h3 class="solution-h3">30-Second Attendance with Instant Alerts</h3>
+                        <p class="solution-p">Teachers take roll-call attendance in under 30 seconds directly from their mobile phones, tablets, or classroom PCs. Automated WhatsApp and SMS alerts notify parents of absent students instantly.</p>
+                    </div>
+                    <ul class="solution-tag-list">
+                        <li class="solution-tag-item">
+                            <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                            <span>One-tap toggle between Present (Green), Absent (Red), and Late (Yellow)</span>
+                        </li>
+                        <li class="solution-tag-item">
+                            <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                            <span>Same-day late arrival updates parent notification automatically</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="solution-card">
+                    <div>
+                        <div class="solution-icon-wrap">
+                            <svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+                        </div>
+                        <h3 class="solution-h3">Itemized Fee Collection &amp; Instant Receipts</h3>
+                        <p class="solution-p">Search any student by name or roll number to pull active invoices, bill breakdowns, and previous payments. Supports Cash, UPI/GPay, and Cheque with auto-calculated rolling balances.</p>
+                    </div>
+                    <ul class="solution-tag-list">
+                        <li class="solution-tag-item">
+                            <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                            <span>Official receipts show Total Bill, Paid Today, and Balance Due</span>
+                        </li>
+                        <li class="solution-tag-item">
+                            <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                            <span>1-Click overdue broadcast reminder on the 10th with payment links</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- 4. BENEFITS SECTION                                                   -->
+    <!-- ===================================================================== -->
+    <section id="sec-benefits" class="section-padding bg-light">
+        <div class="container">
+            <div class="section-header">
+                <span class="eyebrow">Measurable School Impact</span>
+                <h2 class="section-title">Tangible Advantages for School Owners, Staff &amp; Parents</h2>
+                <p class="section-subtitle">Built specifically to eliminate paperwork, secure school finances, and provide complete peace of mind to administrators.</p>
+            </div>
+
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-stat">&lt;30s</div>
+                    <h3 class="benefit-title">Rapid Roll Call</h3>
+                    <p class="benefit-desc">Teachers complete morning attendance in under 30 seconds on phones, restoring up to 20 minutes of daily classroom teaching.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-stat">100%</div>
+                    <h3 class="benefit-title">Financial Privacy</h3>
+                    <p class="benefit-desc">Strict role boundaries prevent teachers from viewing fee ledgers, ensuring student dignity and zero financial leaks.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-stat">1-Click</div>
+                    <h3 class="benefit-title">Tamper-Proof Cards</h3>
+                    <p class="benefit-desc">Examinations are locked by the Principal with an immutable audit log before publishing digital report cards to parents.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-stat">&lt;1 Hr</div>
+                    <h3 class="benefit-title">Complete Setup</h3>
+                    <p class="benefit-desc">Launch your entire institute in five chronological steps: profile, classes, staff onboarding, student bulk import, and go-live.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- 5. WHAT'S INCLUDED / CORE MODULES OF KNOWLETIVE SMART SCHOOL          -->
+    <!-- ===================================================================== -->
+    <section id="pillars" class="section-padding bg-white">
+        <div class="container">
+            <div class="section-header">
+                <span class="eyebrow">Core ERP Modules</span>
+                <h2 class="section-title">Four Built-In Pillars of Knowletive School Management</h2>
+                <p class="section-subtitle">Integrated workflows connecting front desk inquiries, daily attendance, itemized fee accounting, and examination publishing.</p>
+            </div>
+
+            <div class="pillars-grid">
+                
+                <!-- Pillar 01 -->
+                <div class="pillar-card">
+                    <div class="pillar-header-row">
+                        <span class="pillar-number">Module 01</span>
+                        <div class="pillar-icon-box">
+                            <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z"/></svg>
+                        </div>
+                    </div>
+                    <h3 class="pillar-h3">Admissions &amp; Lead Conversion</h3>
+                    <p class="pillar-desc">Capture walk-in visitors and web inquiries with automated follow-up schedules, trial class booking, and 1-click conversion to enrolled students with auto-batch allocation.</p>
+                    <ul class="pillar-features-list">
+                        <li class="pillar-feature-item">
+                            <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                            <span>1-Click '+ New Lead' logging with parent contact details and source tracking</span>
+                        </li>
+                        <li class="pillar-feature-item">
+                            <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                            <span>Instant student enrollment &amp; auto-assignment of roll numbers &amp; fee structure</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Pillar 02 -->
+                <div class="pillar-card">
+                    <div class="pillar-header-row">
+                        <span class="pillar-number">Module 02</span>
+                        <div class="pillar-icon-box">
+                            <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg>
+                        </div>
+                    </div>
+                    <h3 class="pillar-h3">Daily Classroom Attendance</h3>
+                    <p class="pillar-desc">Mobile-first roll call under 30 seconds per class. One-tap 'Mark All Present' default with rapid Green (Present), Red (Absent), and Yellow (Late) toggles.</p>
+                    <ul class="pillar-features-list">
+                        <li class="pillar-feature-item">
+                            <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                            <span>Under 30-second mobile roll call designed for busy teachers on any phone</span>
+                        </li>
+                        <li class="pillar-feature-item">
+                            <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                            <span>Instant automated parent WhatsApp/SMS notifications for absent &amp; late students</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Pillar 03 -->
+                <div class="pillar-card">
+                    <div class="pillar-header-row">
+                        <span class="pillar-number">Module 03</span>
+                        <div class="pillar-icon-box">
+                            <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+                        </div>
+                    </div>
+                    <h3 class="pillar-h3">Fee Management &amp; Instant Receipts</h3>
+                    <p class="pillar-desc">Search students by name or roll number, collect partial installments (Cash, Cheque, UPI, Bank Transfer), issue itemized GST receipts, and roll forward balances.</p>
+                    <ul class="pillar-features-list">
+                        <li class="pillar-feature-item">
+                            <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                            <span>Flexible installment tracking with automated balance roll-forward &amp; ledger history</span>
+                        </li>
+                        <li class="pillar-feature-item">
+                            <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                            <span>1-Click 10th-of-month overdue reminder blasts with direct online payment links</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Pillar 04 -->
+                <div class="pillar-card">
+                    <div class="pillar-header-row">
+                        <span class="pillar-number">Module 04</span>
+                        <div class="pillar-icon-box">
+                            <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                        </div>
+                    </div>
+                    <h3 class="pillar-h3">Exam Marks Entry &amp; AI Studio</h3>
+                    <p class="pillar-desc">Subject teachers draft scores, Academic Head/Principal locks marks to ensure zero tampering, and AI Teacher Studio crafts customized remarks, worksheets, and quizzes.</p>
+                    <ul class="pillar-features-list">
+                        <li class="pillar-feature-item">
+                            <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                            <span>Principal-locked gradebooks with immutable audit logs preventing back-door edits</span>
+                        </li>
+                        <li class="pillar-feature-item">
+                            <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                            <span>Integrated AI Teacher Studio for auto-generated remarks &amp; printable revision sheets</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- 6. HOW IT WORKS (THE 5-STEP SETUP ROADMAP)                            -->
+    <!-- ===================================================================== -->
+    <section id="sec-how-it-works" class="section-padding bg-light">
+        <div class="container">
+            <div class="section-header">
+                <span class="eyebrow">5-Step Setup Roadmap</span>
+                <h2 class="section-title">Get Your Entire Institute Live in Five Structured Steps</h2>
+                <p class="section-subtitle">From institutional profile configuration to daily roll call and fee receipts — ready in under one hour without IT headaches.</p>
+            </div>
+
+            <div class="journey-grid">
+                
+                <div class="journey-card">
+                    <div class="journey-badge">1</div>
+                    <h3 class="journey-step-title">Institute Profile</h3>
+                    <p class="journey-step-desc">Input school name, official logo, affiliation/tax details, and define the active 2026–2027 academic session in Settings.</p>
+                </div>
+
+                <div class="journey-card">
+                    <div class="journey-badge">2</div>
+                    <h3 class="journey-step-title">Class Architecture</h3>
+                    <p class="journey-step-desc">Configure grades (Nursery to 12th), section divisions (A, B, C), elective streams, and assign teacher-subject mappings.</p>
+                </div>
+
+                <div class="journey-card">
+                    <div class="journey-badge">3</div>
+                    <h3 class="journey-step-title">Staff Onboarding</h3>
+                    <p class="journey-step-desc">Invite educators, accountants, and front-desk staff with strict role-based permissions to protect financial data.</p>
+                </div>
+
+                <div class="journey-card">
+                    <div class="journey-badge">4</div>
+                    <h3 class="journey-step-title">Student Admissions</h3>
+                    <p class="journey-step-desc">Bulk import student rosters via Excel/CSV, auto-allocate roll numbers, and link verified parent WhatsApp numbers.</p>
+                </div>
+
+                <div class="journey-card">
+                    <div class="journey-badge">5</div>
+                    <h3 class="journey-step-title">Go Live Operations</h3>
+                    <p class="journey-step-desc">Launch 30-second mobile attendance, collect itemized fee installments with instant receipts, and monitor the live dashboard.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- 7. WHY SCHOOL OWNERS TRUST KNOWLETIVE                                  -->
+    <!-- ===================================================================== -->
+    <section id="sec-why-knowletive" class="section-padding bg-dark-tech">
+        <div class="container">
+            <div class="section-header">
+                <span class="eyebrow eyebrow-dark">Institutional Reliability</span>
+                <h2 class="section-title section-title-dark">Built Exclusively for School Directors, Principals &amp; Trustees</h2>
+                <p class="section-subtitle section-subtitle-dark">Role-based zero-leak data protection, tamper-proof academic ledgers, and seamless mobile access for modern schools.</p>
+            </div>
+
+            <div class="why-grid">
+                <div class="why-card">
+                    <div class="why-icon">
+                        <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+                    </div>
+                    <h3 class="why-h3">100% Financial Privacy &amp; Zero Leaks</h3>
+                    <p class="why-p">Teachers and academic staff have zero visibility into fee collections, tuition balances, or school revenue ledgers. Complete financial data stays strictly restricted to owners and accountants.</p>
+                </div>
+
+                <div class="why-card">
+                    <div class="why-icon">
+                        <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                    </div>
+                    <h3 class="why-h3">Immutable Audit Logs &amp; Locked Gradebooks</h3>
+                    <p class="why-p">Prevent backdoor mark tampering. Teachers draft scores, but only the Principal or Admin holds the master authorization key to lock final marks and generate unalterable digital report cards.</p>
+                </div>
+
+                <div class="why-card">
+                    <div class="why-icon">
+                        <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+                    </div>
+                    <h3 class="why-h3">Frictionless Role Delegation</h3>
+                    <p class="why-p">Dedicated operational workspaces for Front Desk (inquiries), Accountants (installments), Teachers (roll calls), and Parents (attendance &amp; fee receipts) ensure smooth daily administration.</p>
+                </div>
+
+                <div class="why-card">
+                    <div class="why-icon">
+                        <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 00-9.78 2.096A4.001 4.001 0 003 15z"/></svg>
+                    </div>
+                    <h3 class="why-h3">100% Cloud &amp; Mobile-First Architecture</h3>
+                    <p class="why-p">Accessible on any smartphone, tablet, laptop, or desktop via Chrome, Safari, or Edge without expensive on-premise servers, hardware installations, or annual maintenance contracts.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- 8. PROOF / REAL-LIFE SCHOOL SITUATIONS                                -->
+    <!-- ===================================================================== -->
+    <section id="sec-proof" class="section-padding bg-white">
+        <div class="container">
+            <div class="section-header">
+                <span class="eyebrow">Everyday School Scenarios</span>
+                <h2 class="section-title">How Knowletive Solves Real-World School Situations</h2>
+                <p class="section-subtitle">Built from the ground up to handle daily operational edge cases, mid-year transfers, and administrative hurdles smoothly.</p>
+            </div>
+
+            <div class="proof-grid">
+                <div class="proof-card">
+                    <div>
+                        <div class="proof-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                        <p class="proof-quote">&ldquo;<strong>Mid-Year Late Admissions:</strong> A student joined two months into the term. In Knowletive, we simply enrolled them, assigned the batch, and the system automatically calculated prorated tuition and established the opening fee ledger balance in seconds without messy Excel formulas.&rdquo;</p>
+                    </div>
+                    <div class="proof-author">
+                        <div class="proof-avatar">SS</div>
+                        <div>
+                            <div class="author-name">Mrs. Sunita Sharma</div>
+                            <div class="author-role">Senior School Administrator &bull; Pune</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="proof-card">
+                    <div>
+                        <div class="proof-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                        <p class="proof-quote">&ldquo;<strong>Teacher On Sudden Leave:</strong> When a faculty member took medical leave, our Principal reassigned their class timetable in two clicks. The substitute teacher took mobile roll call immediately, ensuring zero disruption and continuous parent alerts.&rdquo;</p>
+                    </div>
+                    <div class="proof-author">
+                        <div class="proof-avatar">RD</div>
+                        <div>
+                            <div class="author-name">Mr. Rajesh Deshmukh</div>
+                            <div class="author-role">Principal &amp; Academic Director</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="proof-card">
+                    <div>
+                        <div class="proof-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                        <p class="proof-quote">&ldquo;<strong>Emergency Weather Holiday Notice:</strong> When schools were closed due to severe monsoon rain, we broadcast an instant WhatsApp &amp; SMS notice to all 1,200 parents directly from the admin dashboard with delivery confirmation in under 3 minutes.&rdquo;</p>
+                    </div>
+                    <div class="proof-author">
+                        <div class="proof-avatar">VJ</div>
+                        <div>
+                            <div class="author-name">Dr. Vikram Joshi</div>
+                            <div class="author-role">School Trustee &amp; Management Head</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- 9. STAFF ROLES & OPERATIONAL PERMISSIONS                              -->
+    <!-- ===================================================================== -->
+    <section id="sec-pricing" class="section-padding bg-light">
+        <div class="container">
+            <div class="section-header">
+                <span class="eyebrow">Institutional Security &amp; Roles</span>
+                <h2 class="section-title">Clear Staff Roles &amp; Operational Access</h2>
+                <p class="section-subtitle">Ensure strict accountability and total financial confidentiality across your entire educational institution.</p>
+            </div>
+
+            <div class="pricing-grid">
+                <!-- Track A: Admin & Finance -->
+                <div class="pricing-card">
+                    <div>
+                        <h3 class="pricing-tier-name">Admin &amp; Finance Access</h3>
+                        <p class="pricing-tier-desc">Full governance over institutional setup, fee collection, staff accounts, and financial health.</p>
+                        
+                        <div class="pricing-price-box">
+                            <div class="pricing-term-notice">
+                                <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                                <span>Full Institutional Governance</span>
+                            </div>
+                        </div>
+
+                        <ul class="pricing-feature-list">
+                            <li class="pricing-feature-item">
+                                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                                <span><strong>Institute Admin (Owner):</strong> Full governance, staff onboarding, academic year configuration</span>
+                            </li>
+                            <li class="pricing-feature-item">
+                                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                                <span><strong>Accountant / Fee Clerk:</strong> Collect tuition &amp; transport fees, issue receipts, trigger overdue blasts</span>
+                            </li>
+                            <li class="pricing-feature-item">
+                                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                                <span><strong>Front Desk Receptionist:</strong> Log inquiries, schedule campus visits, convert leads to admissions</span>
+                            </li>
+                            <li class="pricing-feature-item">
+                                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                                <span><strong>Financial Privacy Lock:</strong> Revenue metrics and balances are restricted exclusively to finance roles</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <a href="#sec-lead-form" class="btn-secondary" style="width: 100%; text-align: center;">
+                        Request Admin Demo
+                    </a>
+                </div>
+
+                <!-- Track B: Academic & Parent Portal -->
+                <div class="pricing-card pricing-card-featured">
+                    <span class="pricing-badge">Academic Suite</span>
+                    <div>
+                        <h3 class="pricing-tier-name">Academic &amp; Parent Portal</h3>
+                        <p class="pricing-tier-desc">Purpose-built interfaces for daily classroom management, gradebook evaluation, and transparent parent communication.</p>
+                        
+                        <div class="pricing-price-box">
+                            <div class="pricing-term-notice">
+                                <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                                <span>Educators, Students &amp; Parents</span>
+                            </div>
+                        </div>
+
+                        <ul class="pricing-feature-list">
+                            <li class="pricing-feature-item">
+                                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                                <span><strong>Principal / Academic Head:</strong> Review attendance trends, approve curricula, lock final exam gradebooks</span>
+                            </li>
+                            <li class="pricing-feature-item">
+                                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                                <span><strong>Teacher / Faculty:</strong> Take 30-sec roll calls, enter subject scores, access AI Teacher Studio</span>
+                            </li>
+                            <li class="pricing-feature-item">
+                                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                                <span><strong>Parent &amp; Student Portal:</strong> Real-time attendance check, fee receipts, digital report cards, holiday alerts</span>
+                            </li>
+                            <li class="pricing-feature-item">
+                                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                                <span><strong>Zero Fee Exposure:</strong> Teachers cannot view fees; parents only view their own registered children</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <a href="#sec-lead-form" class="btn-primary" style="width: 100%; text-align: center;">
+                        Explore Academic Suite
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- 10. NON-TECHNICAL FAQS (From Knowletive Complete Guide PDF Page 8)    -->
+    <!-- ===================================================================== -->
+    <section id="faqs" class="section-padding bg-white">
+        <div class="container">
+            <div class="section-header">
+                <span class="eyebrow">Common Questions</span>
+                <h2 class="section-title">Frequently Asked Questions by School Leaders</h2>
+                <p class="section-subtitle">Clear, non-technical answers directly from our official Institute Administration Guide.</p>
+            </div>
+
+            <div class="faq-wrapper">
+                
+                <!-- FAQ 1 -->
+                <details class="faq-item" open>
+                    <summary class="faq-question">
+                        <span>What if a teacher or staff member forgets their password?</span>
+                        <svg class="faq-chevron" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+                    </summary>
+                    <div class="faq-answer">
+                        The Institute Admin can navigate to the Staff Management directory, click on the staff member's profile, and select 'Reset Password' or 'Send Login Link'. This generates a secure temporary login link delivered directly to the staff member's registered mobile number or email address.
+                    </div>
+                </details>
+
+                <!-- FAQ 2 -->
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <span>Can teachers see what fees a student owes?</span>
+                        <svg class="faq-chevron" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+                    </summary>
+                    <div class="faq-answer">
+                        Absolutely not. Knowletive enforces strict role-based data segregation. The Fee Management and Accounts modules are visible exclusively to the Institute Admin and designated Accountants. Teachers only see student names, roll numbers, attendance records, and academic marks.
+                    </div>
+                </details>
+
+                <!-- FAQ 3 -->
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <span>Does the system work on a smartphone, or do teachers need laptops?</span>
+                        <svg class="faq-chevron" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+                    </summary>
+                    <div class="faq-answer">
+                        Knowletive is 100% responsive and optimized for mobile devices. Teachers can take daily roll calls, enter exam marks, and check timetables directly on their personal smartphones via any standard mobile browser (Chrome, Safari, Edge) without downloading heavy applications.
+                    </div>
+                </details>
+
+                <!-- FAQ 4 -->
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <span>What happens if a student pays fees partially in installments?</span>
+                        <svg class="faq-chevron" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+                    </summary>
+                    <div class="faq-answer">
+                        You can easily log partial payments in Module 3 (Fee Management). Enter the specific amount received under Cash, Cheque, UPI, or Bank Transfer. The software automatically issues an itemized receipt for the paid amount, updates the student ledger, and rolls over the pending balance.
+                    </div>
+                </details>
+
+                <!-- FAQ 5 -->
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <span>How do we handle annual student promotions at the end of the academic year?</span>
+                        <svg class="faq-chevron" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+                    </summary>
+                    <div class="faq-answer">
+                        Use the End-of-Year Batch Transition wizard in Settings. Simply select the current class (e.g., Grade 5-A), filter eligible passing students, and click 'Promote to Grade 6-A'. The system preserves all historical attendance and fee records while establishing the fresh academic year ledger.
+                    </div>
+                </details>
+
+                <!-- FAQ 6 -->
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <span>Can parents see other students' attendance or exam marks?</span>
+                        <svg class="faq-chevron" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+                    </summary>
+                    <div class="faq-answer">
+                        No. Each parent logs into a private, encrypted portal linked specifically to their registered mobile number. Parents can only view their own children's daily attendance records, itemized fee receipts, exam report cards, and school announcements.
+                    </div>
+                </details>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- 11. LEAD INQUIRY FORM SECTION                                         -->
+    <!-- ===================================================================== -->
+    <section id="sec-lead-form" class="section-padding lead-form-section">
+        <div class="container">
+            <div class="form-card-container">
+                <div class="form-top-accent"></div>
+                
+                <div style="text-align: center; margin-bottom: 2rem;">
+                    <span class="form-header-badge">
+                        <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+                        Institutional Demo Request
+                    </span>
+                    <h3 class="form-h3">Schedule an Interactive Knowletive School Demo</h3>
+                    <p class="form-p">Experience how Knowletive simplifies admissions, 30-sec roll calls, fee collection, and tamper-proof grading for your school or coaching institute.</p>
+                </div>
+
+                <form id="coachgenieLeadForm" class="inquiry-form">
+                    <!-- Anti-spam & redirect fields -->
+                    <input type="hidden" name="_subject" value="New Knowletive School Demo Inquiry">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="text" name="_hp" style="display:none" tabindex="-1" autocomplete="off">
+
+                    <!-- Field 1: Full Name & Designation -->
+                    <div class="form-group">
+                        <label class="form-label" for="full-name">Your Name &amp; Designation <span class="required-star">*</span></label>
+                        <input type="text" id="full-name" name="name" class="form-input" placeholder="e.g. Dr. Rajesh Sharma - Principal" required>
+                    </div>
+
+                    <!-- Field 2: Mobile Number -->
+                    <div class="form-group">
+                        <label class="form-label" for="phone-number">Mobile Number (WhatsApp) <span class="required-star">*</span></label>
+                        <div class="phone-group-wrap">
+                            <span class="phone-prefix">+91</span>
+                            <input type="tel" id="phone-number" name="phone" class="phone-input" placeholder="10-digit mobile number" pattern="[6-9][0-9]{9}" required>
+                        </div>
+                    </div>
+
+                    <!-- Field 2b: Official Email Address -->
+                    <div class="form-group">
+                        <label class="form-label" for="email-address">Official Email Address <span class="required-star">*</span></label>
+                        <input type="email" id="email-address" name="email" class="form-input" placeholder="e.g. principal@wisdomschool.edu.in" required>
+                    </div>
+
+                    <!-- Field 3: Institute Name & Location -->
+                    <div class="form-group">
+                        <label class="form-label" for="institute-name">School / Institute Name &amp; City <span class="required-star">*</span></label>
+                        <input type="text" id="institute-name" name="instituteName" class="form-input" placeholder="e.g. Wisdom International School, Pune" required>
+                    </div>
+
+                    <!-- Field 4: I Am A (Profile status) -->
+                    <div class="form-group">
+                        <label class="form-label" for="profile-status">I Am A <span class="required-star">*</span></label>
+                        <select id="profile-status" name="currentStatus" class="form-select" required>
+                            <option value="" disabled selected>Select your institutional role</option>
+                            <option value="School Owner / Trustee / Director">School Owner / Trustee / Director</option>
+                            <option value="Principal / Academic Head">Principal / Academic Head</option>
+                            <option value="School Administrator / Operations Manager">School Administrator / Operations Manager</option>
+                            <option value="Accountant / Finance Lead">Accountant / Finance Lead</option>
+                            <option value="Coaching Institute / Academy Owner">Coaching Institute / Academy Owner</option>
+                        </select>
+                    </div>
+
+                    <!-- Field 5: Specific School Management Needs / Student Strength -->
+                    <div class="form-group">
+                        <label class="form-label" for="coaching-needs">Student Strength &amp; Core Requirements <span class="required-star">*</span></label>
+                        <textarea id="coaching-needs" name="coachingNeeds" class="form-textarea" rows="3" placeholder="e.g. 750 students from Grade 1 to 10. Need rapid 30-sec attendance, automated fee reminders, and tamper-proof report cards..." required></textarea>
+                    </div>
+
+                    <!-- Consent 1: Privacy policy -->
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="privacyConsent" value="Yes" checked required>
+                        <span>I agree to the <a href="#" style="color: var(--indigo-primary); text-decoration: underline;">Privacy Policy</a> and consent to being contacted by Knowletive regarding school management solutions.</span>
+                    </label>
+
+                    <!-- Consent 2: Optional updates -->
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="marketingConsent" value="Yes" checked>
+                        <span>(Optional) Send me product updates, implementation guides, and administrative resources on WhatsApp/Email.</span>
+                    </label>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="form-btn-submit">
+                        <span>Schedule School Demo &rarr;</span>
+                    </button>
+
+                    <div class="form-privacy-note">
+                        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+                        <span>100% Institutional Data Confidentiality Guaranteed.</span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- 12. FINAL CTA SECTION                                                 -->
+    <!-- ===================================================================== -->
+    <section id="sec-final-cta" class="final-cta-section">
+        <div class="container">
+            <div class="final-cta-inner">
+                <h2 class="final-cta-h2">Ready to Modernize Your School Operations?</h2>
+                <p class="final-cta-p">Join educational institutions upgrading to automated admissions, rapid attendance, itemized fee accounting, and locked gradebooks.</p>
+                
+                <div class="final-cta-buttons">
+                    <a href="#sec-lead-form" class="btn-primary" style="font-size: 1rem; padding: 0.95rem 2rem;">
+                        Book School Demo
+                    </a>
+                    <a href="tel:+919970600116" class="btn-secondary" style="font-size: 1rem; padding: 0.95rem 1.75rem;">
+                        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+                        <span>Call +91 99706 00116</span>
+                    </a>
+                    <a href="https://wa.me/919970600116?text=Hi%20Knowletive%2C%20I%20would%20like%20to%20schedule%20a%20demo%20for%20Knowletive%20School%20Management%20system." target="_blank" rel="noopener noreferrer" class="btn-wa" style="font-size: 1rem; padding: 0.95rem 1.75rem;">
+                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.698.077-2.124-.515-1.826-.757-3.003-2.613-3.094-2.736-.091-.123-.746-.992-.746-1.893 0-.901.472-1.343.64-1.525.168-.182.368-.228.49-.228.123 0 .245.002.353.007.113.005.265-.043.415.317.154.368.524 1.277.57 1.369.046.091.077.199.015.321-.061.123-.092.199-.184.307-.092.108-.194.24-.277.322-.092.091-.188.19-.081.373.107.183.477.788 1.025 1.275.706.628 1.302.822 1.486.914.184.091.292.077.4-.047.108-.123.461-.537.584-.72.123-.184.246-.153.415-.091.169.061 1.074.507 1.258.599.184.092.307.138.353.215.046.077.046.446-.098.851z"/></svg>
+                        <span>Chat on WhatsApp</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- FOOTER                                                                -->
+    <!-- ===================================================================== -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-top">
+                <div class="footer-brand-col">
+                    <img src="assets/knowletive-logo-counseling-large.png" alt="Knowletive" style="height: 38px; width: auto; object-fit: contain; filter: brightness(1.2);">
+                    <p class="footer-company-name">Knowletive Technologies Private Limited</p>
+                    <p style="margin-bottom: 0.5rem;">4th Floor, DS IKON, Laxman Nagar, Baner, Pune, Maharashtra 411045</p>
+                    <p>Phone: +91 99706 00116 &bull; Email: info@knowletive.com</p>
+                </div>
+                <div>
+                    <p style="color: #FFFFFF; font-weight: 700; margin-bottom: 0.75rem;">School ERP &bull; Navigation</p>
+                    <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.4rem;">
+                        <li><a href="#sec-hero" style="color: #94A3B8; text-decoration: none;">Overview</a></li>
+                        <li><a href="#sec-problem" style="color: #94A3B8; text-decoration: none;">School Pain Points</a></li>
+                        <li><a href="#pillars" style="color: #94A3B8; text-decoration: none;">Core Modules</a></li>
+                        <li><a href="#sec-how-it-works" style="color: #94A3B8; text-decoration: none;">5-Step Roadmap</a></li>
+                        <li><a href="#faqs" style="color: #94A3B8; text-decoration: none;">Administration FAQs</a></li>
+                        <li><a href="#sec-lead-form" style="color: var(--cta-orange); text-decoration: none; font-weight: 700;">Schedule School Demo</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom-row">
+                <p>&copy; 2026 Knowletive Technologies Private Limited. ISO 9001:2015 Certified. All Rights Reserved.</p>
+                <p>100% Data Confidentiality &bull; Smart School ERP &bull; Baner, Pune</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===================================================================== -->
+    <!-- STICKY MOBILE BOTTOM CONVERSION BAR                                   -->
+    <!-- ===================================================================== -->
+    <div class="sticky-mobile-bar">
+        <a href="tel:+919970600116" class="btn-mobile-call">&#128222; Call Now</a>
+        <a href="#sec-lead-form" class="btn-mobile-book">Schedule School Demo</a>
+    </div>
+
+    <!-- ===================================================================== -->
+    <!-- FLOATING WHATSAPP CTA                                                 -->
+    <!-- ===================================================================== -->
+    <a href="https://wa.me/919970600116?text=Hi%20Knowletive%2C%20I%20would%20like%20to%20schedule%20a%20demo%20for%20Knowletive%20School%20Management%20system." target="_blank" rel="noopener noreferrer" class="floating-whatsapp" aria-label="Chat on WhatsApp">
+        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.698.077-2.124-.515-1.826-.757-3.003-2.613-3.094-2.736-.091-.123-.746-.992-.746-1.893 0-.901.472-1.343.64-1.525.168-.182.368-.228.49-.228.123 0 .245.002.353.007.113.005.265-.043.415.317.154.368.524 1.277.57 1.369.046.091.077.199.015.321-.061.123-.092.199-.184.307-.092.108-.194.24-.277.322-.092.091-.188.19-.081.373.107.183.477.788 1.025 1.275.706.628 1.302.822 1.486.914.184.091.292.077.4-.047.108-.123.461-.537.584-.72.123-.184.246-.153.415-.091.169.061 1.074.507 1.258.599.184.092.307.138.353.215.046.077.046.446-.098.851z"/></svg>
+        <span>Chat on WhatsApp</span>
+    </a>
+
+    <!-- ===================================================================== -->
+    <!-- COOKIE / ANALYTICS NOTICE BANNER (Pure CSS Dismiss using :target)     -->
+    <!-- ===================================================================== -->
+    <div class="cookie-banner" id="cookie-banner">
+        <div>
+            <strong style="color: #FFFFFF; display: block; margin-bottom: 0.25rem;">Institutional Privacy Notice</strong>
+            We use encrypted session authentication and privacy-first analytics to ensure institutional data security and compliance.
+        </div>
+        <div class="cookie-banner-actions">
+            <a href="#cookie-banner" class="cookie-btn-accept">Accept &amp; Continue</a>
+            <a href="#cookie-banner" class="cookie-btn-dismiss">Essential Only</a>
+        </div>
+    </div>
+
+    <!-- ===================================================================== -->
+    <!-- GOOGLE APPS SCRIPT LEAD CAPTURE                                       -->
+    <!-- ===================================================================== -->
+    <script>
+        const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwGOhSIJWTWEop32sD2oGUMQ60XNpZ4--5spa00-ICAXT5LLAyPrvlwjT24vuX0LBgERg/exec";
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const leadForm = document.querySelector('#coachgenieLeadForm') || document.querySelector('#sec-lead-form form') || document.querySelector('form.inquiry-form') || document.querySelector('form');
+            if (!leadForm) return;
+
+            leadForm.addEventListener('submit', async function (e) {
+                e.preventDefault();
+
+                const submitBtn = leadForm.querySelector('button[type="submit"]');
+                const originalBtnText = submitBtn ? submitBtn.innerHTML : 'Submit';
+
+                if (submitBtn) {
+                    submitBtn.disabled = true;
+                    submitBtn.innerHTML = 'Submitting...';
+                }
+
+                const formData = new FormData(leadForm);
+                const nameVal = (formData.get('name') || '').trim();
+                const phoneVal = (formData.get('phone') || '').trim();
+                const emailVal = (formData.get('email') || '').trim();
+                const instituteVal = (formData.get('instituteName') || '').trim();
+                const roleVal = (formData.get('currentStatus') || '').trim();
+                const needsVal = (formData.get('coachingNeeds') || '').trim();
+                const courseCombined = [instituteVal, roleVal ? '[' + roleVal + ']' : '', needsVal ? '- ' + needsVal : ''].filter(Boolean).join(' ') || instituteVal || 'CoachGenie ERP Demo';
+                const sourceVal = 'CoachGenie';
+                const leadId = 'KN-' + Math.floor(100000 + Math.random() * 900000);
+                const dateVal = new Date().toLocaleString('en-IN', {
+                    timeZone: 'Asia/Kolkata',
+                    year: 'numeric',
+                    month: 'short',
+                    day: '2-digit',
+                    hour: '2-digit',
+                    minute: '2-digit',
+                    hour12: true
+                });
+
+                // URLSearchParams payload strictly matching Code.gs expected keys
+                const params = new URLSearchParams();
+                params.append('name', nameVal);
+                params.append('email', emailVal);
+                params.append('phone', phoneVal);
+                params.append('source', sourceVal);
+                params.append('course', courseCombined);
+
+                // Supporting sheet column mappings
+                params.append('landingPage', sourceVal);
+                params.append('leadId', leadId);
+                params.append('date', dateVal);
+                params.append('status', 'Logged with Senior Advisor');
+                params.append('Lead ID', leadId);
+                params.append('Name', nameVal);
+                params.append('Email', emailVal);
+                params.append('Phone', phoneVal);
+                params.append('Landing Page', sourceVal);
+                params.append('Course', courseCombined);
+                params.append('Date', dateVal);
+                params.append('Status', 'Logged with Senior Advisor');
+                params.append('instituteName', instituteVal);
+                params.append('currentStatus', roleVal);
+
+                // Direct fetch using URLSearchParams and mode: 'no-cors' (prevents CORS preflight)
+                console.log("[Knowletive Sheet Sync] Payload sent:", Object.fromEntries(params));
+                try {
+                    await fetch(GOOGLE_SCRIPT_URL, {
+                        method: 'POST',
+                        mode: 'no-cors',
+                        headers: {
+                            'Content-Type': 'application/x-www-form-urlencoded'
+                        },
+                        body: params.toString()
+                    });
+                    console.log('[Knowletive Sheet Sync] POST sent successfully to GOOGLE_SCRIPT_URL.');
+                } catch (err) {
+                    console.error('[Knowletive Sheet Sync] Transmission error:', err);
+                }
+
+                if (submitBtn) {
+                    submitBtn.innerHTML = '✓ Demo Requested!';
+                    submitBtn.style.backgroundColor = '#10B981';
+                }
+
+                const waMessage = `Hi Knowletive! I have submitted an institutional demo inquiry for CoachGenie School ERP:%0A• Name: ${encodeURIComponent(nameVal)}%0A• Mobile: ${encodeURIComponent(phoneVal)}${emailVal ? '%0A• Email: ' + encodeURIComponent(emailVal) : ''}%0A• Institute: ${encodeURIComponent(instituteVal)}`;
+
+                setTimeout(() => {
+                    alert('Thank you, ' + (nameVal || 'Educator') + '! Your demo request has been recorded. Our enterprise team will connect with you shortly.');
+                    leadForm.reset();
+                    if (submitBtn) {
+                        submitBtn.disabled = false;
+                        submitBtn.innerHTML = originalBtnText;
+                        submitBtn.style.backgroundColor = '';
+                    }
+                    window.open(`https://wa.me/919970600116?text=${waMessage}`, '_blank');
+                }, 500);
+            });
+        });
+    </script>
+</body>
+</html>

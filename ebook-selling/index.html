@@ -1,0 +1,1288 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career & Tech Ebooks Library | Download Guides — Knowletive</title>
+    <meta name="description" content="Curated Career & Technical Ebooks written by senior engineers and counselors. Practical roadmaps, architectural best practices, and interview blueprints.">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Career & Tech Ebooks Library | Download Guides — Knowletive">
+    <meta property="og:description" content="Curated Career & Technical Ebooks written by senior engineers and counselors. Practical roadmaps, architectural best practices, and interview blueprints.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="assets/knowletive-logo-horizontal.png">
+    
+    <!-- Google Fonts: Inter & Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            800: '#0B1E33',
+                            900: '#0A2540',
+                            950: '#051321',
+                        },
+                        sky: {
+                            500: '#0EA5E9',
+                            600: '#0284C7',
+                            700: '#0369A1',
+                        },
+                        orange: {
+                            500: '#F97316',
+                            600: '#EA580C',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <style>
+        .font-display { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .hero-pattern {
+            background-color: #ffffff;
+            background-image: radial-gradient(#e2e8f0 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+        .card-hover {
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .card-hover:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 16px 30px -10px rgba(10, 37, 64, 0.08);
+        }
+    
+        /* Minimal Top Header (Matching Reference Design) */
+        .top-header {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            background: rgba(255, 255, 255, 0.96);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid #E2E8F0;
+            padding: 0.75rem 0;
+        }
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.25rem;
+        }
+        .brand-logo-link {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+        .brand-logo-img {
+            height: 48px;
+            max-height: 50px;
+            width: auto;
+            object-fit: contain;
+            display: block;
+            opacity: 1 !important;
+            filter: none !important;
+            image-rendering: -webkit-optimize-contrast;
+            image-rendering: crisp-edges;
+        }
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        .btn-call {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.5rem 0.9rem;
+            border-radius: 0.75rem;
+            background: #F1F5F9;
+            border: 1px solid #E2E8F0;
+            color: #0A2540;
+            font-size: 0.82rem;
+            font-weight: 800;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+        .btn-call:hover {
+            background: #E0F2FE;
+            color: #0284C7;
+        }
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 0.65rem 1.25rem;
+            border-radius: 0.75rem;
+            background: #F97316;
+            color: #FFFFFF;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 800;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(249, 115, 22, 0.25);
+            transition: all 0.2s;
+        }
+        .btn-primary:hover {
+            background: #EA580C;
+            transform: translateY(-1px);
+            box-shadow: 0 6px 16px rgba(249, 115, 22, 0.35);
+        }
+
+    </style>
+</head>
+<body class="font-sans text-slate-800 bg-white antialiased selection:bg-sky-100 selection:text-sky-800 min-h-screen flex flex-col">
+
+<div id="landingPageView">
+    
+    <!-- Global Header -->
+        <!-- Global Header -->
+    <header class="top-header">
+        <div class="header-inner">
+            <a href="#sec-hero" class="brand-logo-link" aria-label="Knowletive Career Counseling">
+                <img src="assets/knowletive-logo-counseling-large.png" alt="Knowletive Career Counseling • Baner, Pune" class="brand-logo-img">
+            </a>
+            <div class="header-actions">
+                <a href="tel:+919970600116" class="btn-call">
+                    <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+                    <span>+91 99706 00116</span>
+                </a>
+                <a href="#sec-lead-form" class="btn-primary">
+                    Book Career Counseling
+                </a>
+            </div>
+        </div>
+    </header>
+
+    
+    <!-- SECTION 1: HERO -->
+    <section id="sec-hero" class="relative py-12 md:py-20 hero-pattern overflow-hidden border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-sky-50 border border-sky-200 text-sky-700 text-xs font-bold font-display">
+                        <i data-lucide="book-open" class="w-3.5 h-3.5 text-sky-600"></i>
+                        <span>Author-Direct &bull; Updated for 2026 Hiring & Admissions</span>
+                    </div>
+                    
+                    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-navy-900 tracking-tight leading-[1.15] font-display">
+                        Curated Career & <br>
+                        <span class="text-sky-600">Technical Ebooks</span> and Guides.
+                    </h1>
+                    
+                    <p class="text-base sm:text-lg text-slate-600 leading-relaxed font-normal max-w-xl">
+                        Written by senior engineers and academic counselors. Practical roadmaps, architectural best practices, and interview blueprints designed to save you hundreds of hours of trial and error.
+                    </p>
+                    
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-2.5 pt-1 text-xs font-semibold text-slate-700">
+                        <div class="flex items-center gap-2 p-2 rounded-lg bg-slate-50 border border-slate-100">
+                            <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500 flex-shrink-0"></i>
+                            <span>Instant DRM-Free PDF</span>
+                        </div>
+                        <div class="flex items-center gap-2 p-2 rounded-lg bg-slate-50 border border-slate-100">
+                            <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500 flex-shrink-0"></i>
+                            <span>Production Code Repos</span>
+                        </div>
+                        <div class="flex items-center gap-2 p-2 rounded-lg bg-slate-50 border border-slate-100">
+                            <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500 flex-shrink-0"></i>
+                            <span>Free Lifetime Updates</span>
+                        </div>
+                    </div>
+                    
+                    <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 pt-3">
+                        <a href="#sec-lead-form" class="inline-flex items-center justify-center gap-2.5 bg-orange-500 hover:bg-orange-600 text-white font-bold px-7 py-3.5 rounded-full shadow-lg shadow-orange-500/25 transition-all text-sm font-display">
+                            <span>Download Guides</span>
+                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                        <a href="https://wa.me/919970600116?text=Hi Knowletive! I want to inquire about your Career & Tech Ebooks. Please share download links and sample chapters." target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2.5 bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-300 font-bold px-6 py-3.5 rounded-full transition-all text-sm font-display">
+                            <i data-lucide="message-circle" class="w-4 h-4 text-emerald-600"></i>
+                            <span>Get Free Chapter on WhatsApp</span>
+                        </a>
+                    </div>
+                    
+                    <div class="flex items-center gap-3 pt-2 text-xs text-slate-500">
+                        <div class="flex text-amber-400">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        </div>
+                        <span><strong>4.9/5 Rating</strong> across 12,000+ engineers & students</span>
+                    </div>
+                </div>
+                
+                <div class="lg:col-span-5">
+                    
+    <div class="relative w-full max-w-lg mx-auto bg-gradient-to-br from-slate-900 to-navy-950 rounded-2xl shadow-2xl border border-slate-800 p-6 overflow-hidden">
+        <div class="flex items-center justify-between border-b border-slate-800 pb-4 mb-5">
+            <div class="flex items-center gap-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-orange-500"></span>
+                <span class="text-xs font-bold text-white uppercase tracking-wider font-display">Knowletive Ebook Library</span>
+            </div>
+            <span class="px-2.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400 text-[10px] font-bold border border-emerald-500/30">DRM-Free PDF &bull; Instant Delivery</span>
+        </div>
+
+        <!-- 3D Ebook Showcase Grid -->
+        <div class="grid grid-cols-2 gap-4">
+            <!-- Book 1 (Featured Free) -->
+            <div class="bg-gradient-to-b from-sky-900 to-navy-900 p-4 rounded-xl border border-sky-700/60 shadow-lg relative group">
+                <span class="absolute top-2 right-2 px-1.5 py-0.5 rounded bg-emerald-500 text-white text-[9px] font-bold uppercase">Free</span>
+                <div class="w-8 h-8 rounded-lg bg-sky-500/20 text-sky-400 flex items-center justify-center mb-2.5">
+                    <i data-lucide="compass" class="w-4 h-4"></i>
+                </div>
+                <div class="text-[11px] font-bold text-white leading-tight font-display mb-1">Career & IT Roadmap Guide</div>
+                <div class="text-[9px] text-slate-400 mb-2">90 Pages &bull; 2026 Edition</div>
+                <div class="flex items-center gap-1 text-amber-400 text-[9px]">
+                    <i data-lucide="star" class="w-3 h-3 fill-amber-400"></i>
+                    <span class="font-bold">4.9</span>
+                    <span class="text-slate-500">(1,840+)</span>
+                </div>
+            </div>
+
+            <!-- Book 2 -->
+            <div class="bg-gradient-to-b from-slate-800 to-slate-900 p-4 rounded-xl border border-slate-700 shadow-lg relative group">
+                <span class="absolute top-2 right-2 px-1.5 py-0.5 rounded bg-orange-500 text-white text-[9px] font-bold uppercase">₹499</span>
+                <div class="w-8 h-8 rounded-lg bg-orange-500/20 text-orange-400 flex items-center justify-center mb-2.5">
+                    <i data-lucide="layers" class="w-4 h-4"></i>
+                </div>
+                <div class="text-[11px] font-bold text-white leading-tight font-display mb-1">Full-Stack Architecture Handbook</div>
+                <div class="text-[9px] text-slate-400 mb-2">240 Pages &bull; Code Repos</div>
+                <div class="flex items-center gap-1 text-amber-400 text-[9px]">
+                    <i data-lucide="star" class="w-3 h-3 fill-amber-400"></i>
+                    <span class="font-bold">5.0</span>
+                    <span class="text-slate-500">(920+)</span>
+                </div>
+            </div>
+
+            <!-- Book 3 -->
+            <div class="bg-gradient-to-b from-purple-950/80 to-slate-900 p-4 rounded-xl border border-purple-800/60 shadow-lg relative group">
+                <span class="absolute top-2 right-2 px-1.5 py-0.5 rounded bg-orange-500 text-white text-[9px] font-bold uppercase">₹499</span>
+                <div class="w-8 h-8 rounded-lg bg-purple-500/20 text-purple-400 flex items-center justify-center mb-2.5">
+                    <i data-lucide="brain-circuit" class="w-4 h-4"></i>
+                </div>
+                <div class="text-[11px] font-bold text-white leading-tight font-display mb-1">Data Science Interview Playbook</div>
+                <div class="text-[9px] text-slate-400 mb-2">180 Pages &bull; ML Mocks</div>
+                <div class="flex items-center gap-1 text-amber-400 text-[9px]">
+                    <i data-lucide="star" class="w-3 h-3 fill-amber-400"></i>
+                    <span class="font-bold">4.9</span>
+                    <span class="text-slate-500">(1,120+)</span>
+                </div>
+            </div>
+
+            <!-- Book 4 -->
+            <div class="bg-gradient-to-b from-sky-950/80 to-slate-900 p-4 rounded-xl border border-sky-800/60 shadow-lg relative group">
+                <span class="absolute top-2 right-2 px-1.5 py-0.5 rounded bg-orange-500 text-white text-[9px] font-bold uppercase">₹399</span>
+                <div class="w-8 h-8 rounded-lg bg-sky-500/20 text-sky-400 flex items-center justify-center mb-2.5">
+                    <i data-lucide="graduation-cap" class="w-4 h-4"></i>
+                </div>
+                <div class="text-[11px] font-bold text-white leading-tight font-display mb-1">Maharashtra CET 2027 Blueprint</div>
+                <div class="text-[9px] text-slate-400 mb-2">150 Pages &bull; Cutoffs</div>
+                <div class="flex items-center gap-1 text-amber-400 text-[9px]">
+                    <i data-lucide="star" class="w-3 h-3 fill-amber-400"></i>
+                    <span class="font-bold">4.8</span>
+                    <span class="text-slate-500">(3,400+)</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Download Status Bar -->
+        <div class="mt-4 p-3 bg-black/60 rounded-xl border border-slate-800 flex items-center justify-between text-[11px]">
+            <div class="flex items-center gap-2 text-slate-300">
+                <i data-lucide="download" class="w-3.5 h-3.5 text-emerald-400"></i>
+                <span>Over 12,000+ Downloads Across India</span>
+            </div>
+            <span class="text-orange-400 font-bold font-display">Immediate PDF + Repos</span>
+        </div>
+    </div>
+    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2: PROBLEM -->
+    <section id="sec-problem" class="py-16 bg-slate-50 border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <span class="text-xs font-bold uppercase tracking-wider text-rose-600 font-display">The Learning Problem</span>
+                <h2 class="text-2xl sm:text-3xl font-black text-navy-900 mt-1 font-display">Why Free Internet Tutorials Keep You Stuck</h2>
+                <p class="text-sm text-slate-600 mt-2">Surface-level tutorials don't teach the real-world engineering standards companies test for.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm card-hover">
+                    <div class="w-10 h-10 rounded-xl bg-rose-50 text-rose-600 flex items-center justify-center mb-4">
+                        <i data-lucide="shuffle" class="w-5 h-5"></i>
+                    </div>
+                    <h3 class="font-bold text-navy-900 text-base mb-1.5 font-display">Fragmented Information</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">Endless YouTube tutorials jump between versions with zero cohesive project architecture.</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm card-hover">
+                    <div class="w-10 h-10 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center mb-4">
+                        <i data-lucide="file-question" class="w-5 h-5"></i>
+                    </div>
+                    <h3 class="font-bold text-navy-900 text-base mb-1.5 font-display">Generic Cheatsheets</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">Memorizing basic definition questions fails when senior interviewers ask scenario-based questions.</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm card-hover">
+                    <div class="w-10 h-10 rounded-xl bg-sky-50 text-sky-600 flex items-center justify-center mb-4">
+                        <i data-lucide="boxes" class="w-5 h-5"></i>
+                    </div>
+                    <h3 class="font-bold text-navy-900 text-base mb-1.5 font-display">Lack of System Design</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">Beginners build apps that don't scale, lacking database indexing, security, or clean caching layers.</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm card-hover">
+                    <div class="w-10 h-10 rounded-xl bg-purple-50 text-purple-600 flex items-center justify-center mb-4">
+                        <i data-lucide="file-warning" class="w-5 h-5"></i>
+                    </div>
+                    <h3 class="font-bold text-navy-900 text-base mb-1.5 font-display">Admission Rules Confusion</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">CET students lose top colleges due to conflicting rumors about CAP rounds and cutoff calculations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: SOLUTION (Ebook Catalog) -->
+    <section id="sec-solution" class="py-16 bg-white border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <span class="text-xs font-bold uppercase tracking-wider text-sky-600 font-display">Curated Catalog</span>
+                <h2 class="text-2xl sm:text-3xl font-black text-navy-900 mt-1 font-display">Available Ebooks &amp; Actionable Guides</h2>
+                <p class="text-sm text-slate-600 mt-2">Written by field veterans. Instantly downloadable in DRM-free PDF format.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Card 1: Zero to Job Ready – Data Analyst (Sky / Navy Gradient) -->
+                <div class="bg-gradient-to-b from-sky-900 via-[#0a2342] to-navy-950 p-6 sm:p-7 rounded-2xl border border-sky-700/60 hover:border-sky-400 shadow-xl shadow-sky-950/40 hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between h-full group text-white">
+                    <div>
+                        <div class="flex items-center justify-between mb-3.5">
+                            <span class="px-3 py-1 rounded-full bg-sky-500/20 text-sky-300 text-[10px] font-bold uppercase tracking-wider border border-sky-500/40">DATA ANALYTICS</span>
+                            <span class="text-xs text-sky-200/70 font-mono">Digital Guide &bull; PDF</span>
+                        </div>
+                        <div class="w-full h-44 sm:h-48 overflow-hidden rounded-xl mb-4 bg-slate-950/60 border border-sky-800/60 shadow-inner">
+                            <img src="Data_analytics_vector_illustration_b53a95dd_2K.jpg" alt="Zero to Job Ready – Data Analyst" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300" loading="lazy">
+                        </div>
+                        <div class="w-10 h-10 rounded-xl bg-sky-500/20 text-sky-400 border border-sky-500/30 flex items-center justify-center mb-3 group-hover:scale-105 transition-transform">
+                            <i data-lucide="bar-chart-2" class="w-5 h-5"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2 font-display">Zero to Job Ready – Data Analyst</h3>
+                        <p class="text-xs text-slate-300 mb-5 leading-relaxed">
+                            A complete beginner-to-job-ready learning roadmap designed to help aspiring data analysts develop practical analytical skills and prepare for industry opportunities.
+                        </p>
+                        <div class="space-y-2 text-xs text-slate-200 mb-6">
+                            <div class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-sky-400 shrink-0"></i> <span>Excel and Advanced Excel.</span></div>
+                            <div class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-sky-400 shrink-0"></i> <span>SQL and Database Management.</span></div>
+                            <div class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-sky-400 shrink-0"></i> <span>Python for Data Analysis.</span></div>
+                            <div class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-sky-400 shrink-0"></i> <span>Power BI, Dashboarding and Real-World Projects.</span></div>
+                            <div class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-sky-400 shrink-0"></i> <span>Interview Preparation and Job Readiness.</span></div>
+                        </div>
+                    </div>
+                    <div class="pt-5 border-t border-sky-800/60 flex items-center justify-between gap-3 mt-auto">
+                        <div class="flex flex-col">
+                            <span class="text-[10px] font-bold text-sky-300/70 uppercase tracking-wider">PRICE</span>
+                            <span class="text-xl sm:text-2xl font-black text-white font-display">₹299</span>
+                        </div>
+                        <a href="#sec-lead-form" onclick="selectEbook('Zero to Job Ready – Data Analyst')" class="inline-flex items-center gap-1.5 bg-orange-500 hover:bg-orange-600 text-white font-bold text-xs sm:text-sm px-4 sm:px-5 py-2.5 rounded-xl transition-all shadow-md shadow-orange-500/30 hover:shadow-lg font-display">
+                            <span>Buy Now &rarr;</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 2: Zero to Job Ready – MERN Stack (Emerald / Slate Gradient) -->
+                <div class="bg-gradient-to-b from-[#132e2b] via-[#0d2220] to-slate-950 p-6 sm:p-7 rounded-2xl border border-emerald-600/60 hover:border-emerald-400 shadow-xl shadow-emerald-950/40 hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between h-full group text-white">
+                    <div>
+                        <div class="flex items-center justify-between mb-3.5">
+                            <span class="px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-300 text-[10px] font-bold uppercase tracking-wider border border-emerald-500/40">FULL STACK DEVELOPMENT</span>
+                            <span class="text-xs text-emerald-200/70 font-mono">Digital Guide &bull; PDF</span>
+                        </div>
+                        <div class="w-full h-44 sm:h-48 overflow-hidden rounded-xl mb-4 bg-slate-950/60 border border-emerald-800/60 shadow-inner">
+                            <img src="Full_Stack_Web_Development_Illus…_f893ec18_2K.jpg" alt="Zero to Job Ready – MERN Stack" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300" loading="lazy">
+                        </div>
+                        <div class="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 flex items-center justify-center mb-3 group-hover:scale-105 transition-transform">
+                            <i data-lucide="layers" class="w-5 h-5"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2 font-display">Zero to Job Ready – MERN Stack</h3>
+                        <p class="text-xs text-slate-300 mb-5 leading-relaxed">
+                            A structured learning guide that takes beginners through modern full-stack web development using the MERN technology stack.
+                        </p>
+                        <div class="space-y-2 text-xs text-slate-200 mb-6">
+                            <div class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i> <span>HTML, CSS and JavaScript.</span></div>
+                            <div class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i> <span>React.js and Frontend Development.</span></div>
+                            <div class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i> <span>Node.js and Express.js.</span></div>
+                            <div class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i> <span>MongoDB and REST API Integration.</span></div>
+                            <div class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i> <span>Full-Stack Projects and Interview Preparation.</span></div>
+                        </div>
+                    </div>
+                    <div class="pt-5 border-t border-emerald-800/60 flex items-center justify-between gap-3 mt-auto">
+                        <div class="flex flex-col">
+                            <span class="text-[10px] font-bold text-emerald-300/70 uppercase tracking-wider">PRICE</span>
+                            <span class="text-xl sm:text-2xl font-black text-white font-display">₹299</span>
+                        </div>
+                        <a href="#sec-lead-form" onclick="selectEbook('Zero to Job Ready – MERN Stack')" class="inline-flex items-center gap-1.5 bg-orange-500 hover:bg-orange-600 text-white font-bold text-xs sm:text-sm px-4 sm:px-5 py-2.5 rounded-xl transition-all shadow-md shadow-orange-500/30 hover:shadow-lg font-display">
+                            <span>Buy Now &rarr;</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 3: Knowletive Personal Growth & Productivity Toolkit (Purple / Violet Gradient) -->
+                <div class="bg-gradient-to-b from-purple-950/90 via-[#1b1035] to-slate-950 p-6 sm:p-7 rounded-2xl border border-purple-800/60 hover:border-purple-500 shadow-xl shadow-purple-950/40 hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between h-full group text-white">
+                    <div>
+                        <div class="flex items-center justify-between mb-3.5">
+                            <span class="px-3 py-1 rounded-full bg-purple-500/20 text-purple-300 text-[10px] font-bold uppercase tracking-wider border border-purple-500/40">PERSONAL DEVELOPMENT</span>
+                            <span class="text-xs text-purple-200/70 font-mono">Actionable Toolkit &bull; PDF</span>
+                        </div>
+                        <div class="w-full h-44 sm:h-48 overflow-hidden rounded-xl mb-4 bg-slate-950/60 border border-purple-800/60 shadow-inner">
+                            <img src="Vector_illustration_of_personal_…_9612d207_2K.jpg" alt="Knowletive Personal Growth & Productivity Toolkit" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300" loading="lazy">
+                        </div>
+                        <div class="w-10 h-10 rounded-xl bg-purple-500/20 text-purple-400 border border-purple-500/30 flex items-center justify-center mb-3 group-hover:scale-105 transition-transform">
+                            <i data-lucide="target" class="w-5 h-5"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2 font-display">Knowletive Personal Growth &amp; Productivity Toolkit</h3>
+                        <p class="text-xs text-slate-300 mb-5 leading-relaxed">
+                            A practical productivity and personal development toolkit designed to help students and professionals improve their daily routines, time management, focus and career growth.
+                        </p>
+                        <div class="space-y-2 text-xs text-slate-200 mb-6">
+                            <div class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-purple-400 shrink-0"></i> <span>Goal Setting and Personal Planning.</span></div>
+                            <div class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-purple-400 shrink-0"></i> <span>Time Management and Productivity.</span></div>
+                            <div class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-purple-400 shrink-0"></i> <span>Daily Habits and Discipline Tracker.</span></div>
+                            <div class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-purple-400 shrink-0"></i> <span>Communication and Self-Development.</span></div>
+                            <div class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-purple-400 shrink-0"></i> <span>Career Planning and Growth Strategies.</span></div>
+                        </div>
+                    </div>
+                    <div class="pt-5 border-t border-purple-800/60 flex items-center justify-between gap-3 mt-auto">
+                        <div class="flex flex-col">
+                            <span class="text-[10px] font-bold text-purple-300/70 uppercase tracking-wider">PRICE</span>
+                            <span class="text-xl sm:text-2xl font-black text-white font-display">₹299</span>
+                        </div>
+                        <a href="#sec-lead-form" onclick="selectEbook('Knowletive Personal Growth & Productivity Toolkit')" class="inline-flex items-center gap-1.5 bg-orange-500 hover:bg-orange-600 text-white font-bold text-xs sm:text-sm px-4 sm:px-5 py-2.5 rounded-xl transition-all shadow-md shadow-orange-500/30 hover:shadow-lg font-display">
+                            <span>Buy Now &rarr;</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: BENEFITS -->
+    <section id="sec-benefits" class="py-16 bg-slate-50 border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <span class="text-xs font-bold uppercase tracking-wider text-emerald-600 font-display">Why Choose Our Guides</span>
+                <h2 class="text-2xl sm:text-3xl font-black text-navy-900 mt-1 font-display">Created by Practitioners, Not Content Marketers</h2>
+                <p class="text-sm text-slate-600 mt-2">Dense, high-value knowledge without filler pages or academic fluff.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Benefit Card 1 (Sky / Navy Gradient) -->
+                <div class="bg-gradient-to-b from-sky-900 to-navy-900 p-6 rounded-2xl border border-sky-700/60 shadow-lg text-white hover:border-sky-400 hover:-translate-y-1 transition-all duration-300">
+                    <div class="w-10 h-10 rounded-xl bg-sky-500/20 text-sky-400 border border-sky-500/30 flex items-center justify-center mb-4">
+                        <i data-lucide="zap" class="w-5 h-5"></i>
+                    </div>
+                    <h3 class="font-bold text-white text-base mb-1 font-display">Zero Fluff Actionable</h3>
+                    <p class="text-xs text-slate-300 leading-relaxed">No 50-page historical introductions. Every page gives you code, diagrams, or decision frameworks.</p>
+                </div>
+                
+                <!-- Benefit Card 2 (Emerald / Teal Gradient) -->
+                <div class="bg-gradient-to-b from-emerald-950 via-[#0d2822] to-slate-900 p-6 rounded-2xl border border-emerald-700/60 shadow-lg text-white hover:border-emerald-400 hover:-translate-y-1 transition-all duration-300">
+                    <div class="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 flex items-center justify-center mb-4">
+                        <i data-lucide="refresh-cw" class="w-5 h-5"></i>
+                    </div>
+                    <h3 class="font-bold text-white text-base mb-1 font-display">Free Lifetime Updates</h3>
+                    <p class="text-xs text-slate-300 leading-relaxed">Whenever frameworks or CET rules change, updated editions are automatically delivered to your email.</p>
+                </div>
+                
+                <!-- Benefit Card 3 (Slate / Warm Amber Gradient) -->
+                <div class="bg-gradient-to-b from-slate-800 to-slate-900 p-6 rounded-2xl border border-slate-700 shadow-lg text-white hover:border-orange-500/60 hover:-translate-y-1 transition-all duration-300">
+                    <div class="w-10 h-10 rounded-xl bg-orange-500/20 text-orange-400 border border-orange-500/30 flex items-center justify-center mb-4">
+                        <i data-lucide="code-2" class="w-5 h-5"></i>
+                    </div>
+                    <h3 class="font-bold text-white text-base mb-1 font-display">Ready-to-Run Code</h3>
+                    <p class="text-xs text-slate-300 leading-relaxed">All technical books include private GitHub repository links with unit tests and deployment scripts.</p>
+                </div>
+                
+                <!-- Benefit Card 4 (Purple / Violet Gradient) -->
+                <div class="bg-gradient-to-b from-purple-950/80 to-slate-900 p-6 rounded-2xl border border-purple-800/60 shadow-lg text-white hover:border-purple-400 hover:-translate-y-1 transition-all duration-300">
+                    <div class="w-10 h-10 rounded-xl bg-purple-500/20 text-purple-400 border border-purple-500/30 flex items-center justify-center mb-4">
+                        <i data-lucide="life-buoy" class="w-5 h-5"></i>
+                    </div>
+                    <h3 class="font-bold text-white text-base mb-1 font-display">Direct Mentor Support</h3>
+                    <p class="text-xs text-slate-300 leading-relaxed">Stuck on a concept? Ebook readers get direct access to our Baner mentor Q&A forum on WhatsApp.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 5: WHAT'S INCLUDED -->
+    <section id="sec-included" class="py-16 bg-white border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <span class="text-xs font-bold uppercase tracking-wider text-sky-600 font-display">Complete Package</span>
+                <h2 class="text-2xl sm:text-3xl font-black text-navy-900 mt-1 font-display">What You Receive With Every Download</h2>
+                <p class="text-sm text-slate-600 mt-2">More than just a PDF file. A complete reference ecosystem.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="p-6 rounded-2xl border border-slate-200 bg-slate-50/50">
+                    <span class="text-xs font-mono font-bold text-sky-600 bg-sky-50 px-2.5 py-1 rounded border border-sky-100">01</span>
+                    <h3 class="text-base font-bold text-navy-900 mt-3 mb-1 font-display">High-Res DRM-Free PDF</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">Read offline on iPad, Kindle, Android, or laptop with searchable text and hyperlinked index.</p>
+                </div>
+                <div class="p-6 rounded-2xl border border-slate-200 bg-slate-50/50">
+                    <span class="text-xs font-mono font-bold text-sky-600 bg-sky-50 px-2.5 py-1 rounded border border-sky-100">02</span>
+                    <h3 class="text-base font-bold text-navy-900 mt-3 mb-1 font-display">Companion GitHub Repos</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">Clone working sample code with Dockerfiles, automated tests, and environment configurations.</p>
+                </div>
+                <div class="p-6 rounded-2xl border border-slate-200 bg-slate-50/50">
+                    <span class="text-xs font-mono font-bold text-sky-600 bg-sky-50 px-2.5 py-1 rounded border border-sky-100">03</span>
+                    <h3 class="text-base font-bold text-navy-900 mt-3 mb-1 font-display">Printable Cheatsheets</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">Single-sheet PDF summaries for quick review right before your technical interviews or counseling rounds.</p>
+                </div>
+                <div class="p-6 rounded-2xl border border-slate-200 bg-slate-50/50">
+                    <span class="text-xs font-mono font-bold text-sky-600 bg-sky-50 px-2.5 py-1 rounded border border-sky-100">04</span>
+                    <h3 class="text-base font-bold text-navy-900 mt-3 mb-1 font-display">Production Case Studies</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">Real incident post-mortems and architecture evolution stories from actual Pune tech firms.</p>
+                </div>
+                <div class="p-6 rounded-2xl border border-slate-200 bg-slate-50/50">
+                    <span class="text-xs font-mono font-bold text-sky-600 bg-sky-50 px-2.5 py-1 rounded border border-sky-100">05</span>
+                    <h3 class="text-base font-bold text-navy-900 mt-3 mb-1 font-display">Lifetime Edition Updates</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">Get all future revision releases and addendum chapters free of charge via your download portal.</p>
+                </div>
+                <div class="p-6 rounded-2xl border border-slate-200 bg-slate-50/50">
+                    <span class="text-xs font-mono font-bold text-sky-600 bg-sky-50 px-2.5 py-1 rounded border border-sky-100">06</span>
+                    <h3 class="text-base font-bold text-navy-900 mt-3 mb-1 font-display">Direct Q&A Channel</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">Exclusive access to Knowletive's reader community for code reviews and admission query resolution.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 6: HOW IT WORKS -->
+    <section id="sec-how-it-works" class="py-16 bg-slate-50 border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <span class="text-xs font-bold uppercase tracking-wider text-orange-600 font-display">Fast-Track Delivery</span>
+                <h2 class="text-2xl sm:text-3xl font-black text-navy-900 mt-1 font-display">How to Access Your Guides</h2>
+                <p class="text-sm text-slate-600 mt-2">Zero waiting time. Read within 60 seconds of requesting access.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                <div class="bg-white p-6 rounded-2xl border border-slate-200">
+                    <span class="text-xs font-bold text-slate-400 font-mono">STEP 01</span>
+                    <h3 class="text-base font-bold text-navy-900 mt-2 mb-1.5 font-display">Select Your Ebook</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">Choose the specific guide tailored to your career milestone or technical stack.</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-2xl border border-slate-200">
+                    <span class="text-xs font-bold text-slate-400 font-mono">STEP 02</span>
+                    <h3 class="text-base font-bold text-navy-900 mt-2 mb-1.5 font-display">Submit Request</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">Enter your WhatsApp and email to generate your personalized download credential.</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-2xl border border-slate-200">
+                    <span class="text-xs font-bold text-slate-400 font-mono">STEP 03</span>
+                    <h3 class="text-base font-bold text-navy-900 mt-2 mb-1.5 font-display">Instant PDF & Repos</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">Receive instant high-speed download links + GitHub repository access via WhatsApp & email.</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-2xl border border-slate-200">
+                    <span class="text-xs font-bold text-slate-400 font-mono">STEP 04</span>
+                    <h3 class="text-base font-bold text-navy-900 mt-2 mb-1.5 font-display">Read & Implement</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">Execute architectural patterns, practice mock questions, and join reader Q&A sessions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 7: WHY KNOWLETIVE -->
+    <section id="sec-why-knowletive" class="py-16 bg-white border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                <div class="lg:col-span-6 space-y-4">
+                    <span class="text-xs font-bold uppercase tracking-wider text-sky-600 font-display">Authentic Knowledge</span>
+                    <h2 class="text-2xl sm:text-3xl font-black text-navy-900 font-display">Tested on Ground at Our Baner, Pune Hub</h2>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        Knowletive guides are not translated summaries or AI hallucinations. They are battle-tested frameworks refined across hundreds of 1-on-1 student counseling sessions and technical placement cohorts at DS IKON, Baner.
+                    </p>
+                    
+                    <div class="space-y-3 pt-2 text-xs">
+                        <div class="flex items-start gap-3">
+                            <div class="w-6 h-6 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <i data-lucide="check" class="w-3.5 h-3.5"></i>
+                            </div>
+                            <div>
+                                <span class="font-bold text-navy-900">Proven by 12,000+ Readers:</span>
+                                <span class="text-slate-600"> Used by engineers at Infosys, Wipro, TCS, Cognizant, and Pune startups.</span>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-6 h-6 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <i data-lucide="check" class="w-3.5 h-3.5"></i>
+                            </div>
+                            <div>
+                                <span class="font-bold text-navy-900">100% Unbiased & Ethical:</span>
+                                <span class="text-slate-600"> No sponsored university ads or fake rankings. Just pure data and verified engineering advice.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lg:col-span-6 bg-slate-50 p-6 sm:p-8 rounded-2xl border border-slate-200 text-center flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow">
+                    <div>
+                        <div class="w-full h-44 sm:h-52 overflow-hidden rounded-xl mb-4 bg-slate-100 border border-slate-200/80 shadow-xs">
+                            <img src="image.png_25c46a0d_2K.jpg" alt="Have Questions About a Guide? - Knowletive Mentors" class="w-full h-full object-cover object-center hover:scale-105 transition-transform duration-300" loading="lazy">
+                        </div>
+                        <h3 class="text-xl font-bold text-navy-900 font-display">Have Questions About a Guide?</h3>
+                        <p class="text-xs text-slate-600 mt-1.5 max-w-sm mx-auto leading-relaxed">
+                            Connect directly with our authors and counseling team in Baner, Pune.
+                        </p>
+                    </div>
+                    <div class="mt-5">
+                        <a href="https://wa.me/919970600116?text=Hi Knowletive! I want to inquire about your Career & Tech Ebooks. Please share download links and sample chapters." target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs px-6 py-2.5 rounded-full transition-colors font-display shadow-md shadow-emerald-600/20">
+                            <i data-lucide="message-circle" class="w-3.5 h-3.5 fill-white"></i>
+                            <span>Chat with Ebook Advisor</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 8: PROOF -->
+    <section id="sec-proof" class="py-16 bg-slate-50 border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <span class="text-xs font-bold uppercase tracking-wider text-amber-600 font-display">Reader Feedback</span>
+                <h2 class="text-2xl sm:text-3xl font-black text-navy-900 mt-1 font-display">What Engineers & Students Say</h2>
+                <p class="text-sm text-slate-600 mt-2">Real reviews from readers who accelerated their careers with our guides.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-1 text-amber-400 mb-3">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        </div>
+                        <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                            "The Full-Stack Architecture Handbook is pure gold. It explains microservice communication and Redis caching better than any $100 course I bought. The companion GitHub repo saved me weeks."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-3 border-t border-slate-100">
+                        <div class="w-9 h-9 rounded-full bg-sky-100 text-sky-700 font-bold flex items-center justify-center text-xs">VA</div>
+                        <div>
+                            <div class="font-bold text-xs text-navy-900 font-display">Vikram A.</div>
+                            <div class="text-[11px] text-slate-500">Backend SDE &bull; Hinjawadi, Pune</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-1 text-amber-400 mb-3">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        </div>
+                        <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                            "The Free Career & IT Roadmap gave me the exact clarity I needed during my final year of BCA. I followed their 52-week plan and landed my first software developer role right out of college."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-3 border-t border-slate-100">
+                        <div class="w-9 h-9 rounded-full bg-emerald-100 text-emerald-700 font-bold flex items-center justify-center text-xs">PD</div>
+                        <div>
+                            <div class="font-bold text-xs text-navy-900 font-display">Pooja D.</div>
+                            <div class="text-[11px] text-slate-500">Associate Developer &bull; Pune</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-1 text-amber-400 mb-3">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        </div>
+                        <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                            "The Maharashtra CET Blueprint is a must-have for parents. The CAP Round cutoff trends and TFWS document checklist saved us from making critical mistakes in our daughter's college option form."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-3 border-t border-slate-100">
+                        <div class="w-9 h-9 rounded-full bg-purple-100 text-purple-700 font-bold flex items-center justify-center text-xs">SK</div>
+                        <div>
+                            <div class="font-bold text-xs text-navy-900 font-display">Sanjay K.</div>
+                            <div class="text-[11px] text-slate-500">Parent of PICT Pune Student</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- SECTION 10: FAQ -->
+    <section id="sec-faq" class="py-16 bg-slate-50 border-b border-slate-200">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="text-xs font-bold uppercase tracking-wider text-sky-600 font-display">Common Queries</span>
+                <h2 class="text-2xl sm:text-3xl font-black text-navy-900 mt-1 font-display">Frequently Asked Questions</h2>
+                <p class="text-sm text-slate-600 mt-2">Everything you need to know about delivery and formats.</p>
+            </div>
+            
+            <div class="space-y-4">
+                <div class="bg-white rounded-xl border border-slate-200 overflow-hidden">
+                    <button onclick="toggleFaq(this)" class="w-full px-6 py-4 text-left flex items-center justify-between font-bold text-sm text-navy-900 font-display hover:text-sky-600 transition-colors">
+                        <span>What formats are the ebooks provided in?</span>
+                        <i data-lucide="chevron-down" class="w-4 h-4 text-slate-400 faq-icon transition-transform"></i>
+                    </button>
+                    <div class="faq-content px-6 pb-4 pt-1 text-xs text-slate-600 leading-relaxed hidden border-t border-slate-100">
+                        All guides are provided in universal, high-resolution DRM-free PDF format compatible with PC, Mac, iPad, iPhone, Android, and e-readers. You can also print physical hard copies for personal study.
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl border border-slate-200 overflow-hidden">
+                    <button onclick="toggleFaq(this)" class="w-full px-6 py-4 text-left flex items-center justify-between font-bold text-sm text-navy-900 font-display hover:text-sky-600 transition-colors">
+                        <span>How do I receive my guide after submitting the form?</span>
+                        <i data-lucide="chevron-down" class="w-4 h-4 text-slate-400 faq-icon transition-transform"></i>
+                    </button>
+                    <div class="faq-content px-6 pb-4 pt-1 text-xs text-slate-600 leading-relaxed hidden border-t border-slate-100">
+                        Upon form submission, your unique download link is instantly generated on the confirmation screen and sent directly to your registered WhatsApp number and email address within 60 seconds.
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl border border-slate-200 overflow-hidden">
+                    <button onclick="toggleFaq(this)" class="w-full px-6 py-4 text-left flex items-center justify-between font-bold text-sm text-navy-900 font-display hover:text-sky-600 transition-colors">
+                        <span>Are the code repositories and future updates really free?</span>
+                        <i data-lucide="chevron-down" class="w-4 h-4 text-slate-400 faq-icon transition-transform"></i>
+                    </button>
+                    <div class="faq-content px-6 pb-4 pt-1 text-xs text-slate-600 leading-relaxed hidden border-t border-slate-100">
+                        Yes! Purchasing a technical guide grants you lifetime access to the book's GitHub repository, including issue discussions, bug fixes, and all upcoming revised annual editions at zero extra cost.
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl border border-slate-200 overflow-hidden">
+                    <button onclick="toggleFaq(this)" class="w-full px-6 py-4 text-left flex items-center justify-between font-bold text-sm text-navy-900 font-display hover:text-sky-600 transition-colors">
+                        <span>Can students without prior coding experience understand these books?</span>
+                        <i data-lucide="chevron-down" class="w-4 h-4 text-slate-400 faq-icon transition-transform"></i>
+                    </button>
+                    <div class="faq-content px-6 pb-4 pt-1 text-xs text-slate-600 leading-relaxed hidden border-t border-slate-100">
+                        Our Career Roadmap and CET Blueprints require zero coding background. For the technical architecture and data science playbooks, basic familiarity with loops and functions is helpful, but every chapter starts with intuitive real-world analogies.
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl border border-slate-200 overflow-hidden">
+                    <button onclick="toggleFaq(this)" class="w-full px-6 py-4 text-left flex items-center justify-between font-bold text-sm text-navy-900 font-display hover:text-sky-600 transition-colors">
+                        <span>What is your refund and satisfaction policy?</span>
+                        <i data-lucide="chevron-down" class="w-4 h-4 text-slate-400 faq-icon transition-transform"></i>
+                    </button>
+                    <div class="faq-content px-6 pb-4 pt-1 text-xs text-slate-600 leading-relaxed hidden border-t border-slate-100">
+                        We back our paid ebooks with a 7-day 100% money-back satisfaction guarantee. If you feel the guide did not provide actionable engineering value, simply send a message on WhatsApp for a prompt full refund.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 11: LEAD FORM -->
+    <section id="sec-lead-form" class="py-16 bg-white border-b border-slate-200">
+        <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-slate-50 border border-slate-200 rounded-3xl p-6 sm:p-10 shadow-sm">
+                <div class="text-center mb-8">
+                    <span class="text-xs font-bold uppercase tracking-wider text-orange-600 font-display">Instant Access</span>
+                    <h2 class="text-2xl sm:text-3xl font-black text-navy-900 mt-1 font-display">Download Ebook & Guides</h2>
+                    <p class="text-xs text-slate-600 mt-2">Select your guide to receive immediate download credentials via WhatsApp & Email.</p>
+                </div>
+                
+                <form onsubmit="return submitLeadForm(event)" class="space-y-4">
+                    <input type="text" name="_hp" style="display:none !important;" tabindex="-1" autocomplete="off">
+                    <input type="hidden" name="serviceInterest" value="ebook_selling">
+                    
+                    <div>
+                        <label class="block text-xs font-bold text-navy-900 mb-1">Full Name <span class="text-rose-500">*</span></label>
+                        <input type="text" name="name" required placeholder="e.g. Aditi Deshmukh" class="w-full text-xs px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent bg-white">
+                    </div>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-bold text-navy-900 mb-1">WhatsApp Mobile (+91) <span class="text-rose-500">*</span></label>
+                            <input type="tel" name="phone" required placeholder="e.g. 9876543210" pattern="[0-9]{10}" class="w-full text-xs px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent bg-white">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-navy-900 mb-1">Email (for PDF link) <span class="text-rose-500">*</span></label>
+                            <input type="email" name="email" required placeholder="e.g. aditi@gmail.com" class="w-full text-xs px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent bg-white">
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-xs font-bold text-navy-900 mb-1">Select Ebook / Guide <span class="text-rose-500">*</span></label>
+                        <select name="ebookTitle" required class="w-full text-xs px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent bg-white">
+                            <option value="">Choose the ebook you wish to access (₹299 each)</option>
+                            <option value="Zero to Job Ready – Data Analyst (₹299)">Zero to Job Ready – Data Analyst (₹299)</option>
+                            <option value="Zero to Job Ready – MERN Stack (₹299)">Zero to Job Ready – MERN Stack (₹299)</option>
+                            <option value="Knowletive Personal Growth & Productivity Toolkit (₹299)">Knowletive Personal Growth & Productivity Toolkit (₹299)</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-navy-900 mb-1">Your Current Goal</label>
+                        <select name="currentStatus" class="w-full text-xs px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent bg-white">
+                            <option value="Student Preparing for First Job">College Student / Job Seeker</option>
+                            <option value="Working Engineer Upskilling">Working Engineer Upskilling</option>
+                            <option value="Parent CET Admission Planning">Parent / Student CET Admission Planning</option>
+                            <option value="Career Switcher into IT">Non-Tech Career Switcher</option>
+                        </select>
+                    </div>
+                    
+                    <div class="pt-2">
+                        <label class="flex items-start gap-2 text-[11px] text-slate-500 cursor-pointer">
+                            <input type="checkbox" name="privacyConsent" checked required class="mt-0.5 rounded text-orange-500 focus:ring-orange-500">
+                            <span>I agree to receive the download links and occasional educational updates from Knowletive.</span>
+                        </label>
+                    </div>
+                    
+                    <button type="submit" class="w-full py-4 bg-orange-500 hover:bg-orange-600 text-white font-bold rounded-xl shadow-lg shadow-orange-500/25 transition-all text-sm font-display flex items-center justify-center gap-2">
+                        <span>Get Instant Ebook Download Link</span>
+                        <i data-lucide="download" class="w-4 h-4"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 12: FINAL CTA -->
+    <section id="sec-final-cta" class="py-16 bg-navy-900 text-white relative overflow-hidden">
+        <div class="absolute inset-0 bg-radial-gradient from-sky-600/10 to-transparent"></div>
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <span class="inline-block px-3 py-1 rounded-full bg-orange-500/20 text-orange-400 text-xs font-bold uppercase tracking-wider mb-4 font-display">
+                Immediate Digital Delivery &bull; DRM Free
+            </span>
+            <h2 class="text-3xl sm:text-4xl font-black font-display tracking-tight leading-tight mb-4">
+                Start Reading and Accelerate Your Learning
+            </h2>
+            <p class="text-sm sm:text-base text-slate-300 max-w-xl mx-auto mb-8 leading-relaxed">
+                Join over 12,000+ ambitious engineers and students who rely on Knowletive guides to save hundreds of hours of trial and error.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#sec-lead-form" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-orange-500 hover:bg-orange-600 text-white font-bold px-8 py-3.5 rounded-full shadow-lg shadow-orange-500/30 transition-all text-sm font-display">
+                    <span>Download Your Guide Now</span>
+                    <i data-lucide="download" class="w-4 h-4"></i>
+                </a>
+                <a href="tel:+919970600116" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white border border-white/20 font-bold px-6 py-3.5 rounded-full transition-all text-sm font-display">
+                    <i data-lucide="phone" class="w-4 h-4 text-sky-400"></i>
+                    <span>Call +91 99706 00116</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    
+    <!-- Global Footer -->
+    <footer class="bg-navy-950 text-slate-400 py-12 border-t border-navy-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-10 pb-10 border-b border-navy-800/80">
+                <div class="md:col-span-2">
+                    <a href="#sec-hero" class="flex items-center gap-3 mb-4">
+                        <img src="assets/knowletive-icon.png" alt="Knowletive" class="w-10 h-10 object-contain brightness-110 flex-shrink-0">
+                        <div class="flex flex-col">
+                            <img src="assets/knowletive-wordmark-white.png" alt="Knowletive" class="h-6 w-auto object-contain">
+                            <span class="text-[10px] font-bold uppercase tracking-wider text-orange-400 font-display">Ebooks & Guides • Instant Download</span>
+                        </div>
+                    </a>
+                    <p class="text-xs text-slate-400 max-w-sm mb-4 leading-relaxed">
+                        Knowletive transforms career paths, education trajectories, and tech capabilities through verified mentoring, data-driven admissions, and hands-on industry programs.
+                    </p>
+                    <div class="flex items-center gap-4 text-xs font-semibold text-slate-300">
+                        <span class="flex items-center gap-1.5"><i data-lucide="map-pin" class="w-4 h-4 text-orange-400"></i> Baner, Pune</span>
+                        <span class="flex items-center gap-1.5"><i data-lucide="shield-check" class="w-4 h-4 text-sky-400"></i> Verified Programs</span>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-white text-xs font-bold uppercase tracking-wider mb-3 font-display">Pune Center Address</h4>
+                    <p class="text-xs leading-relaxed text-slate-400">
+                        4th Floor, DS IKON,<br>
+                        Laxman Nagar, Baner,<br>
+                        Pune, Maharashtra 411045
+                    </p>
+                    <div class="mt-3 text-xs text-slate-300">
+                        <p>Mon - Sat: 9:30 AM - 7:00 PM</p>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-white text-xs font-bold uppercase tracking-wider mb-3 font-display">Direct Contact</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li>
+                            <a href="tel:+919970600116" class="hover:text-white transition-colors flex items-center gap-2">
+                                <i data-lucide="phone" class="w-3.5 h-3.5 text-sky-400"></i>
+                                +91 99706 00116
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:connect@knowletive.in" class="hover:text-white transition-colors flex items-center gap-2">
+                                <i data-lucide="mail" class="w-3.5 h-3.5 text-sky-400"></i>
+                                connect@knowletive.in
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://wa.me/919970600116" target="_blank" rel="noopener" class="hover:text-emerald-400 transition-colors flex items-center gap-2">
+                                <i data-lucide="message-circle" class="w-3.5 h-3.5 text-emerald-400"></i>
+                                WhatsApp Support
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+                <p>&copy; 2026 Knowletive Technologies Private Limited. All rights reserved.</p>
+                <div class="flex items-center gap-6">
+                    <a href="#" class="hover:text-slate-400">Privacy Policy</a>
+                    <a href="#" class="hover:text-slate-400">Terms of Service</a>
+                    <a href="#sec-lead-form" class="hover:text-slate-400">Request Callback</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    
+    <!-- Sticky Mobile CTA Bar -->
+    <div id="sticky-mobile-bar" class="sm:hidden fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-t border-slate-200 px-4 py-2.5 flex items-center justify-between gap-3 shadow-lg">
+        <a href="https://wa.me/919970600116?text=Hi Knowletive! I want to inquire about your Career & Tech Ebooks. Please share download links and sample chapters." target="_blank" rel="noopener" class="flex-1 inline-flex items-center justify-center gap-2 bg-emerald-50 text-emerald-700 border border-emerald-300 font-bold text-xs py-2.5 rounded-lg">
+            <i data-lucide="message-circle" class="w-4 h-4 text-emerald-600"></i>
+            <span>WhatsApp</span>
+        </a>
+        <a href="#sec-lead-form" class="flex-1 inline-flex items-center justify-center gap-2 bg-orange-500 hover:bg-orange-600 text-white font-bold text-xs py-2.5 rounded-lg shadow font-display">
+            <span>Apply Now</span>
+            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+        </a>
+    </div>
+
+    <!-- Floating WhatsApp Button (Desktop & Mobile) -->
+    <div id="sticky-whatsapp-btn" class="fixed bottom-16 sm:bottom-6 right-5 z-40">
+        <button onclick="openStickyWhatsApp()" aria-label="Chat on WhatsApp" class="group flex items-center gap-2.5 bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300">
+            <i data-lucide="message-circle" class="w-5 h-5 fill-white"></i>
+            <span class="hidden md:inline font-bold text-xs tracking-wide">Chat with Advisor</span>
+        </button>
+    </div>
+
+    <!-- Cookie Consent Banner -->
+    <div id="cookie-banner" class="fixed bottom-0 left-0 right-0 z-50 bg-navy-950/95 backdrop-blur-md text-white border-t border-navy-800 px-4 py-3.5 hidden">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3 text-xs">
+            <p class="text-slate-300 text-center sm:text-left">
+                We use cookies and telemetry to personalize your counseling experience and optimize lead delivery. By continuing, you agree to our policies.
+            </p>
+            <div class="flex items-center gap-2.5 flex-shrink-0">
+                <button onclick="acceptCookies()" class="bg-orange-500 hover:bg-orange-600 text-white font-bold px-4 py-1.5 rounded-full transition-colors font-display">Accept</button>
+                <button onclick="dismissCookies()" class="text-slate-400 hover:text-white px-3 py-1.5 transition-colors">Dismiss</button>
+            </div>
+        </div>
+    </div>
+</div> <!-- End #landingPageView -->
+
+<!-- Dedicated Thank You View (SPA) -->
+<div id="thankYouPageView" class="hidden min-h-screen bg-slate-50 flex flex-col items-center justify-center px-4 py-16">
+    <div class="max-w-md w-full bg-white rounded-2xl shadow-xl border border-slate-100 p-8 text-center relative overflow-hidden">
+        <div class="absolute top-0 left-0 right-0 h-2 bg-gradient-to-r from-orange-500 via-sky-600 to-emerald-500"></div>
+        <div class="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto mb-5 shadow-sm">
+            <i data-lucide="check-circle" class="w-8 h-8"></i>
+        </div>
+        <h2 id="tyHeadline" class="text-2xl font-black text-navy-900 font-display mb-2">Inquiry Confirmed!</h2>
+        <p class="text-sm text-slate-600 mb-6">
+            Thank you for reaching out to Knowletive. Your request has been securely logged with our Baner, Pune center.
+        </p>
+        
+        <div class="bg-slate-50 border border-slate-200 rounded-xl p-4 text-left mb-6 space-y-2 text-xs">
+            <div class="flex justify-between items-center text-slate-500">
+                <span>Inquiry Reference ID:</span>
+                <span id="tyLeadId" class="font-mono font-bold text-slate-800">KN-000000</span>
+            </div>
+            <div class="flex justify-between items-center text-slate-500">
+                <span>Program / Topic:</span>
+                <span id="tyExamStream" class="font-bold text-slate-800 truncate max-w-[180px]">-</span>
+            </div>
+            <div class="flex justify-between items-center text-slate-500">
+                <span>Status:</span>
+                <span id="tyCrmStatus" class="font-bold text-emerald-600">✓ Logged with Senior Advisor</span>
+            </div>
+        </div>
+        
+        <a id="tyWhatsAppBtn" href="#" target="_blank" rel="noopener" class="w-full inline-flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3.5 px-6 rounded-xl shadow-md transition-all font-display text-sm mb-3">
+            <i data-lucide="message-circle" class="w-4 h-4 fill-white"></i>
+            <span>Chat on WhatsApp for Fast-Track</span>
+        </a>
+        
+        <button onclick="returnToLandingView()" class="w-full inline-flex items-center justify-center gap-2 bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold py-2.5 px-4 rounded-xl transition-all text-xs">
+            <i data-lucide="arrow-left" class="w-3.5 h-3.5"></i>
+            <span>Back to Home</span>
+        </button>
+    </div>
+</div>
+
+<script>
+    // Lucide Icons initialization
+    if (window.lucide) { lucide.createIcons(); }
+
+    // Global Tracker & Telemetry
+    window.KnowletiveTracker = {
+        trackEvent: function(eventName, data) {
+            console.log('[Knowletive Tracker]', eventName, data);
+            if (window.dataLayer) {
+                window.dataLayer.push({ event: eventName, ...data });
+            }
+        }
+    };
+
+    // UTM Capture and Persistence
+    function captureAndPersistUTMs() {
+        const params = new URLSearchParams(window.location.search);
+        const utmKeys = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'];
+        let hasUtm = false;
+        utmKeys.forEach(k => {
+            const val = params.get(k);
+            if (val) {
+                localStorage.setItem('kn_' + k, val);
+                hasUtm = true;
+            }
+        });
+        if (!localStorage.getItem('kn_first_referrer')) {
+            localStorage.setItem('kn_first_referrer', document.referrer || 'direct');
+        }
+    }
+
+    function getStoredUTMs() {
+        return {
+            utm_source: localStorage.getItem('kn_utm_source') || 'direct',
+            utm_medium: localStorage.getItem('kn_utm_medium') || 'web',
+            utm_campaign: localStorage.getItem('kn_utm_campaign') || 'ebook_selling',
+            utm_term: localStorage.getItem('kn_utm_term') || '',
+            utm_content: localStorage.getItem('kn_utm_content') || '',
+            first_referrer: localStorage.getItem('kn_first_referrer') || ''
+        };
+    }
+
+    // Cookie Banner
+    function initConsentBanner() {
+        if (!localStorage.getItem('kn_cookie_consent')) {
+            document.getElementById('cookie-banner').classList.remove('hidden');
+        }
+    }
+    function acceptCookies() {
+        localStorage.setItem('kn_cookie_consent', 'accepted');
+        document.getElementById('cookie-banner').classList.add('hidden');
+    }
+    function dismissCookies() {
+        localStorage.setItem('kn_cookie_consent', 'dismissed');
+        document.getElementById('cookie-banner').classList.add('hidden');
+    }
+
+    // FAQ Accordion Toggle
+    function toggleFaq(btn) {
+        const content = btn.nextElementSibling;
+        const icon = btn.querySelector('.faq-icon');
+        const isOpen = !content.classList.contains('hidden');
+        
+        // Close all others
+        document.querySelectorAll('.faq-content').forEach(el => el.classList.add('hidden'));
+        document.querySelectorAll('.faq-icon').forEach(el => el.classList.remove('rotate-180'));
+        
+        if (!isOpen) {
+            content.classList.remove('hidden');
+            icon.classList.add('rotate-180');
+        }
+    }
+
+        // Helper to auto-select ebook from catalog CTA click
+    function selectEbook(title) {
+        const sel = document.querySelector('select[name="ebookTitle"]');
+        if (sel) {
+            for (let i = 0; i < sel.options.length; i++) {
+                if (sel.options[i].value === title || sel.options[i].text.includes(title)) {
+                    sel.selectedIndex = i;
+                    break;
+                }
+            }
+        }
+    }
+
+    // Form Submission Handling
+    async function submitLeadForm(e) {
+        e.preventDefault();
+        const form = e.target;
+        
+        // Honeypot check
+        if (form._hp && form._hp.value) {
+            console.warn('Bot detected');
+            return false;
+        }
+        
+        const submitBtn = form.querySelector('button[type="submit"]');
+        const originalText = submitBtn.innerHTML;
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<span class="inline-flex items-center gap-2"><i data-lucide="loader-2" class="w-4 h-4 animate-spin"></i> Submitting...</span>';
+        if (window.lucide) { lucide.createIcons(); }
+
+        const leadId = 'KN-' + Math.floor(100000 + Math.random() * 900000);
+        const utms = getStoredUTMs();
+        
+        const formData = new FormData(form);
+        const dataObj = Object.fromEntries(formData.entries());
+        const nameVal = (formData.get('name') || '').trim();
+        const emailVal = (formData.get('email') || '').trim();
+        const phoneVal = (formData.get('phone') || '').trim();
+        const bookVal = (formData.get('ebookTitle') || '').trim();
+        const bgVal = (formData.get('currentStatus') || '').trim();
+        const courseCombined = [bookVal, bgVal ? '(' + bgVal + ')' : ''].filter(Boolean).join(' ') || bookVal || 'Ebook Bundle';
+        const sourceVal = 'Ebook Selling';
+        const dateVal = new Date().toLocaleString('en-IN', {
+            timeZone: 'Asia/Kolkata',
+            year: 'numeric',
+            month: 'short',
+            day: '2-digit',
+            hour: '2-digit',
+            minute: '2-digit',
+            hour12: true
+        });
+
+        const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwGOhSIJWTWEop32sD2oGUMQ60XNpZ4--5spa00-ICAXT5LLAyPrvlwjT24vuX0LBgERg/exec";
+
+        // URLSearchParams payload strictly matching Code.gs expected keys
+        const params = new URLSearchParams();
+        params.append('name', nameVal);
+        params.append('email', emailVal);
+        params.append('phone', phoneVal);
+        params.append('source', sourceVal);
+        params.append('course', courseCombined);
+
+        // Supporting column mappings for Google Sheet formulas
+        params.append('landingPage', sourceVal);
+        params.append('leadId', leadId);
+        params.append('date', dateVal);
+        params.append('status', 'Logged with Senior Advisor');
+        params.append('Lead ID', leadId);
+        params.append('Name', nameVal);
+        params.append('Email', emailVal);
+        params.append('Phone', phoneVal);
+        params.append('Landing Page', sourceVal);
+        params.append('Course', courseCombined);
+        params.append('Date', dateVal);
+        params.append('Status', 'Logged with Senior Advisor');
+        Object.entries(utms).forEach(([k, v]) => params.append(k, v));
+
+        // Local storage backup
+        try {
+            const existing = JSON.parse(localStorage.getItem('kn_leads') || '[]');
+            existing.push(Object.fromEntries(params.entries()));
+            localStorage.setItem('kn_leads', JSON.stringify(existing));
+        } catch(err) {}
+
+        // Direct fetch using URLSearchParams and mode: 'no-cors' (prevents CORS preflight)
+        console.log("[Knowletive Sheet Sync] Payload sent:", Object.fromEntries(params));
+        try {
+            await fetch(GOOGLE_SCRIPT_URL, {
+                method: 'POST',
+                mode: 'no-cors',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: params.toString()
+            });
+            console.log('[Knowletive Sheet Sync] POST sent successfully to GOOGLE_SCRIPT_URL.');
+        } catch(err) {
+            console.error('[Knowletive Sheet Sync] Transmission error:', err);
+        }
+
+        // Tracker event
+        window.KnowletiveTracker.trackEvent('generate_lead', {
+            name: nameVal,
+            email: emailVal,
+            phone: phoneVal,
+            source: sourceVal,
+            course: courseCombined,
+            leadId: leadId
+        });
+        console.log(`[Knowletive Tracker] Status: ✓ Logged with Senior Advisor (Lead ID: ${leadId})`);
+
+        // Show Thank you View
+        document.getElementById('landingPageView').classList.add('hidden');
+        document.getElementById('thankYouPageView').classList.remove('hidden');
+        window.location.hash = '#thank-you';
+
+        document.getElementById('tyHeadline').textContent = `Thank You, ${nameVal || 'Friend'}!`;
+        document.getElementById('tyLeadId').textContent = leadId;
+        document.getElementById('tyExamStream').textContent = courseCombined || 'Ebooks & Guides';
+        
+        const queryText = encodeURIComponent(`Hi Knowletive! I just submitted an inquiry for *Ebooks & Guides* (Ref: *${leadId}*):%0A• *Name:* ${nameVal}%0A• *Phone:* ${phoneVal}%0A• *Course:* ${courseCombined}%0APlease share complete program details & next steps!`);
+        document.getElementById('tyWhatsAppBtn').href = `https://wa.me/919970600116?text=${queryText}`;
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalText;
+        return false;
+    }
+
+    function returnToLandingView() {
+        document.getElementById('thankYouPageView').classList.add('hidden');
+        document.getElementById('landingPageView').classList.remove('hidden');
+        if (window.location.hash === '#thank-you') {
+            history.replaceState(null, null, ' ');
+        }
+    }
+
+    function handleHashRouting() {
+        if (window.location.hash === '#thank-you') {
+            document.getElementById('landingPageView').classList.add('hidden');
+            document.getElementById('thankYouPageView').classList.remove('hidden');
+        } else {
+            returnToLandingView();
+        }
+    }
+
+    function openStickyWhatsApp() {
+        const utms = getStoredUTMs();
+        const msg = `Hi Knowletive! I would like to speak with an advisor regarding *Ebooks & Guides*. Please share details.`;
+        window.KnowletiveTracker.trackEvent('whatsapp_click', { location: 'floating_button' });
+        window.open(`https://wa.me/919970600116?text=${encodeURIComponent(msg)}`, '_blank', 'noopener,noreferrer');
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        captureAndPersistUTMs();
+        initConsentBanner();
+        handleHashRouting();
+        window.addEventListener('hashchange', handleHashRouting);
+    });
+</script>
+</body>
+</html>
+

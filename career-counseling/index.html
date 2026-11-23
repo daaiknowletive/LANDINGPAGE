@@ -1,0 +1,1763 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knowletive 1-on-1 Career Counseling | Scientific Career Roadmap • Baner, Pune</title>
+    <meta name="description" content="Stop guessing your future. Personalized 1-on-1 Career Counseling & Psychometric Assessment in Baner, Pune or Live Online.">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@700;800;900&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --navy: #0A2540;
+            --navy-dark: #051321;
+            --sky: #0284C7;
+            --cyan: #0EA5E9;
+            --orange: #F97316;
+            --orange-dark: #EA580C;
+            --emerald: #10B981;
+            --emerald-dark: #059669;
+            --bg-page: #F8FAFC;
+            --bg-card: #FFFFFF;
+            --border: #E2E8F0;
+            --text-heading: #0A2540;
+            --text-body: #475569;
+            --text-muted: #64748B;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-page);
+            color: var(--text-heading);
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+            padding-bottom: 70px;
+        }
+
+        @media (min-width: 769px) {
+            body {
+                padding-bottom: 0;
+            }
+        }
+
+        h1, h2, h3, h4, .font-display {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.25rem;
+        }
+
+        /* 1. TOP BAR */
+        .top-header {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            background: rgba(255, 255, 255, 0.96);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+            padding: 0.75rem 0;
+        }
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+        }
+        .brand-logo-link {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+        .brand-logo-img {
+            height: 48px;
+            max-height: 50px;
+            width: auto;
+            object-fit: contain;
+            display: block;
+            opacity: 1 !important;
+            filter: none !important;
+            image-rendering: -webkit-optimize-contrast;
+            image-rendering: crisp-edges;
+        }
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        .btn-call {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.5rem 0.9rem;
+            border-radius: 0.75rem;
+            background: #F1F5F9;
+            border: 1px solid var(--border);
+            color: var(--navy);
+            font-size: 0.82rem;
+            font-weight: 800;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+        .btn-call:hover {
+            background: #E0F2FE;
+            color: var(--sky);
+        }
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 0.65rem 1.25rem;
+            border-radius: 0.75rem;
+            background: var(--orange);
+            color: #FFFFFF;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 800;
+            text-decoration: none;
+            box-shadow: 0 4px 12px rgba(249, 115, 22, 0.25);
+            transition: all 0.2s;
+            border: none;
+            cursor: pointer;
+        }
+        .btn-primary:hover {
+            background: var(--orange-dark);
+            transform: translateY(-1px);
+        }
+
+        /* 2. SECTION 1: HERO SECTION */
+        .sec-hero {
+            position: relative;
+            padding: 3rem 0 4rem;
+            background-image: url('assets/hero-bg.jpg');
+            background-size: cover;
+            background-position: right center;
+            background-repeat: no-repeat;
+            border-bottom: 1px solid var(--border);
+            overflow: hidden;
+        }
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(90deg, rgba(255, 255, 255, 0.96) 0%, rgba(255, 255, 255, 0.85) 50%, rgba(255, 255, 255, 0.25) 100%);
+            pointer-events: none;
+        }
+        @media (max-width: 900px) {
+            .hero-overlay {
+                background: linear-gradient(180deg, rgba(255, 255, 255, 0.97) 0%, rgba(255, 255, 255, 0.90) 65%, rgba(255, 255, 255, 0.80) 100%);
+            }
+        }
+        .hero-grid {
+            position: relative;
+            z-index: 2;
+            display: grid;
+            grid-template-columns: 1fr 1.15fr;
+            gap: 2.5rem;
+            align-items: center;
+        }
+        @media (max-width: 992px) {
+            .hero-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        .pill-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.35rem 0.85rem;
+            border-radius: 9999px;
+            background: #FFFFFF;
+            border: 1px solid #BAE6FD;
+            color: var(--sky);
+            font-size: 0.75rem;
+            font-weight: 800;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            margin-bottom: 1rem;
+        }
+        .pill-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--orange);
+        }
+        .hero-title {
+            font-size: 2.75rem;
+            font-weight: 900;
+            line-height: 1.12;
+            letter-spacing: -0.03em;
+            color: var(--navy);
+            margin-bottom: 1rem;
+        }
+        @media (max-width: 640px) {
+            .hero-title {
+                font-size: 2.1rem;
+            }
+        }
+        .text-sky {
+            color: var(--sky);
+            display: block;
+        }
+        .hero-desc {
+            font-size: 1.05rem;
+            color: var(--text-body);
+            font-weight: 500;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+            max-width: 520px;
+        }
+        .chips-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1.75rem;
+        }
+        .chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.4rem 0.75rem;
+            background: rgba(255, 255, 255, 0.95);
+            border: 1px solid var(--border);
+            border-radius: 0.75rem;
+            font-size: 0.75rem;
+            font-weight: 800;
+            color: var(--navy);
+        }
+        .hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-bottom: 1.5rem;
+        }
+        .btn-wa-outline {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 0.65rem 1.25rem;
+            border-radius: 0.75rem;
+            background: #FFFFFF;
+            border: 2px solid var(--emerald-dark);
+            color: var(--emerald-dark);
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 800;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+        .btn-wa-outline:hover {
+            background: #ECFDF5;
+        }
+        .hero-trust {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 1.25rem;
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: var(--text-muted);
+        }
+
+        /* HERO WINDOW CARD MOCKUP */
+        .window-card {
+            background: #FFFFFF;
+            border: 2px solid #CBD5E1;
+            border-radius: 1.5rem;
+            box-shadow: 0 20px 40px -15px rgba(10, 37, 64, 0.15);
+            overflow: hidden;
+        }
+        .window-header {
+            background: var(--navy);
+            padding: 0.75rem 1.25rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: #FFFFFF;
+        }
+        .window-dots {
+            display: flex;
+            align-items: center;
+            gap: 0.35rem;
+        }
+        .w-dot {
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+        }
+        .window-title {
+            font-size: 0.7rem;
+            font-weight: 800;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            color: #BAE6FD;
+            margin-left: 0.4rem;
+        }
+        .window-badge {
+            background: var(--orange);
+            color: #FFFFFF;
+            font-size: 0.65rem;
+            font-weight: 900;
+            padding: 0.2rem 0.5rem;
+            border-radius: 0.35rem;
+            text-transform: uppercase;
+        }
+        .window-body {
+            background: #F8FAFC;
+            padding: 1rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+        @media (max-width: 600px) {
+            .window-body {
+                grid-template-columns: 1fr;
+            }
+        }
+        .photo-frame {
+            position: relative;
+            border-radius: 1rem;
+            overflow: hidden;
+            background: var(--navy);
+            min-height: 230px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            border: 1px solid var(--border);
+        }
+        .photo-frame img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.9;
+        }
+        .photo-gradient {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(10, 37, 64, 0.95) 0%, rgba(10, 37, 64, 0.3) 60%, transparent 100%);
+        }
+        .photo-content {
+            position: relative;
+            z-index: 2;
+            padding: 1rem;
+            color: #FFFFFF;
+        }
+        .badge-orange-tag {
+            display: inline-block;
+            background: var(--orange);
+            color: #FFFFFF;
+            font-size: 0.65rem;
+            font-weight: 900;
+            padding: 0.15rem 0.5rem;
+            border-radius: 0.25rem;
+            text-transform: uppercase;
+            margin-bottom: 0.35rem;
+        }
+        .photo-title {
+            font-size: 1rem;
+            font-weight: 900;
+            line-height: 1.2;
+            color: #FFFFFF;
+        }
+        .photo-sub {
+            font-size: 0.7rem;
+            color: #BAE6FD;
+            font-weight: 600;
+            margin-top: 0.25rem;
+        }
+        .svg-frame {
+            background: #FFFFFF;
+            border: 1px solid var(--border);
+            border-radius: 1rem;
+            padding: 0.75rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        /* 3. COMMON SECTION STYLING */
+        .sec-padding {
+            padding: 4rem 0;
+            border-bottom: 1px solid var(--border);
+        }
+        .sec-bg-white {
+            background: #FFFFFF;
+        }
+        .sec-bg-slate {
+            background: #F8FAFC;
+        }
+        .sec-header {
+            text-align: center;
+            max-width: 720px;
+            margin: 0 auto 3rem;
+        }
+        .sec-tag {
+            display: inline-block;
+            padding: 0.3rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.7rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.65rem;
+            background: #EFF6FF;
+            color: var(--sky);
+            border: 1px solid #BFDBFE;
+        }
+        .sec-tag.orange {
+            background: #FFF7ED;
+            color: var(--orange-dark);
+            border-color: #FED7AA;
+        }
+        .sec-tag.emerald {
+            background: #ECFDF5;
+            color: var(--emerald-dark);
+            border-color: #A7F3D0;
+        }
+        .sec-title {
+            font-size: 2.1rem;
+            font-weight: 900;
+            color: var(--navy);
+            letter-spacing: -0.02em;
+            margin-bottom: 0.75rem;
+        }
+        .sec-subtitle {
+            font-size: 0.95rem;
+            color: var(--text-body);
+            line-height: 1.6;
+        }
+
+        /* 4. CARDS GRID */
+        .grid-4 {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.25rem;
+        }
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.25rem;
+        }
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+        }
+        @media (max-width: 992px) {
+            .grid-4 { grid-template-columns: repeat(2, 1fr); }
+            .grid-3 { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 640px) {
+            .grid-4 { grid-template-columns: 1fr; }
+            .grid-2 { grid-template-columns: 1fr; }
+        }
+
+        
+        .card-image-wrap {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            background: #F8FAFC;
+            border-radius: 0.75rem;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.15rem;
+            border: 1px solid var(--border);
+        }
+        .card-problem-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+            border-radius: 0.75rem;
+            transition: transform 0.25s ease;
+        }
+        .card-box:hover .card-problem-img {
+            transform: scale(1.02);
+        }
+
+        .card-box {
+            background: #FFFFFF;
+            border: 1px solid var(--border);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .card-box:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 24px -6px rgba(10, 37, 64, 0.08);
+        }
+        .card-icon-wrap {
+            width: 44px;
+            height: 44px;
+            border-radius: 0.75rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+            background: #EFF6FF;
+            color: var(--sky);
+        }
+        .card-num {
+            width: 36px;
+            height: 36px;
+            border-radius: 0.5rem;
+            background: #EFF6FF;
+            color: var(--sky);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+        .card-title {
+            font-size: 1.05rem;
+            font-weight: 900;
+            color: var(--navy);
+            margin-bottom: 0.5rem;
+        }
+        .card-desc {
+            font-size: 0.85rem;
+            color: var(--text-body);
+            line-height: 1.5;
+        }
+        .card-footer-tag {
+            margin-top: 1rem;
+            font-size: 0.7rem;
+            font-weight: 800;
+            text-transform: uppercase;
+        }
+
+        /* 5. STEP PROCESS */
+        .step-card {
+            background: #FFFFFF;
+            border: 1px solid var(--border);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            text-align: center;
+        }
+        .step-circle {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: #E0F2FE;
+            color: var(--sky);
+            font-size: 1.1rem;
+            font-weight: 900;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+        }
+
+        /* 6. WHY KNOWLETIVE BANNER */
+        .why-knowletive-box {
+            background: var(--navy);
+            color: #FFFFFF;
+            padding: 3.5rem 0;
+            border-bottom: 1px solid var(--border);
+        }
+        .why-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 2.5rem;
+            align-items: center;
+        }
+        @media (max-width: 900px) {
+            .why-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        .why-card {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 1.25rem;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        /* 7. PRICING CARDS */
+        .price-card {
+            background: #FFFFFF;
+            border: 1px solid var(--border);
+            border-radius: 1.5rem;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .price-card.featured {
+            border: 2px solid var(--sky);
+            box-shadow: 0 15px 35px -10px rgba(2, 132, 199, 0.15);
+            position: relative;
+        }
+        .price-badge-top {
+            position: absolute;
+            top: -12px;
+            right: 20px;
+            background: var(--sky);
+            color: #FFFFFF;
+            font-size: 0.65rem;
+            font-weight: 900;
+            padding: 0.25rem 0.65rem;
+            border-radius: 9999px;
+            text-transform: uppercase;
+        }
+        .price-val {
+            font-size: 1.8rem;
+            font-weight: 900;
+            color: var(--navy);
+            margin: 0.5rem 0;
+        }
+        .price-list {
+            list-style: none;
+            margin: 1.5rem 0;
+        }
+        .price-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.5rem;
+            font-size: 0.85rem;
+            color: var(--text-body);
+            margin-bottom: 0.65rem;
+        }
+
+        /* 8. NATIVE HTML FAQ ACCORDIONS (ZERO JS) */
+        .faq-item {
+            background: #FFFFFF;
+            border: 1px solid var(--border);
+            border-radius: 1rem;
+            margin-bottom: 0.85rem;
+            overflow: hidden;
+        }
+        .faq-summary {
+            padding: 1.15rem 1.25rem;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 800;
+            color: var(--navy);
+            cursor: pointer;
+            list-style: none;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .faq-summary::-webkit-details-marker {
+            display: none;
+        }
+        .faq-summary svg {
+            transition: transform 0.2s ease;
+            flex-shrink: 0;
+        }
+        details[open] .faq-summary svg {
+            transform: rotate(180deg);
+        }
+        .faq-content {
+            padding: 0 1.25rem 1.25rem;
+            font-size: 0.85rem;
+            color: var(--text-body);
+            line-height: 1.6;
+            border-top: 1px solid #F1F5F9;
+            padding-top: 0.75rem;
+        }
+
+        /* 9. LEAD FORM SECTION */
+        .form-card-main {
+            background: #FFFFFF;
+            border: 1px solid var(--border);
+            border-radius: 1.5rem;
+            box-shadow: 0 20px 40px -15px rgba(10, 37, 64, 0.1);
+            padding: 2.5rem;
+            max-width: 680px;
+            margin: 0 auto;
+        }
+        .form-group {
+            margin-bottom: 1.15rem;
+        }
+        .form-label {
+            display: block;
+            font-size: 0.75rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--slate-700);
+            margin-bottom: 0.35rem;
+        }
+        .form-input, .form-select, .form-textarea {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border-radius: 0.75rem;
+            border: 1px solid var(--border);
+            background: #F8FAFC;
+            font-family: inherit;
+            font-size: 0.88rem;
+            color: var(--text-heading);
+            outline: none;
+        }
+        .form-input:focus, .form-select:focus, .form-textarea:focus {
+            border-color: var(--sky);
+            background: #FFFFFF;
+        }
+        .phone-input-wrap {
+            display: flex;
+        }
+        .phone-prefix {
+            padding: 0.75rem 0.85rem;
+            background: #E2E8F0;
+            border: 1px solid var(--border);
+            border-right: none;
+            border-radius: 0.75rem 0 0 0.75rem;
+            font-size: 0.8rem;
+            font-weight: 800;
+            color: var(--slate-700);
+        }
+        .phone-field {
+            border-radius: 0 0.75rem 0.75rem 0;
+        }
+
+        /* 10. FINAL CTA */
+        .final-cta-box {
+            background: var(--navy);
+            color: #FFFFFF;
+            padding: 4.5rem 0;
+            text-align: center;
+        }
+
+        /* 11. FOOTER */
+        .footer {
+            background: var(--navy-dark);
+            color: var(--text-muted);
+            padding: 3rem 0 2rem;
+            font-size: 0.78rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .footer-inner {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        .footer-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        /* 12. FLOATING & STICKY PURE CSS ELEMENTS */
+        .floating-whatsapp {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            z-index: 40;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.25rem;
+            border-radius: 9999px;
+            background: #10B981;
+            color: #FFFFFF;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 0.82rem;
+            font-weight: 800;
+            text-decoration: none;
+            box-shadow: 0 10px 25px rgba(16, 185, 129, 0.4);
+            transition: transform 0.2s;
+        }
+        .floating-whatsapp:hover {
+            transform: scale(1.05);
+            background: #059669;
+        }
+        @media (max-width: 768px) {
+            .floating-whatsapp {
+                bottom: 80px;
+                right: 16px;
+                padding: 0.65rem;
+                border-radius: 50%;
+                width: 48px;
+                height: 48px;
+                justify-content: center;
+            }
+            .floating-whatsapp span {
+                display: none;
+            }
+        }
+
+        .sticky-mobile-bar {
+            display: none;
+        }
+        @media (max-width: 768px) {
+            .sticky-mobile-bar {
+                display: flex;
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                z-index: 45;
+                background: #FFFFFF;
+                border-top: 1px solid var(--border);
+                padding: 0.6rem 1rem;
+                gap: 0.5rem;
+                box-shadow: 0 -4px 12px rgba(0,0,0,0.05);
+            }
+            .sticky-mobile-bar a {
+                flex: 1;
+                text-align: center;
+                padding: 0.65rem 0.5rem;
+                border-radius: 0.65rem;
+                font-family: 'Plus Jakarta Sans', sans-serif;
+                font-size: 0.78rem;
+                font-weight: 800;
+                text-decoration: none;
+            }
+            .btn-mobile-call {
+                background: #F1F5F9;
+                color: var(--navy);
+                border: 1px solid var(--border);
+            }
+            .btn-mobile-book {
+                background: var(--orange);
+                color: #FFFFFF;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===================================================================== -->
+    <!-- TOP HEADER BAR                                                        -->
+    <!-- ===================================================================== -->
+    <header class="top-header">
+        <div class="container header-inner">
+            <a href="#sec-hero" class="brand-logo-link" aria-label="Knowletive Career Counseling">
+                <img src="assets/knowletive-logo-counseling-large.png" alt="Knowletive Career Counseling • Baner, Pune" class="brand-logo-img">
+            </a>
+            <div class="header-actions">
+                <a href="tel:+919970600116" class="btn-call">
+                    <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+                    <span>+91 99706 00116</span>
+                </a>
+                <a href="#sec-lead-form" class="btn-primary">
+                    Book Career Counseling
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===================================================================== -->
+    <!-- SECTION 1: HERO SECTION                                               -->
+    <!-- ===================================================================== -->
+    <section id="sec-hero" class="sec-hero">
+        <div class="hero-overlay"></div>
+        <div class="container hero-grid">
+            
+            <!-- Left Hero Content -->
+            <div>
+                <div class="pill-badge">
+                    <span class="pill-dot"></span>
+                    <span>Personalized Academic &amp; Professional Guidance</span>
+                </div>
+                <h1 class="hero-title">
+                    Stop Guessing Your Future.
+                    <span class="text-sky">Make Confident Career Moves.</span>
+                </h1>
+                <p class="hero-desc">
+                    Unbiased 1-on-1 guidance on degree choices, high-growth career tracks, and study milestones — in Baner, Pune or live online.
+                </p>
+
+                <div class="chips-group">
+                    <span class="chip">
+                        <svg width="14" height="14" fill="none" stroke="#0284C7" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M16 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="8.5" cy="7" r="4"/><path stroke-linecap="round" stroke-linejoin="round" d="M20 8v6M23 11h-6"/></svg>
+                        1-on-1 Private Consultation
+                    </span>
+                    <span class="chip">
+                        <svg width="14" height="14" fill="none" stroke="#F97316" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path stroke-linecap="round" stroke-linejoin="round" d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+                        Students, Parents &amp; Graduates
+                    </span>
+                    <span class="chip">
+                        <svg width="14" height="14" fill="none" stroke="#10B981" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        Online &amp; In-Person at Pune
+                    </span>
+                </div>
+
+                <div class="hero-buttons">
+                    <a href="#sec-lead-form" class="btn-primary">
+                        <span>Book Career Counseling</span>
+                        <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                    <a href="https://wa.me/919970600116?text=Hi%20Knowletive%2C%20I%20have%20a%20quick%20question%20regarding%20Career%20Counseling." target="_blank" rel="noopener noreferrer" class="btn-wa-outline">
+                        <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.698.077-2.124-.515-1.826-.757-3.003-2.613-3.094-2.736-.091-.123-.746-.992-.746-1.893 0-.901.472-1.343.64-1.525.168-.182.368-.228.49-.228.123 0 .245.002.353.007.113.005.265-.043.415.317.154.368.524 1.277.57 1.369.046.091.077.199.015.321-.061.123-.092.199-.184.307-.092.108-.194.24-.277.322-.092.091-.188.19-.081.373.107.183.477.788 1.025 1.275.706.628 1.302.822 1.486.914.184.091.292.077.4-.047.108-.123.461-.537.584-.72.123-.184.246-.153.415-.091.169.061 1.074.507 1.258.599.184.092.307.138.353.215.046.077.046.446-.098.851z"/></svg>
+                        <span>Quick Question on WhatsApp</span>
+                    </a>
+                </div>
+
+                <div class="hero-trust">
+                    <span><strong style="color: #F59E0B;">★★★★★</strong> 4.8/5 Rating (120+ Reviews)</span>
+                    <span>👥 <strong>5,000+ Students</strong> Guided</span>
+                    <span>🛡️ ISO 9001:2015 Certified</span>
+                </div>
+            </div>
+
+            <!-- Right Visual Showcase Window Card -->
+            <div>
+                <div class="window-card">
+                    <div class="window-header">
+                        <div class="window-dots">
+                            <span class="w-dot" style="background: #F97316;"></span>
+                            <span class="w-dot" style="background: #0EA5E9;"></span>
+                            <span class="w-dot" style="background: #10B981;"></span>
+                            <span class="window-title">1-ON-1 PRIVATE MENTORSHIP • ACTIONABLE STUDY MILESTONES</span>
+                        </div>
+                        <span class="window-badge">BANER • PUNE</span>
+                    </div>
+
+                    <div class="window-body">
+                        <!-- Counselor Photo Frame -->
+                        <div class="photo-frame">
+                            <img src="assets/Man_smiling_in_office_1086c653_2K.jpg" alt="Knowletive Career Counselor in Baner Pune" style="object-position: 55% 25%;">
+                            <div class="photo-gradient"></div>
+                            <div class="photo-content">
+                                <span class="badge-orange-tag">Unbiased Guidance</span>
+                                <div class="photo-title">1-on-1 Parent &amp; Student Desk</div>
+                                <div class="photo-sub">Baner, Pune &amp; Live Google Meet / Zoom</div>
+                            </div>
+                        </div>
+
+                        <!-- Structured SVG Blueprint Card -->
+                        <div class="svg-frame">
+                            <svg viewBox="0 0 280 230" style="width: 100%; height: auto; display: block;">
+                                <rect width="280" height="230" rx="12" fill="#FFFFFF" />
+                                <rect x="6" y="6" width="164" height="20" rx="6" fill="#0A2540" />
+                                <text x="88" y="19" text-anchor="middle" fill="#FFFFFF" font-size="8.5" font-weight="900">PROFILE &amp; DOMAIN FIT</text>
+
+                                <!-- Donut Gauge -->
+                                <circle cx="72" cy="84" r="40" fill="none" stroke="#E2E8F0" stroke-width="11" />
+                                <circle cx="72" cy="84" r="40" fill="none" stroke="#0284C7" stroke-width="11" stroke-dasharray="170 251" stroke-linecap="round" />
+                                <circle cx="72" cy="84" r="40" fill="none" stroke="#F97316" stroke-width="11" stroke-dasharray="60 251" stroke-dashoffset="-175" stroke-linecap="round" />
+                                <text x="72" y="82" text-anchor="middle" fill="#0A2540" font-size="14" font-weight="900">60 MIN</text>
+                                <text x="72" y="95" text-anchor="middle" fill="#0284C7" font-size="7.5" font-weight="800">1-ON-1 FOCUS</text>
+
+                                <!-- Right Career Cluster Pills -->
+                                <rect x="128" y="42" width="146" height="24" rx="7" fill="#E0F2FE" />
+                                <text x="138" y="57" fill="#0A2540" font-size="8.5" font-weight="900">IT &amp; Engineering</text>
+
+                                <rect x="128" y="72" width="146" height="24" rx="7" fill="#FFF7ED" />
+                                <text x="138" y="87" fill="#0A2540" font-size="8.5" font-weight="900">Business &amp; Finance</text>
+
+                                <rect x="128" y="102" width="146" height="24" rx="7" fill="#F1F5F9" />
+                                <text x="138" y="117" fill="#0A2540" font-size="8.5" font-weight="900">Creative &amp; Abroad</text>
+
+                                <!-- Bottom Summary -->
+                                <rect x="6" y="142" width="268" height="80" rx="12" fill="#0A2540" />
+                                <text x="20" y="162" fill="#0EA5E9" font-size="8.5" font-weight="900">WRITTEN GUIDANCE SUMMARY</text>
+                                <line x1="36" y1="190" x2="244" y2="190" stroke="#0EA5E9" stroke-width="2.5" stroke-dasharray="4 3" />
+                                <circle cx="36" cy="190" r="10" fill="#0284C7" />
+                                <text x="36" y="193" text-anchor="middle" fill="#FFFFFF" font-size="7.5" font-weight="900">01</text>
+                                <circle cx="140" cy="190" r="10" fill="#0284C7" />
+                                <text x="140" y="193" text-anchor="middle" fill="#FFFFFF" font-size="7.5" font-weight="900">02</text>
+                                <circle cx="244" cy="190" r="10" fill="#F97316" />
+                                <text x="244" y="193" text-anchor="middle" fill="#FFFFFF" font-size="8" font-weight="900">✓</text>
+                                <text x="140" y="213" text-anchor="middle" fill="#FFFFFF" font-size="8" font-weight="800">Stream → Entrance Timelines → Skill Milestones</text>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- =================================================================== -->
+    <!-- SECTION 2: PROBLEM SECTION                                          -->
+    <!-- =================================================================== -->
+    <section id="sec-problem" class="sec-padding sec-bg-white">
+        <div class="container">
+            <div class="sec-header">
+                <span class="sec-tag orange">Actual Dilemmas</span>
+                <h2 class="sec-title">The Career Crossroads Dilemma</h2>
+                <p class="sec-subtitle">
+                    Making unguided academic and professional decisions leads to expensive mistakes, wasted semesters, and career dissatisfaction.
+                </p>
+            </div>
+
+            <div class="grid-4">
+                <!-- Card 1: Stream Confusion -->
+                <div class="card-box">
+                    <div>
+                        <div class="card-image-wrap">
+                            <img src="assets/Student_choosing_career_paths_24ed6505_2K.jpg" alt="Stream Confusion - Student choosing career paths" class="card-problem-img">
+                        </div>
+                        <div class="card-icon-wrap" style="background: #FFF1F2; color: #E11D48;">
+                            <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>
+                        </div>
+                        <h3 class="card-title">Stream Confusion</h3>
+                        <p class="card-desc">Struggling to choose between Science, Commerce, Arts, or specialized engineering branches without objective aptitude data.</p>
+                    </div>
+                    <span class="card-footer-tag" style="color: #E11D48;">Common Mistake #1</span>
+                </div>
+
+                <!-- Card 2: Degree vs Job Disconnect -->
+                <div class="card-box">
+                    <div>
+                        <div class="card-image-wrap">
+                            <img src="assets/Graduate_examining_job_market_sk…_cf31e93f_2K.jpg" alt="Degree vs Job Disconnect - Graduate examining job market skills" class="card-problem-img">
+                        </div>
+                        <div class="card-icon-wrap" style="background: #FFFBEB; color: #D97706;">
+                            <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+                        </div>
+                        <h3 class="card-title">Degree vs Job Disconnect</h3>
+                        <p class="card-desc">Enrolling in degrees that lack real market demand in Pune and India, graduating with zero practical hiring prospects.</p>
+                    </div>
+                    <span class="card-footer-tag" style="color: #D97706;">Common Mistake #2</span>
+                </div>
+
+                <!-- Card 3: Peer & Parent Friction -->
+                <div class="card-box">
+                    <div>
+                        <div class="card-image-wrap">
+                            <img src="assets/Student_experiencing_career_pres…_efb17ce7_2K.jpg" alt="Peer & Parent Friction - Student experiencing career pressure" class="card-problem-img">
+                        </div>
+                        <div class="card-icon-wrap" style="background: #EFF6FF; color: var(--sky);">
+                            <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+                        </div>
+                        <h3 class="card-title">Peer &amp; Parent Friction</h3>
+                        <p class="card-desc">Conflicting advice between parental expectations, peer pressure, and the student's true strengths causing household stress.</p>
+                    </div>
+                    <span class="card-footer-tag" style="color: var(--sky);">Common Mistake #3</span>
+                </div>
+
+                <!-- Card 4: Costly Trial & Error -->
+                <div class="card-box">
+                    <div>
+                        <div class="card-image-wrap">
+                            <img src="assets/Student_surrounded_by_career_opt…_24fb5dc1_2K.jpg" alt="Costly Trial & Error - Student surrounded by career options" class="card-problem-img">
+                        </div>
+                        <div class="card-icon-wrap" style="background: #FAF5FF; color: #9333EA;">
+                            <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6l4 2"/></svg>
+                        </div>
+                        <h3 class="card-title">Costly Trial &amp; Error</h3>
+                        <p class="card-desc">Spending ₹3L–₹10L on random coaching classes and courses before realizing you have neither aptitude nor interest.</p>
+                    </div>
+                    <span class="card-footer-tag" style="color: #9333EA;">Common Mistake #4</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =================================================================== -->
+    <!-- SECTION 3: SOLUTION SECTION                                         -->
+    <!-- =================================================================== -->
+    <section id="sec-solution" class="sec-padding sec-bg-slate">
+        <div class="container">
+            <div class="sec-header">
+                <span class="sec-tag">Our Strategy</span>
+                <h2 class="sec-title">A Structured, Data-Backed Path to Certainty</h2>
+                <p class="sec-subtitle">
+                    We replace guesswork with psychometric analytics, market demand forecasting, and personalized academic alignment.
+                </p>
+            </div>
+
+            <div class="grid-4">
+                <div class="card-box">
+                    <div class="card-num">01</div>
+                    <h3 class="card-title">Scientific Diagnosis</h3>
+                    <p class="card-desc">Evaluating analytical aptitude, spatial reasoning, verbal fluency, and personality traits using standardized frameworks.</p>
+                </div>
+                <div class="card-box">
+                    <div class="card-num">02</div>
+                    <h3 class="card-title">Market-Mapped Paths</h3>
+                    <p class="card-desc">Mapping real-world hiring trends in Pune, Maharashtra, and global tech corridors to ensure degrees lead to viable careers.</p>
+                </div>
+                <div class="card-box">
+                    <div class="card-num">03</div>
+                    <h3 class="card-title">Stream &amp; Exam Blueprint</h3>
+                    <p class="card-desc">Targeting exact entrance examinations (MHT-CET, JEE, MBA-CET, GATE, GRE) with realistic cutoffs and backup options.</p>
+                </div>
+                <div class="card-box">
+                    <div class="card-num">04</div>
+                    <h3 class="card-title">1-on-1 Action Roadmap</h3>
+                    <p class="card-desc">A customized 3-year execution plan with actionable milestones, skill targets, and post-session advisory support.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =================================================================== -->
+    <!-- SECTION 4: BENEFITS SECTION                                         -->
+    <!-- =================================================================== -->
+    <section id="sec-benefits" class="sec-padding sec-bg-white">
+        <div class="container">
+            <div class="sec-header">
+                <span class="sec-tag emerald">Tangible Outcomes</span>
+                <h2 class="sec-title">Why Families Trust Knowletive Advisory</h2>
+                <p class="sec-subtitle">
+                    Real clarity for students and complete peace of mind for parents.
+                </p>
+            </div>
+
+            <div class="grid-4">
+                <div class="card-box" style="background: #F8FAFC;">
+                    <div class="card-image-wrap" style="aspect-ratio: 16 / 9;">
+                        <img src="assets/card-pinpoint-clarity.jpg" alt="Pinpoint Clarity" class="card-problem-img">
+                    </div>
+                    <div class="card-icon-wrap">
+                        <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+                    </div>
+                    <h3 class="card-title">Pinpoint Clarity</h3>
+                    <p class="card-desc">Eliminate self-doubt with proven psychometric validation of your natural intellectual strengths.</p>
+                </div>
+
+                <div class="card-box" style="background: #F8FAFC;">
+                    <div class="card-image-wrap" style="aspect-ratio: 16 / 9;">
+                        <img src="assets/card-high-roi-education.jpg" alt="High ROI Education" class="card-problem-img">
+                    </div>
+                    <div class="card-icon-wrap" style="background: #ECFDF5; color: #10B981;">
+                        <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
+                    </div>
+                    <h3 class="card-title">High ROI Education</h3>
+                    <p class="card-desc">Avoid lakhs wasted on unfocused degrees by investing exclusively in streams with strong hiring demand.</p>
+                </div>
+
+                <div class="card-box" style="background: #F8FAFC;">
+                    <div class="card-image-wrap" style="aspect-ratio: 16 / 9;">
+                        <img src="assets/card-parent-student-alignment.jpg" alt="Parent-Student Alignment" class="card-problem-img">
+                    </div>
+                    <div class="card-icon-wrap" style="background: #FFF7ED; color: var(--orange);">
+                        <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H4a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"/></svg>
+                    </div>
+                    <h3 class="card-title">Parent-Student Alignment</h3>
+                    <p class="card-desc">Resolve household tension through third-party, objective facts and collaborative counseling discussions.</p>
+                </div>
+
+                <div class="card-box" style="background: #F8FAFC;">
+                    <div class="card-image-wrap" style="aspect-ratio: 16 / 9;">
+                        <img src="assets/card-30day-reassurance.jpg" alt="30-Day Reassurance" class="card-problem-img">
+                    </div>
+                    <div class="card-icon-wrap" style="background: #FAF5FF; color: #9333EA;">
+                        <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                    </div>
+                    <h3 class="card-title">30-Day Reassurance</h3>
+                    <p class="card-desc">Direct advisor WhatsApp and phone access for application reviews and follow-up doubts post-session.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =================================================================== -->
+    <!-- SECTION 5: WHAT'S INCLUDED                                          -->
+    <!-- =================================================================== -->
+    <section id="sec-included" class="sec-padding sec-bg-slate">
+        <div class="container">
+            <div class="sec-header">
+                <span class="sec-tag">Deliverables</span>
+                <h2 class="sec-title">What Is Included in Your Guidance Session</h2>
+                <p class="sec-subtitle">
+                    Concrete, documented toolkits designed to guide your next 3 years of academic and career progression.
+                </p>
+            </div>
+
+            <div class="grid-3">
+                <div class="card-box">
+                    <div class="card-image-wrap" style="aspect-ratio: 16 / 9;">
+                        <img src="assets/Document_icon_with_brain_symbol_5ffa18b0_2K.jpg" alt="Psychometric Evaluation Report" class="card-problem-img">
+                    </div>
+                    <div class="card-icon-wrap">
+                        <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                    </div>
+                    <h3 class="card-title">Psychometric Evaluation Report</h3>
+                    <p class="card-desc">Full diagnostic breakdown of cognitive abilities, analytical strengths, and dominant personality traits.</p>
+                </div>
+
+                <div class="card-box">
+                    <div class="card-image-wrap" style="aspect-ratio: 16 / 9;">
+                        <img src="assets/Open_map_icon_with_path_71ab34d4_2K.jpg" alt="3-Year Action Blueprint" class="card-problem-img">
+                    </div>
+                    <div class="card-icon-wrap" style="background: #ECFDF5; color: #10B981;">
+                        <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"/><line x1="8" y1="2" x2="8" y2="18"/><line x1="16" y1="6" x2="16" y2="22"/></svg>
+                    </div>
+                    <h3 class="card-title">3-Year Action Blueprint</h3>
+                    <p class="card-desc">Semester-by-semester roadmap covering entrance exams, technical skills, and internship timelines.</p>
+                </div>
+
+                <div class="card-box">
+                    <div class="card-image-wrap" style="aspect-ratio: 16 / 9;">
+                        <img src="assets/Graduation_cap_on_checklist_2d165eb5_2K.jpg" alt="Curated Stream & College Matrix" class="card-problem-img">
+                    </div>
+                    <div class="card-icon-wrap" style="background: #FFF7ED; color: var(--orange);">
+                        <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+                    </div>
+                    <h3 class="card-title">Curated Stream &amp; College Matrix</h3>
+                    <p class="card-desc">Shortlisted colleges and degrees in Pune &amp; Maharashtra evaluated on cutoffs, fee structures, and placement records.</p>
+                </div>
+
+                <div class="card-box">
+                    <div class="card-image-wrap" style="aspect-ratio: 16 / 9;">
+                        <img src="assets/Calendar_icon_with_target_arrow_bb8e5617_2K.jpg" alt="Entrance Exam Strategy" class="card-problem-img">
+                    </div>
+                    <div class="card-icon-wrap" style="background: #FAF5FF; color: #9333EA;">
+                        <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                    </div>
+                    <h3 class="card-title">Entrance Exam Strategy</h3>
+                    <p class="card-desc">Targeted schedules for MHT-CET, JEE, MBA-CET, CAT, or GATE with cutoff targets and backup planning.</p>
+                </div>
+
+                <div class="card-box">
+                    <div class="card-image-wrap" style="aspect-ratio: 16 / 9;">
+                        <img src="assets/Two_user_avatars_talking_b717a203_2K.jpg" alt="1-on-1 Consultation Session" class="card-problem-img">
+                    </div>
+                    <div class="card-icon-wrap" style="background: #EFF6FF; color: #2563EB;">
+                        <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+                    </div>
+                    <h3 class="card-title">1-on-1 Consultation Session</h3>
+                    <p class="card-desc">60–90 minute deep dive at our Baner hub (or video call) with student and parent participation.</p>
+                </div>
+
+                <div class="card-box">
+                    <div class="card-image-wrap" style="aspect-ratio: 16 / 9;">
+                        <img src="assets/Smartphone_with_chat_and_calendar_62d3ee5e_2K.jpg" alt="30-Day Follow-Up Desk" class="card-problem-img">
+                    </div>
+                    <div class="card-icon-wrap" style="background: #F0FDFA; color: #0D9488;">
+                        <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
+                    </div>
+                    <h3 class="card-title">30-Day Follow-Up Desk</h3>
+                    <p class="card-desc">Direct WhatsApp support for application reviews, college form filling, and follow-up doubts.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =================================================================== -->
+    <!-- SECTION 6: HOW IT WORKS                                             -->
+    <!-- =================================================================== -->
+    <section id="sec-how-it-works" class="sec-padding sec-bg-white">
+        <div class="container">
+            <div class="sec-header">
+                <span class="sec-tag">Process</span>
+                <h2 class="sec-title">From Confusion to Clarity in 4 Simple Steps</h2>
+                <p class="sec-subtitle">
+                    A seamless, structured counseling journey designed to remove hesitation.
+                </p>
+            </div>
+
+            <div class="grid-4">
+                <div class="step-card">
+                    <div class="step-circle">1</div>
+                    <h3 class="card-title">Submit Inquiry</h3>
+                    <p class="card-desc">Fill out the quick form below with your current academic stage and key career questions.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-circle">2</div>
+                    <h3 class="card-title">Advisor Intake Call</h3>
+                    <p class="card-desc">A senior counselor connects to understand your dilemma and schedules your formal session.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-circle">3</div>
+                    <h3 class="card-title">1-on-1 Deep Dive</h3>
+                    <p class="card-desc">Meet in-person at our Baner hub or online to review psychometric results and explore career paths.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-circle">4</div>
+                    <h3 class="card-title">Receive Roadmap</h3>
+                    <p class="card-desc">Walk away with a documented 3-year execution plan and 30-day post-session advisory support.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =================================================================== -->
+    <!-- SECTION 7: WHY KNOWLETIVE                                           -->
+    <!-- =================================================================== -->
+    <section id="sec-why-knowletive" class="why-knowletive-box">
+        <div class="container">
+            <div class="why-grid">
+                <div>
+                    <span class="sec-tag" style="background: rgba(255,255,255,0.1); color: #BAE6FD; border-color: rgba(255,255,255,0.2);">The Knowletive Difference</span>
+                    <h2 class="sec-title" style="color: #FFFFFF; font-size: 2.3rem;">Grounded in Real Industry and Academic Facts</h2>
+                    <p style="color: #E2E8F0; font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.5rem;">
+                        Based at <strong>4th Floor, DS IKON, Laxman Nagar, Baner, Pune</strong>, Knowletive is an ISO 9001:2015 certified consulting firm. We maintain zero commercial tie-ups with colleges, ensuring unbiased guidance.
+                    </p>
+
+                    <div class="grid-2">
+                        <div style="background: rgba(255,255,255,0.06); padding: 1.25rem; border-radius: 0.75rem; border: 1px solid rgba(255,255,255,0.12);">
+                            <h4 style="color: #FFFFFF; font-size: 0.95rem; font-weight: 800; margin-bottom: 0.25rem;">Zero College Commissions</h4>
+                            <p style="color: #CBD5E1; font-size: 0.8rem; line-height: 1.4;">We never push colleges for kickbacks. Every recommendation is 100% student-centric.</p>
+                        </div>
+                        <div style="background: rgba(255,255,255,0.06); padding: 1.25rem; border-radius: 0.75rem; border: 1px solid rgba(255,255,255,0.12);">
+                            <h4 style="color: #FFFFFF; font-size: 0.95rem; font-weight: 800; margin-bottom: 0.25rem;">Physical Baner Hub</h4>
+                            <p style="color: #CBD5E1; font-size: 0.8rem; line-height: 1.4;">Face-to-face consultation center in Pune where parents and students meet senior counselors.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="why-card">
+                        <div style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 3rem; font-weight: 900; color: var(--orange); margin-bottom: 0.5rem;">5,000+</div>
+                        <h3 style="font-size: 1.2rem; font-weight: 900; color: #FFFFFF; margin-bottom: 0.75rem;">Students &amp; Professionals Guided</h3>
+                        <p style="color: #BAE6FD; font-size: 0.85rem; line-height: 1.5; margin-bottom: 1.5rem;">
+                            Our data-backed frameworks have helped students secure admission to premier institutions and switch into thriving IT, analytics, and business careers.
+                        </p>
+                        <a href="tel:+919970600116" class="btn-call" style="background: #FFFFFF; color: var(--navy);">
+                            <span>Speak Directly: +91 99706 00116</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =================================================================== -->
+    <!-- SECTION 8: PROOF (TESTIMONIALS)                                     -->
+    <!-- =================================================================== -->
+    <section id="sec-proof" class="sec-padding sec-bg-white">
+        <div class="container">
+            <div class="sec-header">
+                <span class="sec-tag orange">Verified Outcomes</span>
+                <h2 class="sec-title">Real Families. Clear Career Decisions.</h2>
+                <p class="sec-subtitle">
+                    Read feedback from students and parents across Pune and Maharashtra.
+                </p>
+            </div>
+
+            <div class="grid-3">
+                <div class="card-box" style="background: #F8FAFC;">
+                    <div>
+                        <div style="color: #F59E0B; font-weight: 900; font-size: 1.1rem; margin-bottom: 0.75rem;">★★★★★</div>
+                        <p style="font-style: italic; font-size: 0.88rem; color: var(--text-body); line-height: 1.5;">
+                            "We were thoroughly confused between computer science and data science for my son. Knowletive's advisor broke down the actual Pune hiring market and curriculum differences. Completely transformed our perspective."
+                        </p>
+                    </div>
+                    <div style="margin-top: 1.25rem; padding-top: 0.75rem; border-top: 1px solid var(--border);">
+                        <strong style="color: var(--navy); font-size: 0.88rem;">Rohit Deshmukh</strong>
+                        <div style="font-size: 0.75rem; color: var(--text-muted);">Parent, Kothrud, Pune</div>
+                    </div>
+                </div>
+
+                <div class="card-box" style="background: #F8FAFC;">
+                    <div>
+                        <div style="color: #F59E0B; font-weight: 900; font-size: 1.1rem; margin-bottom: 0.75rem;">★★★★★</div>
+                        <p style="font-style: italic; font-size: 0.88rem; color: var(--text-body); line-height: 1.5;">
+                            "I was applying to generic IT roles with zero callbacks. The 1-on-1 session helped me pivot to product QA and automation with a clear 6-month roadmap. Landed an offer within 90 days."
+                        </p>
+                    </div>
+                    <div style="margin-top: 1.25rem; padding-top: 0.75rem; border-top: 1px solid var(--border);">
+                        <strong style="color: var(--navy); font-size: 0.88rem;">Sneha Kulkarni</strong>
+                        <div style="font-size: 0.75rem; color: var(--text-muted);">BE Graduate, Baner, Pune</div>
+                    </div>
+                </div>
+
+                <div class="card-box" style="background: #F8FAFC;">
+                    <div>
+                        <div style="color: #F59E0B; font-weight: 900; font-size: 1.1rem; margin-bottom: 0.75rem;">★★★★★</div>
+                        <p style="font-style: italic; font-size: 0.88rem; color: var(--text-body); line-height: 1.5;">
+                            "The psychometric report was astonishingly accurate. Instead of blindly following the coaching class advice, we chose the right engineering stream with total confidence."
+                        </p>
+                    </div>
+                    <div style="margin-top: 1.25rem; padding-top: 0.75rem; border-top: 1px solid var(--border);">
+                        <strong style="color: var(--navy); font-size: 0.88rem;">Amit Patil</strong>
+                        <div style="font-size: 0.75rem; color: var(--text-muted);">Class 12 Parent, Pimpri-Chinchwad</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =================================================================== -->
+    <!-- SECTION 9: PRICING SECTION                                          -->
+    <!-- =================================================================== -->
+    <section id="sec-pricing" class="sec-padding sec-bg-slate">
+        <div class="container">
+            <div class="sec-header">
+                <span class="sec-tag">Guidance Plans</span>
+                <h2 class="sec-title">Transparent Guidance Terms</h2>
+                <p class="sec-subtitle">
+                    Start with a zero-risk discovery call, then choose our comprehensive counseling package.
+                </p>
+            </div>
+
+            <div class="grid-2" style="max-width: 820px; margin: 0 auto;">
+                <div class="price-card">
+                    <div>
+                        <span style="font-size: 0.75rem; font-weight: 800; color: var(--text-muted); text-transform: uppercase;">Initial Assessment</span>
+                        <h3 class="card-title" style="margin-top: 0.5rem; font-size: 1.25rem;">15-Min Discovery Call</h3>
+                        <div class="price-val">Free</div>
+                        <p style="font-size: 0.75rem; color: var(--text-muted);">Zero financial obligation</p>
+                        
+                        <ul class="price-list">
+                            <li><span style="color: #10B981; font-weight: 900;">✓</span> Quick evaluation of current career dilemma</li>
+                            <li><span style="color: #10B981; font-weight: 900;">✓</span> Scope analysis of relevant entrance exams / degrees</li>
+                            <li><span style="color: #10B981; font-weight: 900;">✓</span> Guidance roadmap feasibility overview</li>
+                        </ul>
+                    </div>
+                    <a href="#sec-lead-form" class="btn-call" style="justify-content: center; padding: 0.75rem;">
+                        Book Free Call
+                    </a>
+                </div>
+
+                <div class="price-card featured">
+                    <span class="price-badge-top">Most Recommended</span>
+                    <div>
+                        <span style="font-size: 0.75rem; font-weight: 800; color: var(--sky); text-transform: uppercase;">Full Guidance Package</span>
+                        <h3 class="card-title" style="margin-top: 0.5rem; font-size: 1.25rem;">Comprehensive Career Strategy</h3>
+                        <div class="price-val" style="color: var(--sky);">Nominal Fixed Fee</div>
+                        <p style="font-size: 0.75rem; color: var(--text-muted);">Inclusive of in-person session &amp; 30-day support</p>
+                        
+                        <ul class="price-list">
+                            <li><span style="color: #10B981; font-weight: 900;">✓</span> Scientific Psychometric Assessment &amp; Diagnostic Report</li>
+                            <li><span style="color: #10B981; font-weight: 900;">✓</span> 60–90 Minute In-Person Consultation at Baner, Pune or Video</li>
+                            <li><span style="color: #10B981; font-weight: 900;">✓</span> Documented 3-Year Milestone Action Plan</li>
+                            <li><span style="color: #10B981; font-weight: 900;">✓</span> Curated College, Degree &amp; Entrance Shortlist</li>
+                            <li><span style="color: #10B981; font-weight: 900;">✓</span> 30-Day Follow-Up Support via WhatsApp and Phone</li>
+                        </ul>
+                    </div>
+                    <a href="#sec-lead-form" class="btn-primary" style="padding: 0.85rem;">
+                        Reserve Guidance Slot
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =================================================================== -->
+    <!-- SECTION 10: FAQ SECTION (NATIVE HTML ACCORDIONS - ZERO JS)           -->
+    <!-- =================================================================== -->
+    <section id="sec-faq" class="sec-padding sec-bg-white">
+        <div class="container" style="max-w: 800px; max-width: 800px;">
+            <div class="sec-header">
+                <span class="sec-tag">Got Questions?</span>
+                <h2 class="sec-title">Frequently Asked Questions</h2>
+            </div>
+
+            <details class="faq-item" open>
+                <summary class="faq-summary">
+                    <span>Who conducts the 1-on-1 career counseling session?</span>
+                    <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+                </summary>
+                <div class="faq-content">
+                    Sessions are conducted exclusively by senior academic and corporate mentors with 15+ years of real-world hiring, engineering, and admission counseling experience in Pune.
+                </div>
+            </details>
+
+            <details class="faq-item">
+                <summary class="faq-summary">
+                    <span>Can parents participate in the counseling session?</span>
+                    <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+                </summary>
+                <div class="faq-content">
+                    Yes, highly encouraged! Parent participation ensures everyone is aligned on the student's natural aptitude, financial considerations, and realistic academic expectations without family conflict.
+                </div>
+            </details>
+
+            <details class="faq-item">
+                <summary class="faq-summary">
+                    <span>What is the difference between Baner offline and online sessions?</span>
+                    <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+                </summary>
+                <div class="faq-content">
+                    The deliverables, psychometric evaluation, and 1-on-1 advisor depth are 100% identical. Offline sessions take place at our Baner, Pune center, while online sessions use screen-shared video calls for outstation families.
+                </div>
+            </details>
+
+            <details class="faq-item">
+                <summary class="faq-summary">
+                    <span>At what stage is career counseling most beneficial?</span>
+                    <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+                </summary>
+                <div class="faq-content">
+                    It is most crucial at key transition milestones: Class 10 (stream selection), Class 12 (degree &amp; CET entrance exam focus), college 3rd/final year (job domain specialization), and early career professionals planning a role transition.
+                </div>
+            </details>
+
+            <details class="faq-item">
+                <summary class="faq-summary">
+                    <span>Does Knowletive guarantee college admissions or job placements?</span>
+                    <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+                </summary>
+                <div class="faq-content">
+                    No ethical firm can guarantee admission, as college seats are strictly governed by merit cutoffs and computerized CAP rounds. We empower you with data, strategy, and roadmap execution to maximize your probability of success.
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- =================================================================== -->
+    <!-- SECTION 11: LEAD FORM SECTION                                       -->
+    <!-- =================================================================== -->
+    <section id="sec-lead-form" class="sec-padding sec-bg-slate">
+        <div class="container">
+            <div class="form-card-main">
+                <div style="text-align: center; margin-bottom: 2rem;">
+                    <span class="sec-tag orange">Take Action Today</span>
+                    <h2 class="sec-title" style="font-size: 1.85rem;">Request 1-on-1 Career Guidance</h2>
+                    <p style="font-size: 0.85rem; color: var(--text-body);">
+                        Enter your details below. A senior counselor from Baner, Pune will review your stage and connect within 2 hours.
+                    </p>
+                </div>
+
+                <form id="careerLeadForm">
+                    <div class="form-group">
+                        <label class="form-label">Full Name *</label>
+                        <input type="text" name="name" required placeholder="e.g. Rahul Patil" class="form-input">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Mobile Number (WhatsApp) *</label>
+                        <div class="phone-input-wrap">
+                            <span class="phone-prefix">+91</span>
+                            <input type="tel" name="phone" required pattern="[6-9][0-9]{9}" maxlength="10" placeholder="10-digit number" class="form-input phone-field">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="email">Email Address (Optional)</label>
+                        <input type="email" id="email" name="email" placeholder="Enter Email Address" class="form-input">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Current Stage / Education *</label>
+                        <select name="stage" required class="form-select">
+                            <option value="">Select current stage...</option>
+                            <option value="Class 10th Student">Class 10th Student (Stream Selection)</option>
+                            <option value="Class 11-12th / CET Aspirant">Class 11-12th / CET Aspirant</option>
+                            <option value="Engineering / College Student">Engineering / Degree Student</option>
+                            <option value="Recent Graduate / Job Seeker">Recent Graduate / Job Seeker</option>
+                            <option value="Working Professional (Career Shift)">Working Professional (Career Shift)</option>
+                            <option value="Parent Inquiring for Ward">Parent Inquiring for Ward</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Key Career Questions / Confusion (Optional)</label>
+                        <textarea name="text" rows="2" placeholder="Tell us briefly about your dilemma (e.g. choice between branches, job switch timeline)..." class="form-textarea"></textarea>
+                    </div>
+
+                    <div class="form-group" style="display: flex; align-items: flex-start; gap: 0.5rem;">
+                        <input type="checkbox" id="privacyConsent" name="privacyConsent" required style="margin-top: 0.2rem;">
+                        <label for="privacyConsent" style="font-size: 0.75rem; color: var(--text-muted); line-height: 1.4;">
+                            I agree to the <a href="https://knowletive.in/privacy-policy" target="_blank" style="color: var(--sky); font-weight: 700;">Privacy Policy</a> and consent to being contacted by Knowletive regarding career counseling. *
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn-primary" style="width: 100%; padding: 0.95rem; font-size: 0.95rem;">
+                        Submit Career Consultation Request
+                    </button>
+                    <p style="text-align: center; font-size: 0.72rem; color: var(--text-muted); margin-top: 0.75rem;">
+                        🔒 100% Privacy Protected • Zero Spam Guarantee
+                    </p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- =================================================================== -->
+    <!-- SECTION 12: FINAL CTA SECTION                                       -->
+    <!-- =================================================================== -->
+    <section id="sec-final-cta" class="final-cta-box">
+        <div class="container" style="max-width: 780px;">
+            <span class="sec-tag" style="background: rgba(255,255,255,0.1); color: #BAE6FD; border-color: rgba(255,255,255,0.2);">Baner, Pune Center &amp; Live Online</span>
+            <h2 class="sec-title" style="color: #FFFFFF; font-size: 2.3rem; margin-top: 0.75rem;">Ready to Stop Guessing Your Future?</h2>
+            <p style="color: #BAE6FD; font-size: 0.95rem; line-height: 1.6; margin-bottom: 2rem;">
+                Book your 1-on-1 counseling session today. Get clear psychometric diagnosis, stream selection clarity, and a customized 3-year execution roadmap.
+            </p>
+
+            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem;">
+                <a href="#sec-lead-form" class="btn-primary" style="padding: 0.9rem 1.8rem; font-size: 0.95rem;">
+                    Book Career Counseling
+                </a>
+                <a href="tel:+919970600116" class="btn-call" style="background: rgba(255,255,255,0.12); color: #FFFFFF; border-color: rgba(255,255,255,0.25); padding: 0.9rem 1.5rem; font-size: 0.95rem;">
+                    <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+                    <span>Call +91 99706 00116</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- MINIMAL FOOTER                                                        -->
+    <!-- ===================================================================== -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-top">
+                <img src="assets/knowletive-logo-counseling-white-large.png" alt="Knowletive Career Counseling" style="height: 42px; width: auto; object-fit: contain; display: block;">
+                <div>
+                    <p style="color: #FFFFFF; font-weight: 700;">Knowletive Technologies Private Limited</p>
+                    <p>4th Floor, DS IKON, Laxman Nagar, Baner, Pune, Maharashtra 411045</p>
+                    <p>Phone: +91 99706 00116 &bull; Email: info@knowletive.com</p>
+                </div>
+            </div>
+            <div style="border-top: 1px solid rgba(255,255,255,0.08); padding-top: 1rem; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; font-size: 0.72rem;">
+                <p>&copy; 2026 Knowletive. ISO 9001:2015 Certified Educational Firm. All Rights Reserved.</p>
+                <p>100% Privacy Protected &bull; Unbiased Academic &amp; Career Advisory</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===================================================================== -->
+    <!-- STICKY MOBILE BOTTOM CONVERSION BAR                                   -->
+    <!-- ===================================================================== -->
+    <div class="sticky-mobile-bar">
+        <a href="tel:+919970600116" class="btn-mobile-call">📞 Call Now</a>
+        <a href="#sec-lead-form" class="btn-mobile-book">Book Counseling</a>
+    </div>
+
+    <!-- ===================================================================== -->
+    <!-- FLOATING WHATSAPP CTA                                                 -->
+    <!-- ===================================================================== -->
+    <a href="https://wa.me/919970600116?text=Hi%20Knowletive%2C%20I%20have%20questions%20regarding%20Career%20Counseling." target="_blank" rel="noopener noreferrer" class="floating-whatsapp" aria-label="Chat on WhatsApp">
+        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.698.077-2.124-.515-1.826-.757-3.003-2.613-3.094-2.736-.091-.123-.746-.992-.746-1.893 0-.901.472-1.343.64-1.525.168-.182.368-.228.49-.228.123 0 .245.002.353.007.113.005.265-.043.415.317.154.368.524 1.277.57 1.369.046.091.077.199.015.321-.061.123-.092.199-.184.307-.092.108-.194.24-.277.322-.092.091-.188.19-.081.373.107.183.477.788 1.025 1.275.706.628 1.302.822 1.486.914.184.091.292.077.4-.047.108-.123.461-.537.584-.72.123-.184.246-.153.415-.091.169.061 1.074.507 1.258.599.184.092.307.138.353.215.046.077.046.446-.098.851z"/></svg>
+        <span>Quick Question on WhatsApp</span>
+    </a>
+
+    <!-- ===================================================================== -->
+    <!-- GOOGLE APPS SCRIPT LEAD CAPTURE SCRIPT                                -->
+    <!-- ===================================================================== -->
+    <script>
+        (function () {
+            const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwGOhSIJWTWEop32sD2oGUMQ60XNpZ4--5spa00-ICAXT5LLAyPrvlwjT24vuX0LBgERg/exec";
+
+            function initLeadForm() {
+                const leadForm = document.getElementById('careerLeadForm') || document.querySelector('#sec-lead-form form') || document.querySelector('form');
+                if (!leadForm) {
+                    console.error('[Knowletive Leads] Lead form could not be found in DOM.');
+                    return;
+                }
+
+                console.log('[Knowletive Leads] Lead form handler initialized successfully.');
+
+                leadForm.addEventListener('submit', async function (e) {
+                    e.preventDefault();
+                    console.log('[Knowletive Leads] Form submit intercepted via event listener.');
+
+                    const submitBtn = leadForm.querySelector('button[type="submit"]') || leadForm.querySelector('button');
+                    const originalBtnText = submitBtn ? submitBtn.innerHTML : 'Submit Career Consultation Request';
+
+                    // Extract form field values
+                    const name = (leadForm.querySelector('[name="name"]')?.value || '').trim();
+                    const phone = (leadForm.querySelector('[name="phone"]')?.value || '').trim();
+                    const email = (leadForm.querySelector('#email')?.value || leadForm.querySelector('[name="email"]')?.value || '').trim();
+                    const stage = (leadForm.querySelector('[name="stage"]')?.value || '').trim();
+                    const text = (leadForm.querySelector('[name="text"]')?.value || '').trim();
+
+                    if (!name || !phone) {
+                        alert('Please enter your full name and a valid 10-digit mobile number.');
+                        return;
+                    }
+
+                    const courseCombined = [stage, text].filter(Boolean).join(' - ') || stage || 'General Career Counseling';
+                    const sourceVal = 'Career Counseling';
+                    const leadId = 'KN-' + Math.floor(100000 + Math.random() * 900000);
+                    const dateVal = new Date().toLocaleString('en-IN', {
+                        timeZone: 'Asia/Kolkata',
+                        year: 'numeric',
+                        month: 'short',
+                        day: '2-digit',
+                        hour: '2-digit',
+                        minute: '2-digit',
+                        hour12: true
+                    });
+
+                    // Prepare URLSearchParams matching exact Code.gs keys
+                    const params = new URLSearchParams();
+                    params.append('name', name);
+                    params.append('email', email);
+                    params.append('phone', phone);
+                    params.append('source', sourceVal);
+                    params.append('course', courseCombined);
+
+                    // Supporting sheet column mappings
+                    params.append('landingPage', sourceVal);
+                    params.append('leadId', leadId);
+                    params.append('date', dateVal);
+                    params.append('status', 'Logged with Senior Advisor');
+                    params.append('Lead ID', leadId);
+                    params.append('Name', name);
+                    params.append('Email', email);
+                    params.append('Phone', phone);
+                    params.append('Landing Page', sourceVal);
+                    params.append('Course', courseCombined);
+                    params.append('Date', dateVal);
+                    params.append('Status', 'Logged with Senior Advisor');
+                    params.append('stage', stage);
+                    params.append('text', text);
+
+                    if (submitBtn) {
+                        submitBtn.disabled = true;
+                        submitBtn.innerHTML = 'Submitting to counselor portal...';
+                    }
+
+                    // Direct fetch using URLSearchParams and mode: 'no-cors' (prevents CORS preflight)
+                    console.log("[Knowletive Sheet Sync] Payload sent:", Object.fromEntries(params));
+                    try {
+                        await fetch(GOOGLE_SCRIPT_URL, {
+                            method: 'POST',
+                            mode: 'no-cors',
+                            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                            body: params.toString()
+                        });
+
+                        console.log('[Knowletive Sheet Sync] POST sent successfully to GOOGLE_SCRIPT_URL.');
+
+                        if (submitBtn) {
+                            submitBtn.innerHTML = '✓ Consultation Requested!';
+                            submitBtn.style.backgroundColor = '#10B981';
+                        }
+
+                        alert(`Thank you, ${name}! Your career guidance request has been received. Our senior counselor from Baner, Pune will contact you shortly.`);
+
+                        leadForm.reset();
+
+                        // Construct WhatsApp redirect for immediate two-way communication
+                        const waMessage = `Hi Knowletive! I have submitted an inquiry for 1-on-1 Career Counseling:%0A• Name: ${encodeURIComponent(name)}%0A• WhatsApp: ${encodeURIComponent(phone)}${email ? '%0A• Email: ' + encodeURIComponent(email) : ''}%0A• Stage: ${encodeURIComponent(stage)}${text ? '%0A• Query: ' + encodeURIComponent(text) : ''}`;
+                        setTimeout(() => {
+                            window.open(`https://wa.me/919970600116?text=${waMessage}`, '_blank');
+                        }, 500);
+                    } catch (error) {
+                        console.error('[Knowletive Sheet Sync] Transmission error:', error);
+                        alert('Your consultation request has been sent! If you need immediate assistance, our advisor is also available directly on WhatsApp.');
+
+                        const waMessage = `Hi Knowletive! I would like to connect for 1-on-1 Career Counseling:%0A• Name: ${encodeURIComponent(name)}%0A• Mobile: ${encodeURIComponent(phone)}%0A• Stage: ${encodeURIComponent(stage)}`;
+                        window.open(`https://wa.me/919970600116?text=${waMessage}`, '_blank');
+                    } finally {
+                        if (submitBtn) {
+                            submitBtn.disabled = false;
+                            submitBtn.innerHTML = originalBtnText;
+                            submitBtn.style.backgroundColor = '';
+                        }
+                    }
+                });
+            }
+
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', initLeadForm);
+            } else {
+                initLeadForm();
+            }
+        })()
+    </script>
+</body>
+</html>

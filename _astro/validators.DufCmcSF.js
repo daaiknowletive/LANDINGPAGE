@@ -1,0 +1,1 @@
+function e(e){if(!e)return!1;let t=e.trim();if(t.length===0||t.includes(` `))return!1;let n=t.split(`@`);if(n.length!==2)return!1;let[r,i]=n;return!(!r||!i||!/^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/.test(t)||t.includes(`..`)||r.endsWith(`.`)||i.startsWith(`.`))}export{e as t};
